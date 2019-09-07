@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="https://khs9628.github.io/2019/09/07/codingtest1/">
+<link rel="canonical" href="https://khs9628.github.io/2019/09/07/dbtest2/">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hash CodingTEST1 · khs9628</title>
+    <title>DBtest2 · khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,7 +218,7 @@
                 <a href="/">현수쓰 기술블로그</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Hash CodingTEST1</a>
+                <a href="#" class="post-name">DBtest2</a>
             </div>
     </div>
     
@@ -248,7 +248,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hash CodingTEST1
+            DBtest2
             <!-- 404 -->
             
         </h1>
@@ -267,7 +267,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">225</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">177</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -396,27 +396,22 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>수많은 마라톤 선수들이 마라톤에 참여하였습니다.   
-단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   
-마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴
-배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 
-함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote>
-<ul>
-<li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li>
-<li>completion의 길이는 participant의 길이보다 1 작습니다.</li>
-<li>참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li>
-<li>참가자 중에는 동명이인이 있을 수 있습니다.</li>
-</ul>
-</blockquote>
-<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest1.PNG" alt="RESULT"></p>
-<h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">solution</span><span class="params">(String[] participant, String[] completion)</span> </span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; participant.length; i++)&#123;</span><br><span class="line">            Boolean stop = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; completion.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                  completion[j] = <span class="keyword">null</span>;</span><br><span class="line">                  stop = <span class="keyword">false</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(stop == <span class="keyword">true</span>)&#123;</span><br><span class="line">                    answer = participant[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a>문제1.</h2><pre><code>ANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.
+ANIMAL_INS 테이블 구조는 다음과 같으며, ANIMAL_ID, ANIMAL_TYPE, DATETIME,
+INTAKE_CONDITION, NAME, SEX_UPON_INTAKE는 각각 동물의 아이디, 생물 종,
+보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</code></pre><h3 id="ANIMAL-INS-TABLE"><a href="#ANIMAL-INS-TABLE" class="headerlink" title="ANIMAL_INS TABLE"></a>ANIMAL_INS TABLE</h3><p><img src="/assets/img/animalin.PNG" alt="inTable"></p>
+<pre><code>ANIMAL_OUTS 테이블은 동물 보호소에서 입양 보낸 동물의 정보를 담은
+테이블입니다. ANIMAL_OUTS 테이블 구조는 다음과 같으며, ANIMAL_ID,
+ANIMAL_TYPE, DATETIME, NAME, SEX_UPON_OUTCOME는 각각 동물의 아이디, 생물
+종, 입양일, 이름, 성별 및 중성화 여부를 나타냅니다. ANIMAL_OUTS 테이블의
+ANIMAL_ID는 ANIMAL_INS의 ANIMAL_ID의 외래 키입니다.</code></pre><h3 id="ANIMAL-OUTS-TABLE"><a href="#ANIMAL-OUTS-TABLE" class="headerlink" title="ANIMAL_OUTS TABLE"></a>ANIMAL_OUTS TABLE</h3><p><img src="/assets/img/animalout.PNG" alt="outTable"></p>
+<h2 id="1번-오래-보호한-동물-1"><a href="#1번-오래-보호한-동물-1" class="headerlink" title="1번. 오래 보호한 동물(1)"></a><a href="https://programmers.co.kr/learn/courses/30/lessons/59044" rel="external nofollow noopener noreferrer" target="_blank">1번. 오래 보호한 동물(1)</a></h2><pre><code>아직 입양을 못 간 동물 중, 가장 오래 보호소에 있었던 동물 3마리의 이름과 보호 
+시작일을 조회하는 SQL문을 작성해주세요. 이때 결과는 보호 시작일 순으로 
+조회해야 합니다.</code></pre><h2 id="1번-답안"><a href="#1번-답안" class="headerlink" title="1번 답안"></a>1번 답안</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> animal_id , <span class="keyword">name</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line"><span class="keyword">WHERE</span>  animal_id  <span class="keyword">NOT</span> <span class="keyword">IN</span>( <span class="keyword">SELECT</span> animal_id</span><br><span class="line">    <span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<h2 id="cf-HASH란"><a href="#cf-HASH란" class="headerlink" title="cf) HASH란?"></a>cf) HASH란?</h2><blockquote>
-<p>2<br>1</p>
-</blockquote>
-<h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2번-없어진-기록-찾기"><a href="#2번-없어진-기록-찾기" class="headerlink" title="2번. 없어진 기록 찾기"></a><a href="https://programmers.co.kr/learn/courses/30/lessons/59042" rel="external nofollow noopener noreferrer" target="_blank">2번. 없어진 기록 찾기</a></h2><pre><code>천재지변으로 인해 일부 데이터가 유실되었습니다. 입양을 간 기록은 있는데,
+보호소에 들어온 기록이 없는 동물의 ID와 이름을 ID 순으로 조회하는 SQL문을 
+작성해주세요.</code></pre><h2 id="2번-답안"><a href="#2번-답안" class="headerlink" title="2번 답안"></a>2번 답안</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> animal_id , <span class="keyword">name</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line"><span class="keyword">WHERE</span>  animal_id  <span class="keyword">NOT</span> <span class="keyword">IN</span>( <span class="keyword">SELECT</span> animal_id</span><br><span class="line">    <span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>하루를 기록하다</p>
@@ -427,9 +422,9 @@ height:50vh;
     
         <div class="license-wrapper">
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
-            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">https://khs9628.github.io/2019/09/07/codingTest1/</a>
-            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 7th 2019, 3:17:57 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 7th 2019, 4:04:29 pm</a>
+            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">https://khs9628.github.io/2019/09/07/DBtest2/</a>
+            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">September 7th 2019, 6:40:40 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">September 7th 2019, 7:15:50 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -437,17 +432,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/09/07/DBtest1/" title="7DAYSQL Challenge">
-                    <div class="nextTitle">7DAYSQL Challenge</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/09/06/first/" title="처음 글">
-                    <div class="prevTitle">처음 글</div>
+                <a href="/2019/09/07/DBtest1/" title="7DAYSQL Challenge">
+                    <div class="prevTitle">7DAYSQL Challenge</div>
                 </a>
             
         </li>
@@ -464,8 +454,8 @@ height:50vh;
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         
         var disqus_config = function () {
-        this.page.url = "https://khs9628.github.io/2019/09/07/codingTest1/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "Hash CodingTEST1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = "https://khs9628.github.io/2019/09/07/DBtest2/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "DBtest2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function () { // DON'T EDIT BELOW THIS LINE
@@ -599,7 +589,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#문제1"><span class="toc-number">1.</span> <span class="toc-text">문제1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#제한사항"><span class="toc-number">2.</span> <span class="toc-text">제한사항</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#입출력-예"><span class="toc-number">3.</span> <span class="toc-text">입출력 예</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1차-답안-gt-Hash-알고리즘-X"><span class="toc-number">4.</span> <span class="toc-text">1차 답안 -&gt; Hash 알고리즘 X</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cf-HASH란"><span class="toc-number">5.</span> <span class="toc-text">cf) HASH란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2차-답안-gt-Hash-알고리즘"><span class="toc-number">6.</span> <span class="toc-text">2차 답안 -&gt; Hash 알고리즘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3차-답안-gt-sort-메소드-이용"><span class="toc-number">7.</span> <span class="toc-text">3차 답안 -&gt; sort()메소드 이용</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#문제1"><span class="toc-number">1.</span> <span class="toc-text">문제1.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ANIMAL-INS-TABLE"><span class="toc-number">1.1.</span> <span class="toc-text">ANIMAL_INS TABLE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ANIMAL-OUTS-TABLE"><span class="toc-number">1.2.</span> <span class="toc-text">ANIMAL_OUTS TABLE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1번-오래-보호한-동물-1"><span class="toc-number">2.</span> <span class="toc-text">1번. 오래 보호한 동물(1)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1번-답안"><span class="toc-number">3.</span> <span class="toc-text">1번 답안</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2번-없어진-기록-찾기"><span class="toc-number">4.</span> <span class="toc-text">2번. 없어진 기록 찾기</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2번-답안"><span class="toc-number">5.</span> <span class="toc-text">2번 답안</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
