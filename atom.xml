@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-06T14:12:59.881Z</updated>
+  <updated>2019-09-07T07:02:31.800Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -17,19 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>first</title>
-    <link href="https://khs9628.github.io/2019/09/06/first/"/>
-    <id>https://khs9628.github.io/2019/09/06/first/</id>
-    <published>2019-09-06T13:18:44.000Z</published>
-    <updated>2019-09-06T14:12:59.881Z</updated>
+    <title>Hash CodingTEST Example</title>
+    <link href="https://khs9628.github.io/2019/09/07/codingTest1/"/>
+    <id>https://khs9628.github.io/2019/09/07/codingTest1/</id>
+    <published>2019-09-07T06:17:57.000Z</published>
+    <updated>2019-09-07T07:02:31.800Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h1 id="lion-현수쓰-기술블로그-시작-lion"><a href="#lion-현수쓰-기술블로그-시작-lion" class="headerlink" title=":lion: 현수쓰 기술블로그 시작 :lion:"></a>:lion: 현수쓰 기술블로그 시작 :lion:</h1><pre><code>* 기술 블로그 관련 POST* SPRING 개념정리* Django / React 공부* 알고리즘 / DB 문제 정리</code></pre><blockquote><p>하루를 기록하다 :feet:</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>수많은 마라톤 선수들이 마라톤에 참여하였습니다.   단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote><ul><li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li><li>completion의 길이는 participant의 길이보다 1 작습니다.</li><li>참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li><li>참가자 중에는 동명이인이 있을 수 있습니다.</li></ul></blockquote><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest1.PNG" alt="RESULT"></p><h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">solution</span><span class="params">(String[] participant, String[] completion)</span> </span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; participant.length; i++)&#123;</span><br><span class="line">            Boolean stop = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; completion.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                  completion[j] = <span class="keyword">null</span>;</span><br><span class="line">                  stop = <span class="keyword">false</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(stop == <span class="keyword">true</span>)&#123;</span><br><span class="line">                    answer = participant[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="cf-HASH란"><a href="#cf-HASH란" class="headerlink" title="cf) HASH란?"></a>cf) HASH란?</h2><blockquote><p>2<br>1</p></blockquote><h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;MAIN-목차-및-정리개념&quot;&gt;&lt;a href=&quot;#MAIN-목차-및-정리개념&quot; class=&quot;headerlink&quot; title=&quot;MAIN 목차 및 정리개념&quot;&gt;&lt;/a&gt;MAIN 목차 및 정리개념&lt;/h1&gt;&lt;h1 id=&quot;lion-현수쓰-기술블로그-시작
+        &lt;h2 id=&quot;문제1&quot;&gt;&lt;a href=&quot;#문제1&quot; class=&quot;headerlink&quot; title=&quot;문제1.&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42576&quot; rel=&quot;exte
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>처음 글</title>
+    <link href="https://khs9628.github.io/2019/09/06/first/"/>
+    <id>https://khs9628.github.io/2019/09/06/first/</id>
+    <published>2019-09-06T13:18:44.000Z</published>
+    <updated>2019-09-07T06:54:22.415Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h1 id="현수쓰-기술블로그-시작"><a href="#현수쓰-기술블로그-시작" class="headerlink" title="현수쓰 기술블로그 시작"></a>현수쓰 기술블로그 시작</h1><p>기술 블로그 관련 POST</p><ol><li><p>SPRING 개념정리</p><ul><li>Tiles 프레임워크</li></ul></li><li><p>Django / React 공부</p></li><li><p>알고리즘 / DB 문제 정리</p><ul><li><p>해시(hash 알고리즘)</p><ol><li>완주하지 못한 마라톤 선수</li><li>NEXT</li></ol></li><li><p>DB 문제</p></li></ul></li></ol><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;MAIN-목차-및-정리개념&quot;&gt;&lt;a href=&quot;#MAIN-목차-및-정리개념&quot; class=&quot;headerlink&quot; title=&quot;MAIN 목차 및 정리개념&quot;&gt;&lt;/a&gt;MAIN 목차 및 정리개념&lt;/h1&gt;&lt;h1 id=&quot;현수쓰-기술블로그-시작&quot;&gt;&lt;a 
       
     
     </summary>
