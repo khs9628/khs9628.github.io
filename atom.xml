@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-07T07:02:31.800Z</updated>
+  <updated>2019-09-07T07:19:01.029Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hash CodingTEST Example</title>
+    <title>DBtest1</title>
+    <link href="https://khs9628.github.io/2019/09/07/DBtest1/"/>
+    <id>https://khs9628.github.io/2019/09/07/DBtest1/</id>
+    <published>2019-09-07T07:08:56.000Z</published>
+    <updated>2019-09-07T07:19:01.029Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/59043" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>ANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.ANIMAL_INS 테이블 구조는 다음과 같으며, ANIMAL_ID, ANIMAL_TYPE, DATETIME,INTAKE_CONDITION, NAME, SEX_UPON_INTAKE는 각각 동물의 아이디, 생물 종,보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</code></pre><h3 id="ANIMAL-INS-TABLE"><a href="#ANIMAL-INS-TABLE" class="headerlink" title="ANIMAL_INS TABLE"></a>ANIMAL_INS TABLE</h3><table><thead><tr><th>NAME</th><th>TYPE</th><th>NULLABLE</th></tr></thead><tbody><tr><td>ANIMAL_ID</td><td>VARCHAR(N)</td><td>FALSE</td></tr><tr><td>ANIMAL_TYPE</td><td>VARCHAR(N)</td><td>FALSE</td></tr><tr><td>DATETIME</td><td>DATETIME</td><td>FALSE</td></tr><tr><td>INTAKE_CONDITION</td><td>VARCHAR(N)</td><td>FALSE</td></tr><tr><td>NAME</td><td>VARCHAR(N)</td><td>TRUE</td></tr><tr><td>SEX_UPON_INTAKE</td><td>VARCHAR(N)</td><td>FALSE</td></tr></tbody></table><pre><code>ANIMAL_OUTS 테이블은 동물 보호소에서 입양 보낸 동물의 정보를 담은테이블입니다. ANIMAL_OUTS 테이블 구조는 다음과 같으며, ANIMAL_ID,ANIMAL_TYPE, DATETIME, NAME, SEX_UPON_OUTCOME는 각각 동물의 아이디, 생물종, 입양일, 이름, 성별 및 중성화 여부를 나타냅니다. ANIMAL_OUTS 테이블의ANIMAL_ID는 ANIMAL_INS의 ANIMAL_ID의 외래 키입니다.</code></pre><h3 id="ANIMAL-OUTS-TABLE"><a href="#ANIMAL-OUTS-TABLE" class="headerlink" title="ANIMAL_OUTS TABLE"></a>ANIMAL_OUTS TABLE</h3><table><thead><tr><th>NAME</th><th>TYPE</th><th>NULLABLE</th></tr></thead><tbody><tr><td>ANIMAL_ID</td><td>VARCHAR(N)</td><td>FALSE</td></tr><tr><td>ANIMAL_TYPE</td><td>VARCHAR(N)</td><td>FALSE</td></tr><tr><td>DATETIME</td><td>DATETIME</td><td>FALSE</td></tr><tr><td>NAME</td><td>VARCHAR(N)</td><td>TRUE</td></tr><tr><td>SEX_UPON_INTAKE</td><td>VARCHAR(N)</td><td>FALSE</td></tr></tbody></table><pre><code>관리자의 실수로 일부 동물의 입양일이 잘못 입력되었습니다. 보호 시작일보다입양일이 더 빠른 동물의 아이디와 이름을 조회하는 SQL문을 작성해주세요. 이때 결과는 보호 시작일이 빠른 순으로 조회해야합니다.</code></pre><h2 id="1차-답안"><a href="#1차-답안" class="headerlink" title="1차 답안"></a>1차 답안</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> o.animal_id, o.name</span><br><span class="line"><span class="keyword">FROM</span> animal_outs <span class="keyword">AS</span> o</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span>  animal_ins <span class="keyword">AS</span> i</span><br><span class="line"><span class="keyword">ON</span> o.animal_id = i.animal_id</span><br><span class="line"><span class="keyword">WHERE</span> o.datetime &lt; i.datetime</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> i.datetime <span class="keyword">asc</span>;</span><br></pre></td></tr></table></figure><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;문제1&quot;&gt;&lt;a href=&quot;#문제1&quot; class=&quot;headerlink&quot; title=&quot;문제1.&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/59043&quot; rel=&quot;exte
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hash CodingTEST1</title>
     <link href="https://khs9628.github.io/2019/09/07/codingTest1/"/>
     <id>https://khs9628.github.io/2019/09/07/codingTest1/</id>
     <published>2019-09-07T06:17:57.000Z</published>
-    <updated>2019-09-07T07:02:31.800Z</updated>
+    <updated>2019-09-07T07:04:29.393Z</updated>
     
     <content type="html"><![CDATA[<h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>수많은 마라톤 선수들이 마라톤에 참여하였습니다.   단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote><ul><li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li><li>completion의 길이는 participant의 길이보다 1 작습니다.</li><li>참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li><li>참가자 중에는 동명이인이 있을 수 있습니다.</li></ul></blockquote><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest1.PNG" alt="RESULT"></p><h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">solution</span><span class="params">(String[] participant, String[] completion)</span> </span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; participant.length; i++)&#123;</span><br><span class="line">            Boolean stop = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; completion.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                  completion[j] = <span class="keyword">null</span>;</span><br><span class="line">                  stop = <span class="keyword">false</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(stop == <span class="keyword">true</span>)&#123;</span><br><span class="line">                    answer = participant[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="cf-HASH란"><a href="#cf-HASH란" class="headerlink" title="cf) HASH란?"></a>cf) HASH란?</h2><blockquote><p>2<br>1</p></blockquote><h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
     
@@ -43,37 +65,15 @@
     <link href="https://khs9628.github.io/2019/09/06/first/"/>
     <id>https://khs9628.github.io/2019/09/06/first/</id>
     <published>2019-09-06T13:18:44.000Z</published>
-    <updated>2019-09-07T06:54:22.415Z</updated>
+    <updated>2019-09-07T07:08:07.318Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h1 id="현수쓰-기술블로그-시작"><a href="#현수쓰-기술블로그-시작" class="headerlink" title="현수쓰 기술블로그 시작"></a>현수쓰 기술블로그 시작</h1><p>기술 블로그 관련 POST</p><ol><li><p>SPRING 개념정리</p><ul><li>Tiles 프레임워크</li></ul></li><li><p>Django / React 공부</p></li><li><p>알고리즘 / DB 문제 정리</p><ul><li><p>해시(hash 알고리즘)</p><ol><li>완주하지 못한 마라톤 선수</li><li>NEXT</li></ol></li><li><p>DB 문제</p></li></ul></li></ol><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h1 id="현수쓰-기술블로그-시작"><a href="#현수쓰-기술블로그-시작" class="headerlink" title="현수쓰 기술블로그 시작"></a>현수쓰 기술블로그 시작</h1><p>기술 블로그 관련 POST</p><ol><li><p>SPRING 개념정리</p><ul><li>Tiles 프레임워크</li></ul></li><li><p>Django / React 공부</p></li><li><p>알고리즘 / DB 문제 정리</p><ul><li><p>해시(hash 알고리즘)</p><ol><li><a href="https://khs9628.github.io/2019/09/07/codingTest1/">완주하지 못한 마라톤 선수</a></li><li>NEXT</li></ol></li><li><p>DB 문제</p><ol><li><a href>있었는데요 없었습니다</a></li><li>NEXT</li></ol></li></ul></li></ol><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h1 id=&quot;MAIN-목차-및-정리개념&quot;&gt;&lt;a href=&quot;#MAIN-목차-및-정리개념&quot; class=&quot;headerlink&quot; title=&quot;MAIN 목차 및 정리개념&quot;&gt;&lt;/a&gt;MAIN 목차 및 정리개념&lt;/h1&gt;&lt;h1 id=&quot;현수쓰-기술블로그-시작&quot;&gt;&lt;a 
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://khs9628.github.io/2019/09/06/hello-world/"/>
-    <id>https://khs9628.github.io/2019/09/06/hello-world/</id>
-    <published>2019-09-06T12:35:59.800Z</published>
-    <updated>2019-09-06T12:35:59.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first post.
       
     
     </summary>
