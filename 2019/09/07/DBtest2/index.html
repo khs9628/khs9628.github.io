@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DBtest2 · khs9628</title>
+    <title>NEXT · khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,7 +218,7 @@
                 <a href="/">현수쓰 기술블로그</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">DBtest2</a>
+                <a href="#" class="post-name">NEXT</a>
             </div>
     </div>
     
@@ -248,7 +248,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            DBtest2
+            NEXT
             <!-- 404 -->
             
         </h1>
@@ -267,7 +267,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">177</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">2</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -396,24 +396,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a>문제1.</h2><pre><code>ANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.
-ANIMAL_INS 테이블 구조는 다음과 같으며, ANIMAL_ID, ANIMAL_TYPE, DATETIME,
-INTAKE_CONDITION, NAME, SEX_UPON_INTAKE는 각각 동물의 아이디, 생물 종,
-보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</code></pre><h3 id="ANIMAL-INS-TABLE"><a href="#ANIMAL-INS-TABLE" class="headerlink" title="ANIMAL_INS TABLE"></a>ANIMAL_INS TABLE</h3><p><img src="/assets/img/animalin.PNG" alt="inTable"></p>
-<pre><code>ANIMAL_OUTS 테이블은 동물 보호소에서 입양 보낸 동물의 정보를 담은
-테이블입니다. ANIMAL_OUTS 테이블 구조는 다음과 같으며, ANIMAL_ID,
-ANIMAL_TYPE, DATETIME, NAME, SEX_UPON_OUTCOME는 각각 동물의 아이디, 생물
-종, 입양일, 이름, 성별 및 중성화 여부를 나타냅니다. ANIMAL_OUTS 테이블의
-ANIMAL_ID는 ANIMAL_INS의 ANIMAL_ID의 외래 키입니다.</code></pre><h3 id="ANIMAL-OUTS-TABLE"><a href="#ANIMAL-OUTS-TABLE" class="headerlink" title="ANIMAL_OUTS TABLE"></a>ANIMAL_OUTS TABLE</h3><p><img src="/assets/img/animalout.PNG" alt="outTable"></p>
-<h2 id="1번-오래-보호한-동물-1"><a href="#1번-오래-보호한-동물-1" class="headerlink" title="1번. 오래 보호한 동물(1)"></a><a href="https://programmers.co.kr/learn/courses/30/lessons/59044" rel="external nofollow noopener noreferrer" target="_blank">1번. 오래 보호한 동물(1)</a></h2><pre><code>아직 입양을 못 간 동물 중, 가장 오래 보호소에 있었던 동물 3마리의 이름과 보호 
-시작일을 조회하는 SQL문을 작성해주세요. 이때 결과는 보호 시작일 순으로 
-조회해야 합니다.</code></pre><h2 id="1번-답안"><a href="#1번-답안" class="headerlink" title="1번 답안"></a>1번 답안</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> animal_id , <span class="keyword">name</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line"><span class="keyword">WHERE</span>  animal_id  <span class="keyword">NOT</span> <span class="keyword">IN</span>( <span class="keyword">SELECT</span> animal_id</span><br><span class="line">    <span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2번-없어진-기록-찾기"><a href="#2번-없어진-기록-찾기" class="headerlink" title="2번. 없어진 기록 찾기"></a><a href="https://programmers.co.kr/learn/courses/30/lessons/59042" rel="external nofollow noopener noreferrer" target="_blank">2번. 없어진 기록 찾기</a></h2><pre><code>천재지변으로 인해 일부 데이터가 유실되었습니다. 입양을 간 기록은 있는데,
-보호소에 들어온 기록이 없는 동물의 ID와 이름을 ID 순으로 조회하는 SQL문을 
-작성해주세요.</code></pre><h2 id="2번-답안"><a href="#2번-답안" class="headerlink" title="2번 답안"></a>2번 답안</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> animal_id , <span class="keyword">name</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line"><span class="keyword">WHERE</span>  animal_id  <span class="keyword">NOT</span> <span class="keyword">IN</span>( <span class="keyword">SELECT</span> animal_id</span><br><span class="line">    <span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
+        <blockquote>
 <p>하루를 기록하다</p>
 </blockquote>
 
@@ -424,7 +407,7 @@ ANIMAL_ID는 ANIMAL_INS의 ANIMAL_ID의 외래 키입니다.</code></pre><h3 id=
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">https://khs9628.github.io/2019/09/07/DBtest2/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">September 7th 2019, 6:40:40 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">September 7th 2019, 7:15:50 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/DBtest2/">September 7th 2019, 8:56:21 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -455,7 +438,7 @@ ANIMAL_ID는 ANIMAL_INS의 ANIMAL_ID의 외래 키입니다.</code></pre><h3 id=
         
         var disqus_config = function () {
         this.page.url = "https://khs9628.github.io/2019/09/07/DBtest2/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "DBtest2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = "NEXT"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function () { // DON'T EDIT BELOW THIS LINE
@@ -589,7 +572,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#문제1"><span class="toc-number">1.</span> <span class="toc-text">문제1.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ANIMAL-INS-TABLE"><span class="toc-number">1.1.</span> <span class="toc-text">ANIMAL_INS TABLE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ANIMAL-OUTS-TABLE"><span class="toc-number">1.2.</span> <span class="toc-text">ANIMAL_OUTS TABLE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1번-오래-보호한-동물-1"><span class="toc-number">2.</span> <span class="toc-text">1번. 오래 보호한 동물(1)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1번-답안"><span class="toc-number">3.</span> <span class="toc-text">1번 답안</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2번-없어진-기록-찾기"><span class="toc-number">4.</span> <span class="toc-text">2번. 없어진 기록 찾기</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2번-답안"><span class="toc-number">5.</span> <span class="toc-text">2번 답안</span></a></li></ol>
+        
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -654,7 +637,7 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/07</span><a class="archive-post-title" href="/2019/09/07/DBtest2/">DBtest2</a>
+            <span class="archive-post-date">09/07</span><a class="archive-post-title" href="/2019/09/07/DBtest2/">NEXT</a>
         </li>
     
     
@@ -664,7 +647,7 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/07</span><a class="archive-post-title" href="/2019/09/07/codingTest1/">Hash CodingTEST1</a>
+            <span class="archive-post-date">09/07</span><a class="archive-post-title" href="/2019/09/07/codingTest1/">Hash 알고리즘</a>
         </li>
     
     
