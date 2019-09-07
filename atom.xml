@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-07T11:56:21.963Z</updated>
+  <updated>2019-09-07T12:11:16.042Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>전화번호 목록</title>
+    <link href="https://khs9628.github.io/2019/09/07/codingTest2/"/>
+    <id>https://khs9628.github.io/2019/09/07/codingTest2/</id>
+    <published>2019-09-07T12:05:57.000Z</published>
+    <updated>2019-09-07T12:11:16.042Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.전화번호가 다음과 같을 경우, 구조대 전화번호는 영석이의 전화번호의 접두사입니다.    * 구조대 : 119    * 박준영 : 97 674 223    * 지영석 : 11 9552 4421전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때, 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote><ul><li>phone_book의 길이는 1 이상 1,000,000 이하입니다.</li><li>각 전화번호의 길이는 1 이상 20 이하입니다.</li></ul></blockquote><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest2.PNG" alt="RESULT"></p><h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">solution</span><span class="params">(String[] phone_book)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> answer = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;문제1&quot;&gt;&lt;a href=&quot;#문제1&quot; class=&quot;headerlink&quot; title=&quot;문제1.&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42576&quot; rel=&quot;exte
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>NEXT</title>
@@ -64,11 +86,11 @@
   </entry>
   
   <entry>
-    <title>Hash 알고리즘</title>
+    <title>완주하지 못한 선수</title>
     <link href="https://khs9628.github.io/2019/09/07/codingTest1/"/>
     <id>https://khs9628.github.io/2019/09/07/codingTest1/</id>
     <published>2019-09-07T06:17:57.000Z</published>
-    <updated>2019-09-07T11:56:02.769Z</updated>
+    <updated>2019-09-07T12:01:03.950Z</updated>
     
     <content type="html"><![CDATA[<h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>수많은 마라톤 선수들이 마라톤에 참여하였습니다.   단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote><ul><li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li><li>completion의 길이는 participant의 길이보다 1 작습니다.</li><li>참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li><li>참가자 중에는 동명이인이 있을 수 있습니다.</li></ul></blockquote><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest1.PNG" alt="RESULT"></p><h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">solution</span><span class="params">(String[] participant, String[] completion)</span> </span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; participant.length; i++)&#123;</span><br><span class="line">            Boolean stop = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; completion.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                  completion[j] = <span class="keyword">null</span>;</span><br><span class="line">                  stop = <span class="keyword">false</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(stop == <span class="keyword">true</span>)&#123;</span><br><span class="line">                    answer = participant[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="cf-HASH란"><a href="#cf-HASH란" class="headerlink" title="cf) HASH란?"></a>cf) HASH란?</h2><blockquote><p>2<br>1</p></blockquote><h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
     
@@ -86,13 +108,13 @@
   </entry>
   
   <entry>
-    <title>처음 글</title>
+    <title>목차</title>
     <link href="https://khs9628.github.io/2019/09/06/first/"/>
     <id>https://khs9628.github.io/2019/09/06/first/</id>
     <published>2019-09-06T13:18:44.000Z</published>
-    <updated>2019-09-07T11:55:38.592Z</updated>
+    <updated>2019-09-07T11:58:54.484Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h2 id="기술-블로그-관련-POST"><a href="#기술-블로그-관련-POST" class="headerlink" title="기술 블로그 관련 POST"></a>기술 블로그 관련 POST</h2><h3 id="1-SPRING-개념정리"><a href="#1-SPRING-개념정리" class="headerlink" title="1. SPRING 개념정리"></a>1. SPRING 개념정리</h3><pre><code>* Tiles 프레임워크</code></pre><h3 id="2-Django-React-공부"><a href="#2-Django-React-공부" class="headerlink" title="2. Django / React 공부"></a>2. Django / React 공부</h3><h3 id="3-알고리즘-DB-문제-정리"><a href="#3-알고리즘-DB-문제-정리" class="headerlink" title="3. 알고리즘 / DB 문제 정리"></a>3. 알고리즘 / DB 문제 정리</h3><ul><li><p>코딩 테스트 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/codingTest1/">HASH 알고리즘</a></li><li>NEXT</li></ol></li><li><p>DB 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/DBtest1/">7DAYSQL 하루 2문제 14문제</a></li><li>NEXT</li></ol></li></ul><h3 id="4-개념공부"><a href="#4-개념공부" class="headerlink" title="4. 개념공부"></a>4. 개념공부</h3><pre><code>* REST란?</code></pre><h3 id="5-포토폴리오"><a href="#5-포토폴리오" class="headerlink" title="5. 포토폴리오"></a>5. 포토폴리오</h3><pre><code>* WorkManager* GuardOWL* 나왐마* 5DUCKU</code></pre><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h2 id="기술-블로그-관련-POST"><a href="#기술-블로그-관련-POST" class="headerlink" title="기술 블로그 관련 POST"></a>기술 블로그 관련 POST</h2><h3 id="1-SPRING-개념정리"><a href="#1-SPRING-개념정리" class="headerlink" title="1. SPRING 개념정리"></a>1. SPRING 개념정리</h3><pre><code>* Tiles 프레임워크</code></pre><h3 id="2-Django-React-공부"><a href="#2-Django-React-공부" class="headerlink" title="2. Django / React 공부"></a>2. Django / React 공부</h3><h3 id="3-알고리즘-DB-문제-정리"><a href="#3-알고리즘-DB-문제-정리" class="headerlink" title="3. 알고리즘 / DB 문제 정리"></a>3. 알고리즘 / DB 문제 정리</h3><ul><li><p>코딩 테스트 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/codingTest1/">HASH 알고리즘</a></li><li><a href>NEXT</a></li></ol></li><li><p>DB 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/DBtest1/">7daySQL</a></li><li><a href>NEXT</a></li></ol></li></ul><h3 id="4-개념공부"><a href="#4-개념공부" class="headerlink" title="4. 개념공부"></a>4. 개념공부</h3><pre><code>* REST란?</code></pre><h3 id="5-포토폴리오"><a href="#5-포토폴리오" class="headerlink" title="5. 포토폴리오"></a>5. 포토폴리오</h3><pre><code>* WorkManager* GuardOWL* 나왐마* 5DUCKU</code></pre><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
     
     <summary type="html">
     

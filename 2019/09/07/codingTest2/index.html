@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="https://khs9628.github.io/archives/">
+<link rel="canonical" href="https://khs9628.github.io/2019/09/07/codingtest2/">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>khs9628</title>
+    <title>전화번호 목록 · khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,12 +204,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">현수쓰 기술블로그</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">전화번호 목록</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">현수쓰 기술블로그</a>
 </header>
@@ -221,24 +232,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            전화번호 목록
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">108</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/09/07</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -339,20 +394,9 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/codingTest2/">
-            
-                <span>전화번호 목록</span>
-        </a>
-        <div class="abstract-content">
-            문제1.전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.
 전화번호가 다음과 같을 경우, 구조대 전화번호는 영석이의 전화번호의 접두사입니다.
     * 구조대 : 119
     * 박준영 : 97 674 223
@@ -360,159 +404,101 @@
 전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 
 solution 함수의 매개변수로 주어질 때, 
 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 
-그렇지 않으면 true를 return 하도록 soluti...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote>
+<ul>
+<li>phone_book의 길이는 1 이상 1,000,000 이하입니다.</li>
+<li>각 전화번호의 길이는 1 이상 20 이하입니다.</li>
+</ul>
+</blockquote>
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest2.PNG" alt="RESULT"></p>
+<h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">solution</span><span class="params">(String[] phone_book)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> answer = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>하루를 기록하다</p>
+</blockquote>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/DBtest2/">
-            
-                <span>NEXT</span>
-        </a>
-        <div class="abstract-content">
-            
-하루를 기록하다
-
-
+        <div class="license-wrapper">
+            <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
+            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/07/codingTest2/">https://khs9628.github.io/2019/09/07/codingTest2/</a>
+            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest2/">September 7th 2019, 9:05:57 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest2/">September 7th 2019, 9:11:16 pm</a>
+            </p><p>license：@madeby현수쓰</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/DBtest1/">
-            
-                <span>7DAYSQL Challenge</span>
-        </a>
-        <div class="abstract-content">
-            7DAYSQL ChallengeANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.
-ANIMAL_INS 테이블 구조는 다음과 같으며, ANIMAL_ID, ANIMAL_TYPE, DATETIME,
-INTAKE_CONDITION, NAME, SEX_UPON_INTAKE는 각각 동물의 아이디, 생물 종,
-보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.ANIMAL_INS TABLE
-
-
-NAME
-TYPE
-NULLABLE
-
-
-
-ANIMAL_ID
-VARCHAR(N)
-FALSE
-
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/codingTest1/">
-            
-                <span>완주하지 못한 선수</span>
-        </a>
-        <div class="abstract-content">
-            문제1.수많은 마라톤 선수들이 마라톤에 참여하였습니다.   
-단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   
-마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴
-배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 
-함수를 작성해주세요.제한사항
-
-마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.
-completion의 길이는 participant의 길이보다 1 작습니다.
-참가자의 이름은 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/06/first/">
-            
-                <span>목차</span>
-        </a>
-        <div class="abstract-content">
-            MAIN 목차 및 정리개념기술 블로그 관련 POST1. SPRING 개념정리* Tiles 프레임워크2. Django / React 공부3. 알고리즘 / DB 문제 정리
-코딩 테스트 문제
-
-HASH 알고리즘
-NEXT
-
-
-DB 문제
-
-7daySQL
-NEXT
-
-
-
-4. 개념공부* REST란?5. 포토폴리오* WorkManager
-* GuardOWL
-* 나왐마
-* 5DUCKU
-하루를 기록하다
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/09/07/DBtest2/" title="NEXT">
+                    <div class="prevTitle">NEXT</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    <!-- 
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        
+        var disqus_config = function () {
+        this.page.url = "https://khs9628.github.io/2019/09/07/codingTest2/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "전화번호 목록"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://khs9628.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ -->
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://khs9628.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
+                            
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -598,6 +584,13 @@ NEXT
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#문제1"><span class="toc-number">1.</span> <span class="toc-text">문제1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#제한사항"><span class="toc-number">2.</span> <span class="toc-text">제한사항</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#입출력-예"><span class="toc-number">3.</span> <span class="toc-text">입출력 예</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1차-답안-gt-Hash-알고리즘-X"><span class="toc-number">4.</span> <span class="toc-text">1차 답안 -&gt; Hash 알고리즘 X</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -769,8 +762,10 @@ jsonContent:
     
     
     <!-- async load share.js -->
-     
     
+        <script src="/scripts/share.js" async></script>    
+     
+    </body>
 </html>
 
 
