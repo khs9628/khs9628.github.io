@@ -265,9 +265,15 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="알고리즘">알고리즘</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">225</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">313</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -396,11 +402,8 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="문제1"><a href="#문제1" class="headerlink" title="문제1."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">문제1.</a></h2><pre><code>수많은 마라톤 선수들이 마라톤에 참여하였습니다.   
-단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   
-마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴
-배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 
-함수를 작성해주세요.</code></pre><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote>
+        <h2 id="완주하지-못한-선수"><a href="#완주하지-못한-선수" class="headerlink" title="완주하지 못한 선수."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">완주하지 못한 선수.</a></h2><p>수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</p>
+<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote>
 <ul>
 <li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li>
 <li>completion의 길이는 participant의 길이보다 1 작습니다.</li>
@@ -414,9 +417,9 @@ height:50vh;
 <h2 id="cf-HASH란"><a href="#cf-HASH란" class="headerlink" title="cf) HASH란?"></a>cf) HASH란?</h2><blockquote>
 <p>2<br>1</p>
 </blockquote>
-<h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        Map&lt;String, Integer&gt; map = <span class="keyword">new</span> Hashmap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(String part: participant)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(part) == <span class="keyword">null</span>)&#123;</span><br><span class="line">                map.get(part,<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                val = map.get(part)+<span class="number">1</span>;</span><br><span class="line">                map.put(part,val);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(String comp : completion)&#123;</span><br><span class="line">            val = map.get(comp)-<span class="number">1</span>;</span><br><span class="line">            map.put(comp,val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(String key : map.keySet())&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(key)==<span class="number">1</span>)&#123;</span><br><span class="line">                answer = key;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> answer;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>하루를 기록하다</p>
@@ -429,7 +432,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">https://khs9628.github.io/2019/09/07/codingTest1/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 7th 2019, 3:17:57 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 7th 2019, 9:01:03 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 8th 2019, 11:18:52 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -599,7 +602,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#문제1"><span class="toc-number">1.</span> <span class="toc-text">문제1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#제한사항"><span class="toc-number">2.</span> <span class="toc-text">제한사항</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#입출력-예"><span class="toc-number">3.</span> <span class="toc-text">입출력 예</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1차-답안-gt-Hash-알고리즘-X"><span class="toc-number">4.</span> <span class="toc-text">1차 답안 -&gt; Hash 알고리즘 X</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cf-HASH란"><span class="toc-number">5.</span> <span class="toc-text">cf) HASH란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2차-답안-gt-Hash-알고리즘"><span class="toc-number">6.</span> <span class="toc-text">2차 답안 -&gt; Hash 알고리즘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3차-답안-gt-sort-메소드-이용"><span class="toc-number">7.</span> <span class="toc-text">3차 답안 -&gt; sort()메소드 이용</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#완주하지-못한-선수"><span class="toc-number">1.</span> <span class="toc-text">완주하지 못한 선수.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#제한사항"><span class="toc-number">2.</span> <span class="toc-text">제한사항</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#입출력-예"><span class="toc-number">3.</span> <span class="toc-text">입출력 예</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1차-답안-gt-Hash-알고리즘-X"><span class="toc-number">4.</span> <span class="toc-text">1차 답안 -&gt; Hash 알고리즘 X</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cf-HASH란"><span class="toc-number">5.</span> <span class="toc-text">cf) HASH란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2차-답안-gt-Hash-알고리즘"><span class="toc-number">6.</span> <span class="toc-text">2차 답안 -&gt; Hash 알고리즘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3차-답안-gt-sort-메소드-이용"><span class="toc-number">7.</span> <span class="toc-text">3차 답안 -&gt; sort()메소드 이용</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -612,12 +615,6 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
     
     
     
@@ -706,6 +703,10 @@ s.setAttribute('data-timestamp', +new Date());
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
+    
+        <span class="sidebar-tag-name" data-tags="알고리즘"><span class="iconfont-archer">&#xe606;</span>알고리즘</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
