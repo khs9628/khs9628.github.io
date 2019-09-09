@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="https://khs9628.github.io/archives/2019/">
+<link rel="canonical" href="https://khs9628.github.io/2019/09/09/django2/">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>khs9628</title>
+    <title>RESTFUL API? · khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,12 +204,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">현수쓰 기술블로그</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">RESTFUL API?</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">현수쓰 기술블로그</a>
 </header>
@@ -221,24 +232,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            RESTFUL API?
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Django">Django</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">113</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/09/09</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -339,289 +400,113 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/09/Django2/">
-            
-                <span>RESTFUL API?</span>
-        </a>
-        <div class="abstract-content">
-            Restful Architecture
-개념
-
-REST? - REpresentational State TransferHTTP를 이용해 통신하는 네트워크상에서 정한 약속분산 하이퍼미디어 시스템을 위한 소프트웨어 설계 형식
-자원을 대표하는 단어 OR 식별자로 자원의 상태를 전송하는 방법
-자원을 이름으로 구분하여 상태를 전송하는 방법
-하위 호환을 깨뜨리지 않고 독립적 발전할 수 있게 도와주는 방법
-
-REST 필요충분조건?
-
-Server - Client
-STATELESS
-Cache
-Uniform Interface
-Layered Syst...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Django">Django</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="Restful-Architecture"><a href="#Restful-Architecture" class="headerlink" title="Restful Architecture"></a>Restful Architecture</h3><ol>
+<li>개념</li>
+</ol>
+<h4 id="REST-REpresentational-State-Transfer"><a href="#REST-REpresentational-State-Transfer" class="headerlink" title="REST? - REpresentational State Transfer"></a>REST? - REpresentational State Transfer</h4><p>HTTP를 이용해 통신하는 네트워크상에서 정한 약속<br>분산 하이퍼미디어 시스템을 위한 소프트웨어 설계 형식</p>
+<p>자원을 대표하는 단어 OR 식별자로 자원의 상태를 전송하는 방법</p>
+<p>자원을 이름으로 구분하여 상태를 전송하는 방법</p>
+<p>하위 호환을 깨뜨리지 않고 독립적 발전할 수 있게 도와주는 방법</p>
+<blockquote>
+<p>REST 필요충분조건?</p>
+<ul>
+<li>Server - Client</li>
+<li>STATELESS</li>
+<li>Cache</li>
+<li>Uniform Interface</li>
+<li>Layered System</li>
+<li>Code-On-Demand</li>
+</ul>
+</blockquote>
+<h4 id="API-Application-Program-Interface"><a href="#API-Application-Program-Interface" class="headerlink" title="API? -  Application Program Interface"></a>API? -  Application Program Interface</h4><p><a href="/source/img/api.PNG">API</a><br>특정방식으로 response나 request를 보내는 형식</p>
+<h4 id="RESTAPI"><a href="#RESTAPI" class="headerlink" title="RESTAPI?"></a>RESTAPI?</h4><p>REST 아키텍쳐 스타일을 따르는 API<br>HTTP로 CRUD를 구현할 수 있는 API?</p>
+<p>-&gt; JSON : 모든 태그가 만들어져 있는 것도 아님 만든 이가 정의하기 나름  -&gt; RESTFUL하지 못함</p>
+<h4 id="현재의-RESTFUL-API"><a href="#현재의-RESTFUL-API" class="headerlink" title="현재의 RESTFUL API?"></a>현재의 RESTFUL API?</h4><p>Self-Description (x)<br>HATROAS(x)<br>-&gt; 잘 지켜지지 않고 있다!</p>
+<h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/09/Django1/">
-            
-                <span>CBV(Class Based View)</span>
-        </a>
-        <div class="abstract-content">
-            Restful API Django
-JSON (JavaScript Object Notation)데이터의 송수신을 자바스크립트의 객체로서 수행할 수 있게끔하는 가벼운 문자열 데이터 표현식&lt;&gt; XML(Extensible Markup Language)만국 공통 자료형 -&gt; 문자열문자열로 변환해서 전송하는 과정 -&gt; 직렬화(Serializer)
-123456789101112131415import jsondiary = &#123;    'id' : 3,    'title' : 'I\'m starving',    'bo...
+        <div class="license-wrapper">
+            <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
+            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/09/Django2/">https://khs9628.github.io/2019/09/09/Django2/</a>
+            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 9th 2019, 5:06:04 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 9th 2019, 5:12:11 pm</a>
+            </p><p>license：@madeby현수쓰</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Django">Django</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/codingTest2/">
-            
-                <span>전화번호 목록</span>
-        </a>
-        <div class="abstract-content">
-            전화번호 목록전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다. 전화번호가 다음과 같을 경우,구조대 전화번호는 영석이의 전화번호의 접두사입니다.
-
-구조대 : 119
-박준영 : 97 674 223
-지영석 : 11 9552 4421
-
-전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때, 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
-제한...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="알고리즘">알고리즘</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/DBtest2/">
-            
-                <span>NEXT</span>
-        </a>
-        <div class="abstract-content">
-            
-하루를 기록하다
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="DB">DB</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/DBtest1/">
-            
-                <span>7DAYSQL Challenge</span>
-        </a>
-        <div class="abstract-content">
-            7DAYSQL ChallengeANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.
-ANIMAL_INS 테이블 구조는 다음과 같으며, ANIMAL_ID, ANIMAL_TYPE, DATETIME,
-INTAKE_CONDITION, NAME, SEX_UPON_INTAKE는 각각 동물의 아이디, 생물 종,
-보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.ANIMAL_INS TABLE
-
-
-NAME
-TYPE
-NULLABLE
-
-
-
-ANIMAL_ID
-VARCHAR(N)
-FALSE
-
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="DB">DB</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/07/codingTest1/">
-            
-                <span>완주하지 못한 선수</span>
-        </a>
-        <div class="abstract-content">
-            완주하지 못한 선수.수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.
-제한사항
-
-마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.
-completion의 길이는 participant의 길이보다 1 작습니다.
-참가자의 이...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="알고리즘">알고리즘</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/06/first/">
-            
-                <span>목차</span>
-        </a>
-        <div class="abstract-content">
-            MAIN 목차 및 정리개념기술 블로그 관련 POST1. SPRING 개념정리
-Tiles 프레임워크
-
-2. Django
-CBV
-Serializer
-?
-
-3. React4. 알고리즘 / DB 문제 정리
-코딩 테스트 문제
-
-HASH 알고리즘
-완주하지 못한 선수
-전화번호 목록
-
-
-NEXT
-
-
-DB 문제
-
-7daySQL
-NEXT
-
-
-
-5. 포토폴리오
-WorkManager
-GuardOWL
-나왐마
-5DUCKU
-
-
-하루를 기록하다
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/09/09/Django1/" title="CBV(Class Based View)">
+                    <div class="prevTitle">CBV(Class Based View)</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    <!-- 
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        
+        var disqus_config = function () {
+        this.page.url = "https://khs9628.github.io/2019/09/09/Django2/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "RESTFUL API?"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://khs9628.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ -->
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://khs9628.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
+                            
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -707,6 +592,13 @@ GuardOWL
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Restful-Architecture"><span class="toc-number">1.</span> <span class="toc-text">Restful Architecture</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#REST-REpresentational-State-Transfer"><span class="toc-number">1.1.</span> <span class="toc-text">REST? - REpresentational State Transfer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#API-Application-Program-Interface"><span class="toc-number">1.2.</span> <span class="toc-text">API? -  Application Program Interface</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RESTAPI"><span class="toc-number">1.3.</span> <span class="toc-text">RESTAPI?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#현재의-RESTFUL-API"><span class="toc-number">1.4.</span> <span class="toc-text">현재의 RESTFUL API?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-직렬화-Serializer"><span class="toc-number">2.</span> <span class="toc-text">JSON 직렬화 - Serializer</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -904,8 +796,10 @@ jsonContent:
     
     
     <!-- async load share.js -->
-     
     
+        <script src="/scripts/share.js" async></script>    
+     
+    </body>
 </html>
 
 

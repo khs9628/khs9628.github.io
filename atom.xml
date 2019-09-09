@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-08T14:19:00.677Z</updated>
+  <updated>2019-09-09T08:12:11.166Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RESTFUL API?</title>
+    <link href="https://khs9628.github.io/2019/09/09/Django2/"/>
+    <id>https://khs9628.github.io/2019/09/09/Django2/</id>
+    <published>2019-09-09T08:06:04.000Z</published>
+    <updated>2019-09-09T08:12:11.166Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Restful-Architecture"><a href="#Restful-Architecture" class="headerlink" title="Restful Architecture"></a>Restful Architecture</h3><ol><li>개념</li></ol><h4 id="REST-REpresentational-State-Transfer"><a href="#REST-REpresentational-State-Transfer" class="headerlink" title="REST? - REpresentational State Transfer"></a>REST? - REpresentational State Transfer</h4><p>HTTP를 이용해 통신하는 네트워크상에서 정한 약속<br>분산 하이퍼미디어 시스템을 위한 소프트웨어 설계 형식</p><p>자원을 대표하는 단어 OR 식별자로 자원의 상태를 전송하는 방법</p><p>자원을 이름으로 구분하여 상태를 전송하는 방법</p><p>하위 호환을 깨뜨리지 않고 독립적 발전할 수 있게 도와주는 방법</p><blockquote><p>REST 필요충분조건?</p><ul><li>Server - Client</li><li>STATELESS</li><li>Cache</li><li>Uniform Interface</li><li>Layered System</li><li>Code-On-Demand</li></ul></blockquote><h4 id="API-Application-Program-Interface"><a href="#API-Application-Program-Interface" class="headerlink" title="API? -  Application Program Interface"></a>API? -  Application Program Interface</h4><p><a href="/source/img/api.PNG">API</a><br>특정방식으로 response나 request를 보내는 형식</p><h4 id="RESTAPI"><a href="#RESTAPI" class="headerlink" title="RESTAPI?"></a>RESTAPI?</h4><p>REST 아키텍쳐 스타일을 따르는 API<br>HTTP로 CRUD를 구현할 수 있는 API?</p><p>-&gt; JSON : 모든 태그가 만들어져 있는 것도 아님 만든 이가 정의하기 나름  -&gt; RESTFUL하지 못함</p><h4 id="현재의-RESTFUL-API"><a href="#현재의-RESTFUL-API" class="headerlink" title="현재의 RESTFUL API?"></a>현재의 RESTFUL API?</h4><p>Self-Description (x)<br>HATROAS(x)<br>-&gt; 잘 지켜지지 않고 있다!</p><h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Restful-Architecture&quot;&gt;&lt;a href=&quot;#Restful-Architecture&quot; class=&quot;headerlink&quot; title=&quot;Restful Architecture&quot;&gt;&lt;/a&gt;Restful Architecture&lt;/h3&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Django" scheme="https://khs9628.github.io/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CBV(Class Based View)</title>
+    <link href="https://khs9628.github.io/2019/09/09/Django1/"/>
+    <id>https://khs9628.github.io/2019/09/09/Django1/</id>
+    <published>2019-09-09T07:33:40.000Z</published>
+    <updated>2019-09-09T08:39:05.533Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Restful-API-Django"><a href="#Restful-API-Django" class="headerlink" title="Restful API Django"></a>Restful API Django</h2><p><img src="/assets/img/RestAPI.png" alt="RESTAPI"></p><h4 id="JSON-JavaScript-Object-Notation"><a href="#JSON-JavaScript-Object-Notation" class="headerlink" title="JSON (JavaScript Object Notation)"></a>JSON (JavaScript Object Notation)</h4><p>데이터의 송수신을 자바스크립트의 객체로서 수행할 수 있게끔하는 가벼운 문자열 데이터 표현식<br>&lt;&gt; XML(Extensible Markup Language)<br>만국 공통 자료형 -&gt; 문자열<br>문자열로 변환해서 전송하는 과정 -&gt; 직렬화(Serializer)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">diary = &#123;</span><br><span class="line">    <span class="string">'id'</span> : <span class="number">3</span>,</span><br><span class="line">    <span class="string">'title'</span> : <span class="string">'I\'m starving'</span>,</span><br><span class="line">    <span class="string">'body'</span>: <span class="string">' what&gt;??'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">print(type(diary)) <span class="comment">#dic</span></span><br><span class="line"></span><br><span class="line">json_diary = json.dump(diary) <span class="comment">#dictionary -&gt; json</span></span><br><span class="line">print(type(json_diary)) <span class="comment">#str</span></span><br><span class="line"></span><br><span class="line">back_diary = json.loads(json_diary) <span class="comment">#json -&gt; dictionary</span></span><br><span class="line">print(type(back_diary)) <span class="comment"># dic</span></span><br></pre></td></tr></table></figure><p><a href="http://www.json.org/" rel="external nofollow noopener noreferrer" target="_blank">JSON참고</a></p><h4 id="Http-Request-amp-Method"><a href="#Http-Request-amp-Method" class="headerlink" title="Http Request &amp; Method"></a>Http Request &amp; Method</h4><p>Http Request</p><table><thead><tr><th>Method</th><th>Meaning</th></tr></thead><tbody><tr><td>GET</td><td>요청받은 URL의 정보를 검색하여 응답한다.</td></tr><tr><td>POST</td><td>요청된 자원을 생성(CREATE)한다.</td></tr><tr><td>PUT</td><td>요청된 자원을 수정(UPDATE)한다.</td></tr><tr><td>DELETE</td><td>요청된 자원을 삭제(DELETE)한다.</td></tr><tr><td>PATCH</td><td>요청된 자원의 일부를 교체(수정)한다.</td></tr><tr><td>OPTION</td><td>웹서버에서 지원되는 메소드의 종류 확인</td></tr></tbody></table><p>HTTP Response</p><blockquote><p>1xx(정보) : 요청을 받았으며 프로세스를 계속한다.<br>2xx(성공) : 요청을 성공적으로 받았으며 인식했고 수용하였다.<br>3xx(리다이렉션) : 요청 완료를 위해 추가 작업 조치가 필요하다.<br>4xx(클라이언트 오류) : 요청의 문법이 잘못되었거나 요청을 처리할 수 없다.<br>5xx(서버 오류) : 서버가 명백히 유효한 요청에 대해 충족을 실패했다.</p></blockquote><h4 id="Httpie"><a href="#Httpie" class="headerlink" title="Httpie"></a>Httpie</h4><p>Command Line으로 동작하는 Http Client</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade httpie <span class="comment">#설치</span></span><br><span class="line">http [flags] [Method] URL [ITEM[ITME]]</span><br><span class="line"><span class="comment">#flags = 옵션</span></span><br><span class="line"><span class="comment">#Method = Request (GET / POST / PUT / DELETE / PATCH / OPTION)</span></span><br><span class="line"><span class="comment">#ITEM = 인자 #GET -&gt; X == A #POST -&gt; X = A</span></span><br></pre></td></tr></table></figure><p>POST</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#JSON 형식의 요청:</span></span><br><span class="line">http --json POST [주소] GET == 값 / POST = 값</span><br><span class="line"><span class="comment">#HTML form 형식의 요청:</span></span><br><span class="line">http --form POST [주소] GET == 값 / POST = 값</span><br></pre></td></tr></table></figure><p>HTML 방식<br><img src="/assets/img/httpPost.png" alt="예"><br>JSON방식<br><img src="/assets/img/httpPost2.png" alt="예2"></p><p><a href="https://httpie.org/" rel="external nofollow noopener noreferrer" target="_blank">HTTPIE 참고 사이트</a></p><h4 id="CBV-Generic-View-lt-gt-FBV"><a href="#CBV-Generic-View-lt-gt-FBV" class="headerlink" title="CBV(Generic View) &lt;&gt; FBV"></a>CBV(Generic View) &lt;&gt; FBV</h4><p>Class Based View &lt;&gt; Function Based View<br>3가지 질문<br>왜 클래스?<br>함수로 작성한 것과 무슨 차이?<br>Views.py는 뭘로 채워 넣어야 해? -&gt; callable object</p><p>function or class = callable object<br>class -&gt; 상속이 가능하다! -&gt; 중복의 제거 , 코드의 재사용</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Restful-API-Django&quot;&gt;&lt;a href=&quot;#Restful-API-Django&quot; class=&quot;headerlink&quot; title=&quot;Restful API Django&quot;&gt;&lt;/a&gt;Restful API Django&lt;/h2&gt;&lt;p&gt;&lt;img s
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Django" scheme="https://khs9628.github.io/tags/Django/"/>
+    
+  </entry>
   
   <entry>
     <title>전화번호 목록</title>
@@ -120,9 +168,9 @@
     <link href="https://khs9628.github.io/2019/09/06/first/"/>
     <id>https://khs9628.github.io/2019/09/06/first/</id>
     <published>2019-09-06T13:18:44.000Z</published>
-    <updated>2019-09-08T13:54:57.337Z</updated>
+    <updated>2019-09-09T07:38:30.189Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h2 id="기술-블로그-관련-POST"><a href="#기술-블로그-관련-POST" class="headerlink" title="기술 블로그 관련 POST"></a>기술 블로그 관련 POST</h2><h3 id="1-SPRING-개념정리"><a href="#1-SPRING-개념정리" class="headerlink" title="1. SPRING 개념정리"></a>1. SPRING 개념정리</h3><ul><li>Tiles 프레임워크</li></ul><h3 id="2-Django-React-공부"><a href="#2-Django-React-공부" class="headerlink" title="2. Django / React 공부"></a>2. Django / React 공부</h3><h3 id="3-알고리즘-DB-문제-정리"><a href="#3-알고리즘-DB-문제-정리" class="headerlink" title="3. 알고리즘 / DB 문제 정리"></a>3. 알고리즘 / DB 문제 정리</h3><ul><li><p>코딩 테스트 문제</p><ol><li>HASH 알고리즘<ul><li><a href="https://khs9628.github.io/2019/09/07/codingTest1/">완주하지 못한 선수</a></li><li><a href="https://khs9628.github.io/2019/09/07/codingTest2/">전화번호 목록</a></li></ul></li><li><a href>NEXT</a></li></ol></li><li><p>DB 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/DBtest1/">7daySQL</a></li><li><a href>NEXT</a></li></ol></li></ul><h3 id="4-개념공부"><a href="#4-개념공부" class="headerlink" title="4. 개념공부"></a>4. 개념공부</h3><ul><li>REST란?</li></ul><h3 id="5-포토폴리오"><a href="#5-포토폴리오" class="headerlink" title="5. 포토폴리오"></a>5. 포토폴리오</h3><ul><li>WorkManager</li><li>GuardOWL</li><li>나왐마</li><li>5DUCKU</li></ul><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h2 id="기술-블로그-관련-POST"><a href="#기술-블로그-관련-POST" class="headerlink" title="기술 블로그 관련 POST"></a>기술 블로그 관련 POST</h2><h3 id="1-SPRING-개념정리"><a href="#1-SPRING-개념정리" class="headerlink" title="1. SPRING 개념정리"></a>1. SPRING 개념정리</h3><ul><li>Tiles 프레임워크</li></ul><h3 id="2-Django"><a href="#2-Django" class="headerlink" title="2. Django"></a>2. Django</h3><ol><li>CBV</li><li>Serializer</li><li>?</li></ol><h3 id="3-React"><a href="#3-React" class="headerlink" title="3. React"></a>3. React</h3><h3 id="4-알고리즘-DB-문제-정리"><a href="#4-알고리즘-DB-문제-정리" class="headerlink" title="4. 알고리즘 / DB 문제 정리"></a>4. 알고리즘 / DB 문제 정리</h3><ul><li><p>코딩 테스트 문제</p><ol><li>HASH 알고리즘<ul><li><a href="https://khs9628.github.io/2019/09/07/codingTest1/">완주하지 못한 선수</a></li><li><a href="https://khs9628.github.io/2019/09/07/codingTest2/">전화번호 목록</a></li></ul></li><li><a href>NEXT</a></li></ol></li><li><p>DB 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/DBtest1/">7daySQL</a></li><li><a href>NEXT</a></li></ol></li></ul><h3 id="5-포토폴리오"><a href="#5-포토폴리오" class="headerlink" title="5. 포토폴리오"></a>5. 포토폴리오</h3><ul><li>WorkManager</li><li>GuardOWL</li><li>나왐마</li><li>5DUCKU</li></ul><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
     
     <summary type="html">
     

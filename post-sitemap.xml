@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2019/09/09/Django1/</loc>
+        <lastmod>2019-09-09T08:39:05.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/09/Django2/</loc>
+        <lastmod>2019-09-09T08:12:11.166Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/06/first/</loc>
+        <lastmod>2019-09-09T07:38:30.189Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2019/09/07/DBtest1/</loc>
         <lastmod>2019-09-08T14:19:10.939Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -34,14 +58,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/07/codingTest1/</loc>
         <lastmod>2019-09-08T14:18:52.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/06/first/</loc>
-        <lastmod>2019-09-08T13:54:57.337Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
