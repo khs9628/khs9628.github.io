@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="https://khs9628.github.io/2019/09/07/codingtest1/">
+<link rel="canonical" href="https://khs9628.github.io/2019/09/09/react1/">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>완주하지 못한 선수 · khs9628</title>
+    <title>React1 · khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,7 +218,7 @@
                 <a href="/">현수쓰 기술블로그</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">완주하지 못한 선수</a>
+                <a href="#" class="post-name">React1</a>
             </div>
     </div>
     
@@ -248,7 +248,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            완주하지 못한 선수
+            React1
             <!-- 404 -->
             
         </h1>
@@ -267,18 +267,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="알고리즘">알고리즘</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">313</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">407</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/09/07</span>
+                    <span class="post-intro-time">2019/09/09</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -402,27 +402,25 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="완주하지-못한-선수"><a href="#완주하지-못한-선수" class="headerlink" title="완주하지 못한 선수."></a><a href="https://programmers.co.kr/learn/courses/30/lessons/42576" rel="external nofollow noopener noreferrer" target="_blank">완주하지 못한 선수.</a></h2><p>수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.   마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열  completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</p>
-<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><blockquote>
-<ul>
-<li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li>
-<li>completion의 길이는 participant의 길이보다 1 작습니다.</li>
-<li>참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li>
-<li>참가자 중에는 동명이인이 있을 수 있습니다.</li>
-</ul>
+        <h2 id="Restful-API-Django"><a href="#Restful-API-Django" class="headerlink" title="Restful API Django"></a>Restful API Django</h2><h3 id="필수-JavaScript-개념"><a href="#필수-JavaScript-개념" class="headerlink" title="필수 JavaScript 개념"></a>필수 JavaScript 개념</h3><blockquote>
+<p>Arrow Function<br>Class &amp; Super<br>Asynchronous<br>Promise &amp; Async Func  </p>
 </blockquote>
-<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p><img src="/assets/img/codingtest1.PNG" alt="RESULT"></p>
-<h2 id="1차-답안-gt-Hash-알고리즘-X"><a href="#1차-답안-gt-Hash-알고리즘-X" class="headerlink" title="1차 답안 -&gt; Hash 알고리즘 X"></a>1차 답안 -&gt; Hash 알고리즘 X</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">solution</span><span class="params">(String[] participant, String[] completion)</span> </span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; participant.length; i++)&#123;</span><br><span class="line">            Boolean stop = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; completion.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(participant[i].equals(completion[j]))&#123;</span><br><span class="line">                  completion[j] = <span class="keyword">null</span>;</span><br><span class="line">                  stop = <span class="keyword">false</span>;</span><br><span class="line">                  <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(stop == <span class="keyword">true</span>)&#123;</span><br><span class="line">                    answer = participant[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Basic</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">plusTwo</span>(<span class="params">s</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s+<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Arrow Function</span></span><br><span class="line">plusTwo = <span class="function">(<span class="params">s</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s+<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//함축</span></span><br><span class="line">plusTwo = <span class="function"><span class="params">s</span> =&gt;</span> s+<span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(plusTwo(<span class="number">10</span>)) <span class="comment">//12</span></span><br><span class="line">-----------------------------------</span><br><span class="line"><span class="comment">//MAP &amp; FILTER</span></span><br><span class="line">arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">14</span>,<span class="number">323</span>,<span class="number">223</span>]</span><br><span class="line">arr_map = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> v*<span class="number">2</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//Arrow Function</span></span><br><span class="line">arr_map = arr.map(<span class="function"><span class="params">v</span> =&gt;</span> v*<span class="number">2</span>)<span class="comment">//2,4,6,8,10,12,14,16,18,26,646,446</span></span><br><span class="line">arr_filter = arr.filter(<span class="function"><span class="params">v</span>=&gt;</span>v&gt;<span class="number">10</span>)<span class="comment">//14,323,223</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="cf-HASH란"><a href="#cf-HASH란" class="headerlink" title="cf) HASH란?"></a>cf) HASH란?</h2><blockquote>
-<p>2<br>1</p>
-</blockquote>
-<h2 id="2차-답안-gt-Hash-알고리즘"><a href="#2차-답안-gt-Hash-알고리즘" class="headerlink" title="2차 답안 -&gt; Hash 알고리즘"></a>2차 답안 -&gt; Hash 알고리즘</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        String answer = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        Map&lt;String, Integer&gt; map = <span class="keyword">new</span> Hashmap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(String part: participant)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(part) == <span class="keyword">null</span>)&#123;</span><br><span class="line">                map.get(part,<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                val = map.get(part)+<span class="number">1</span>;</span><br><span class="line">                map.put(part,val);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(String comp : completion)&#123;</span><br><span class="line">            val = map.get(comp)-<span class="number">1</span>;</span><br><span class="line">            map.put(comp,val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(String key : map.keySet())&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(key)==<span class="number">1</span>)&#123;</span><br><span class="line">                answer = key;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> answer;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Class-amp-Super-클래스-상속"><a href="#Class-amp-Super-클래스-상속" class="headerlink" title="Class &amp; Super (클래스 상속)"></a>Class &amp; Super (클래스 상속)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//parent</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(leg)&#123;</span><br><span class="line">        <span class="keyword">this</span>.leg = leg</span><br><span class="line">    &#125;</span><br><span class="line">    printAnimal()&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name+<span class="string">"은 "</span>+<span class="built_in">String</span>(<span class="keyword">this</span>.leg)+<span class="string">"개의 다리를 가진다."</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//child</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lion</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name, leg)&#123;</span><br><span class="line">        <span class="keyword">super</span>(leg) <span class="comment">//부모의 생성자 (constructor)</span></span><br><span class="line">        <span class="keyword">this</span>.name =name</span><br><span class="line">    &#125;</span><br><span class="line">    getName()&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"내 이름은 "</span>+ <span class="keyword">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myLion = <span class="keyword">new</span> Lion(<span class="string">"king"</span>,<span class="number">4</span>)</span><br><span class="line">myLion.getName() <span class="comment">//내 이름은 king</span></span><br><span class="line">myLion.printAnimal() <span class="comment">//king은 4개의 다리를 갖는다.</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3차-답안-gt-sort-메소드-이용"><a href="#3차-답안-gt-sort-메소드-이용" class="headerlink" title="3차 답안 -&gt; sort()메소드 이용"></a>3차 답안 -&gt; sort()메소드 이용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">Solution</span><span class="params">(String[] participant, String[] completion)</span></span>&#123;</span><br><span class="line">        Arrays.sort(participant);</span><br><span class="line">        Arrays.sort(completion);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;completion.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(participant[i].equals(completion[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> participant[i];</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> participant[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Asynchronous-비동기성"><a href="#Asynchronous-비동기성" class="headerlink" title="Asynchronous(비동기성)"></a>Asynchronous(비동기성)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//callback 기본구조</span></span><br><span class="line"><span class="comment">//callBack -&gt; 다 되면 알려줘 : 비동기의 문제점을 알려줌</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomethingElseAsync</span>(<span class="params">callBack</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'doSomethingElseAsync: Wait for half a sec.'</span>)</span><br><span class="line">    setTimeout()&#123; callBack();,<span class="number">500</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">------------------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayhello</span>(<span class="params">name,byCallback</span>)</span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(name+<span class="string">" 님 안 녕 하 세 요"</span>);</span><br><span class="line">        byCallback()</span><br><span class="line">    &#125;, <span class="number">2000</span>);<span class="comment">//(2초뒤에 실행)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sayhello(<span class="string">'mike'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"안 녕 히 가 세 요"</span>)</span><br><span class="line">&#125;) <span class="comment">//mike님 안녕하세요 2초뒤 안 녕 히 가 세 요</span></span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>하루를 기록하다</p>
+<h3 id="Promise-amp-Async-Func"><a href="#Promise-amp-Async-Func" class="headerlink" title="Promise &amp; Async Func"></a>Promise &amp; Async Func</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*  new Promise((resolve, reject)=&gt;&#123;&#125;)</span></span><br><span class="line"><span class="comment">    Resolve -&gt; 성공 / 해결 -&gt; .then()</span></span><br><span class="line"><span class="comment">    Reject -&gt; 거절 / 실패 -&gt; .catch() */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayhello2</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(name+<span class="string">" 님 안 녕 하 세 요"</span>)</span><br><span class="line">            resolve(<span class="string">"그 만"</span>)</span><br><span class="line">        &#125; ,<span class="number">3000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">sayhello2(<span class="string">"Frank"</span>)</span><br><span class="line">    .then(<span class="function">(<span class="params">v</span>)=&gt;</span><span class="built_in">console</span>.log(v+<span class="string">" 안 녕 히 가 세 요"</span>))</span><br><span class="line">    <span class="comment">//Frank 안녕하세요 3초뒤 그 만 안 녕 히 가 세 요 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*  </span></span><br><span class="line"><span class="comment">    .then 대신에 씀</span></span><br><span class="line"><span class="comment">    async func_name(p)&#123;</span></span><br><span class="line"><span class="comment">        const result = await get_result()&#123;&#125;</span></span><br><span class="line"><span class="comment">    &#125; </span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">sayhelloBye</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    loc = <span class="keyword">await</span> sayhello2(name)</span><br><span class="line">    <span class="built_in">console</span>.log(loc +<span class="string">" 안 녕 히 가 세 요"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sayhelloBye(<span class="string">"Hyunsoo"</span>)</span><br><span class="line"><span class="comment">//Hyunsoo 안녕하세요 3초뒤 그 만 안 녕 히 가 세 요</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h3><blockquote>
+<ol>
+<li>비동기의 문제를 해결하기 위한 callback</li>
+<li>작업이 완료되면 알려주는 callback은 가독성이 좋지 X</li>
+<li>완료를 약속하는 Promise 등장</li>
+<li>Then / Catch로 편리하게 사용</li>
+<li>더 편리한 것  async / await </li>
+</ol>
 </blockquote>
 
     </article>
@@ -430,9 +428,9 @@ height:50vh;
     
         <div class="license-wrapper">
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
-            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">https://khs9628.github.io/2019/09/07/codingTest1/</a>
-            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 7th 2019, 3:17:57 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/07/codingTest1/">September 8th 2019, 11:18:52 pm</a>
+            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/09/React1/">https://khs9628.github.io/2019/09/09/React1/</a>
+            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/09/React1/">September 9th 2019, 10:21:15 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/React1/">September 10th 2019, 12:19:30 am</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -440,17 +438,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/09/07/DBtest1/" title="7DAYSQL Challenge">
-                    <div class="nextTitle">7DAYSQL Challenge</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/09/06/first/" title="목차">
-                    <div class="prevTitle">목차</div>
+                <a href="/2019/09/09/Django2/" title="RESTFUL API?">
+                    <div class="prevTitle">RESTFUL API?</div>
                 </a>
             
         </li>
@@ -467,8 +460,8 @@ height:50vh;
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         
         var disqus_config = function () {
-        this.page.url = "https://khs9628.github.io/2019/09/07/codingTest1/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "완주하지 못한 선수"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = "https://khs9628.github.io/2019/09/09/React1/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "React1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function () { // DON'T EDIT BELOW THIS LINE
@@ -602,7 +595,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#완주하지-못한-선수"><span class="toc-number">1.</span> <span class="toc-text">완주하지 못한 선수.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#제한사항"><span class="toc-number">2.</span> <span class="toc-text">제한사항</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#입출력-예"><span class="toc-number">3.</span> <span class="toc-text">입출력 예</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1차-답안-gt-Hash-알고리즘-X"><span class="toc-number">4.</span> <span class="toc-text">1차 답안 -&gt; Hash 알고리즘 X</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cf-HASH란"><span class="toc-number">5.</span> <span class="toc-text">cf) HASH란?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2차-답안-gt-Hash-알고리즘"><span class="toc-number">6.</span> <span class="toc-text">2차 답안 -&gt; Hash 알고리즘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3차-답안-gt-sort-메소드-이용"><span class="toc-number">7.</span> <span class="toc-text">3차 답안 -&gt; sort()메소드 이용</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Restful-API-Django"><span class="toc-number">1.</span> <span class="toc-text">Restful API Django</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#필수-JavaScript-개념"><span class="toc-number">1.1.</span> <span class="toc-text">필수 JavaScript 개념</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrow-Function"><span class="toc-number">1.2.</span> <span class="toc-text">Arrow Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-amp-Super-클래스-상속"><span class="toc-number">1.3.</span> <span class="toc-text">Class &amp; Super (클래스 상속)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Asynchronous-비동기성"><span class="toc-number">1.4.</span> <span class="toc-text">Asynchronous(비동기성)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise-amp-Async-Func"><span class="toc-number">1.5.</span> <span class="toc-text">Promise &amp; Async Func</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#정리"><span class="toc-number">1.6.</span> <span class="toc-text">정리</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
