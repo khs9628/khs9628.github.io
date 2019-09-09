@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">112</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">133</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -423,7 +423,33 @@ height:50vh;
 <h4 id="API-Application-Program-Interface"><a href="#API-Application-Program-Interface" class="headerlink" title="API? -  Application Program Interface"></a>API? -  Application Program Interface</h4><p><img src="/assets/img/api.PNG" alt="API"><br>특정방식으로 response나 request를 보내는 형식</p>
 <h4 id="RESTAPI"><a href="#RESTAPI" class="headerlink" title="RESTAPI?"></a>RESTAPI?</h4><p>REST 아키텍쳐 스타일을 따르는 API<br>HTTP로 CRUD를 구현할 수 있는 API?<br>-&gt; JSON : 모든 태그가 만들어져 있는 것도 아님 만든 이가 정의하기 나름  -&gt; RESTFUL하지 못함</p>
 <h4 id="현재의-RESTFUL-API"><a href="#현재의-RESTFUL-API" class="headerlink" title="현재의 RESTFUL API?"></a>현재의 RESTFUL API?</h4><p>Self-Description (x)  HATROAS(x)<br>-&gt; 잘 지켜지지 않고 있다!</p>
-<h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3>
+<h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3><p>(Model)Form vs (Model)Serializer</p>
+<table>
+<thead>
+<tr>
+<th>Django</th>
+<th>Serializer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Form/ModelForm</td>
+<td>Serializer/ModelSerializer</td>
+</tr>
+<tr>
+<td>Model로 부터 Field 읽어옴</td>
+<td></td>
+</tr>
+<tr>
+<td>유효성검사</td>
+<td></td>
+</tr>
+<tr>
+<td>HTML Form</td>
+<td>JSON 문자열</td>
+</tr>
+</tbody></table>
+<p><img src="/assets/img/serializer.PNG" alt="Serializer"></p>
+
     </article>
     <!-- license  -->
     
@@ -431,7 +457,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/09/Django2/">https://khs9628.github.io/2019/09/09/Django2/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 9th 2019, 5:06:04 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 9th 2019, 5:45:29 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 9th 2019, 6:04:26 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     

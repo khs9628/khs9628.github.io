@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-09T08:45:29.292Z</updated>
+  <updated>2019-09-09T09:04:26.588Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://khs9628.github.io/2019/09/09/Django2/"/>
     <id>https://khs9628.github.io/2019/09/09/Django2/</id>
     <published>2019-09-09T08:06:04.000Z</published>
-    <updated>2019-09-09T08:45:29.292Z</updated>
+    <updated>2019-09-09T09:04:26.588Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="REST-REpresentational-State-Transfer"><a href="#REST-REpresentational-State-Transfer" class="headerlink" title="REST? - REpresentational State Transfer"></a>REST? - REpresentational State Transfer</h4><ul><li>HTTP를 이용해 통신하는 네트워크상에서 정한 약속</li><li>분산 하이퍼미디어 시스템을 위한 소프트웨어 설계 형식</li><li>자원을 대표하는 단어 OR 식별자로 자원의 상태를 전송하는 방법</li><li>자원을 이름으로 구분하여 상태를 전송하는 방법</li><li>하위 호환을 깨뜨리지 않고 독립적 발전할 수 있게 도와주는 방법</li></ul><blockquote><p>REST 필요충분조건?</p><ul><li>Server - Client</li><li>STATELESS</li><li>Cache</li><li>Uniform Interface</li><li>Layered System</li><li>Code-On-Demand</li></ul></blockquote><h4 id="API-Application-Program-Interface"><a href="#API-Application-Program-Interface" class="headerlink" title="API? -  Application Program Interface"></a>API? -  Application Program Interface</h4><p><img src="/assets/img/api.PNG" alt="API"><br>특정방식으로 response나 request를 보내는 형식</p><h4 id="RESTAPI"><a href="#RESTAPI" class="headerlink" title="RESTAPI?"></a>RESTAPI?</h4><p>REST 아키텍쳐 스타일을 따르는 API<br>HTTP로 CRUD를 구현할 수 있는 API?<br>-&gt; JSON : 모든 태그가 만들어져 있는 것도 아님 만든 이가 정의하기 나름  -&gt; RESTFUL하지 못함</p><h4 id="현재의-RESTFUL-API"><a href="#현재의-RESTFUL-API" class="headerlink" title="현재의 RESTFUL API?"></a>현재의 RESTFUL API?</h4><p>Self-Description (x)  HATROAS(x)<br>-&gt; 잘 지켜지지 않고 있다!</p><h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3>]]></content>
+    <content type="html"><![CDATA[<h4 id="REST-REpresentational-State-Transfer"><a href="#REST-REpresentational-State-Transfer" class="headerlink" title="REST? - REpresentational State Transfer"></a>REST? - REpresentational State Transfer</h4><ul><li>HTTP를 이용해 통신하는 네트워크상에서 정한 약속</li><li>분산 하이퍼미디어 시스템을 위한 소프트웨어 설계 형식</li><li>자원을 대표하는 단어 OR 식별자로 자원의 상태를 전송하는 방법</li><li>자원을 이름으로 구분하여 상태를 전송하는 방법</li><li>하위 호환을 깨뜨리지 않고 독립적 발전할 수 있게 도와주는 방법</li></ul><blockquote><p>REST 필요충분조건?</p><ul><li>Server - Client</li><li>STATELESS</li><li>Cache</li><li>Uniform Interface</li><li>Layered System</li><li>Code-On-Demand</li></ul></blockquote><h4 id="API-Application-Program-Interface"><a href="#API-Application-Program-Interface" class="headerlink" title="API? -  Application Program Interface"></a>API? -  Application Program Interface</h4><p><img src="/assets/img/api.PNG" alt="API"><br>특정방식으로 response나 request를 보내는 형식</p><h4 id="RESTAPI"><a href="#RESTAPI" class="headerlink" title="RESTAPI?"></a>RESTAPI?</h4><p>REST 아키텍쳐 스타일을 따르는 API<br>HTTP로 CRUD를 구현할 수 있는 API?<br>-&gt; JSON : 모든 태그가 만들어져 있는 것도 아님 만든 이가 정의하기 나름  -&gt; RESTFUL하지 못함</p><h4 id="현재의-RESTFUL-API"><a href="#현재의-RESTFUL-API" class="headerlink" title="현재의 RESTFUL API?"></a>현재의 RESTFUL API?</h4><p>Self-Description (x)  HATROAS(x)<br>-&gt; 잘 지켜지지 않고 있다!</p><h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3><p>(Model)Form vs (Model)Serializer</p><table><thead><tr><th>Django</th><th>Serializer</th></tr></thead><tbody><tr><td>Form/ModelForm</td><td>Serializer/ModelSerializer</td></tr><tr><td>Model로 부터 Field 읽어옴</td><td></td></tr><tr><td>유효성검사</td><td></td></tr><tr><td>HTML Form</td><td>JSON 문자열</td></tr></tbody></table><p><img src="/assets/img/serializer.PNG" alt="Serializer"></p>]]></content>
     
     <summary type="html">
     
