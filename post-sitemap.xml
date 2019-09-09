@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2019/09/06/first/</loc>
+        <lastmod>2019-09-09T15:23:45.992Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2019/09/09/React1/</loc>
-        <lastmod>2019-09-09T15:19:30.418Z</lastmod>
+        <lastmod>2019-09-09T15:22:01.305Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,14 +26,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/07/DBtest1/</loc>
         <lastmod>2019-09-09T14:51:45.042Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/06/first/</loc>
-        <lastmod>2019-09-09T13:25:49.826Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
