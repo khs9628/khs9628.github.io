@@ -402,7 +402,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="Restful-API-Django"><a href="#Restful-API-Django" class="headerlink" title="Restful API Django"></a>Restful API Django</h2><p><img src="/assets/img/RestAPI.png" alt="RESTAPI"></p>
+        <h2 id="Restful-API-Django"><a href="#Restful-API-Django" class="headerlink" title="Restful API Django"></a>Restful API Django</h2><p><img src="/assets/img/Django/RestAPI.png" alt="RESTAPI"></p>
 <h4 id="JSON-JavaScript-Object-Notation"><a href="#JSON-JavaScript-Object-Notation" class="headerlink" title="JSON (JavaScript Object Notation)"></a>JSON (JavaScript Object Notation)</h4><p>데이터의 송수신을 자바스크립트의 객체로서 수행할 수 있게끔하는 가벼운 문자열 데이터 표현식<br>&lt;&gt; XML(Extensible Markup Language)<br>만국 공통 자료형 -&gt; 문자열<br>문자열로 변환해서 전송하는 과정 -&gt; 직렬화(Serializer)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">diary = &#123;</span><br><span class="line">    <span class="string">'id'</span> : <span class="number">3</span>,</span><br><span class="line">    <span class="string">'title'</span> : <span class="string">'I\'m starving'</span>,</span><br><span class="line">    <span class="string">'body'</span>: <span class="string">' what&gt;??'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">print(type(diary)) <span class="comment">#dic</span></span><br><span class="line"></span><br><span class="line">json_diary = json.dump(diary) <span class="comment">#dictionary -&gt; json</span></span><br><span class="line">print(type(json_diary)) <span class="comment">#str</span></span><br><span class="line"></span><br><span class="line">back_diary = json.loads(json_diary) <span class="comment">#json -&gt; dictionary</span></span><br><span class="line">print(type(back_diary)) <span class="comment"># dic</span></span><br></pre></td></tr></table></figure>
 
@@ -450,7 +450,7 @@ height:50vh;
 <p>POST</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#JSON 형식의 요청:</span></span><br><span class="line">http --json POST [주소] GET == 값 / POST = 값</span><br><span class="line"><span class="comment">#HTML form 형식의 요청:</span></span><br><span class="line">http --form POST [주소] GET == 값 / POST = 값</span><br></pre></td></tr></table></figure>
 
-<p>HTML 방식<br><img src="/assets/img/httpPost.png" alt="예"><br>JSON방식<br><img src="/assets/img/httpPost2.png" alt="예2"></p>
+<p>HTML 방식<br><img src="/assets/img/Django/httpPost.png" alt="예"><br>JSON방식<br><img src="/assets/img/Django/httpPost2.png" alt="예2"></p>
 <p><a href="https://httpie.org/" rel="external nofollow noopener noreferrer" target="_blank">HTTPIE 참고 사이트</a></p>
 <h4 id="CBV-Generic-View-lt-gt-FBV"><a href="#CBV-Generic-View-lt-gt-FBV" class="headerlink" title="CBV(Generic View) &lt;&gt; FBV"></a>CBV(Generic View) &lt;&gt; FBV</h4><p>Class Based View &lt;&gt; Function Based View<br>3가지 질문<br>왜 클래스?<br>함수로 작성한 것과 무슨 차이?<br>Views.py는 뭘로 채워 넣어야 해? -&gt; callable object</p>
 <p>function or class = callable object<br>class -&gt; 상속이 가능하다! -&gt; 중복의 제거 , 코드의 재사용</p>
@@ -462,7 +462,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/09/Django1/">https://khs9628.github.io/2019/09/09/Django1/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/09/Django1/">September 9th 2019, 4:33:40 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/Django1/">September 9th 2019, 5:39:05 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/Django1/">September 10th 2019, 1:57:53 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -732,9 +732,83 @@ s.setAttribute('data-timestamp', +new Date());
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 9
+        Total : 13
         </div>
         <!-- search  -->
         
@@ -750,7 +824,27 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/React2/">React2</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/5Ducku/">5Ducku</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/WorkManager/">WorkManager</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/React2/">React기본</a>
         </li>
     
     
@@ -805,6 +899,10 @@ s.setAttribute('data-timestamp', +new Date());
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
     
         <span class="sidebar-tag-name" data-tags="알고리즘"><span class="iconfont-archer">&#xe606;</span>알고리즘</span>
+    
+        <span class="sidebar-tag-name" data-tags="포토폴리오"><span class="iconfont-archer">&#xe606;</span>포토폴리오</span>
+    
+        <span class="sidebar-tag-name" data-tags="PORTFOLIO"><span class="iconfont-archer">&#xe606;</span>PORTFOLIO</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
