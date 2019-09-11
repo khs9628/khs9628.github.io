@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">460</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">463</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,8 +402,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><p>API 서버의 페이지네이션의 의의</p>
-<p>하나의 request만으로 처리하기 어려운 레코드들을<br>여러 request로 나누어 전송</p>
+        <h2 id="ViewSet-amp-Router"><a href="#ViewSet-amp-Router" class="headerlink" title="ViewSet &amp; Router"></a>ViewSet &amp; Router</h2><h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><h4 id="API-서버의-페이지네이션의-의의"><a href="#API-서버의-페이지네이션의-의의" class="headerlink" title="API 서버의 페이지네이션의 의의"></a>API 서버의 페이지네이션의 의의</h4><p>하나의 request만으로 처리하기 어려운 레코드들을<br>여러 request로 나누어 전송</p>
 <p>DRF (장고 Rest Framework)의 Pagination</p>
 <ol>
 <li><strong>PageNumberPagination</strong> - Default</li>
@@ -425,7 +424,7 @@ height:50vh;
 <td align="center">Response 걸러보내기</td>
 </tr>
 </tbody></table>
-<p><strong><em>cf)Request 가져오는법</em></strong></p>
+<p><strong><em>cf) Request 가져오는법</em></strong></p>
 <table>
 <thead>
 <tr>
@@ -450,7 +449,7 @@ height:50vh;
 <td align="center">self.request.POST</td>
 </tr>
 </tbody></table>
-<h3 id="Authentication-amp-Permission"><a href="#Authentication-amp-Permission" class="headerlink" title="Authentication &amp; Permission"></a>Authentication &amp; Permission</h3><p><strong>Authentication</strong><br>서비스를 이용하는데 있어 내가 어느정도의 권한이 있음을  알려주는 과정<br><strong>Permission</strong><br>서비스를 어느 정도로 이용할 수 있는지에 대한 권한</p>
+<h3 id="Authentication-amp-Permission"><a href="#Authentication-amp-Permission" class="headerlink" title="Authentication &amp; Permission"></a>Authentication &amp; Permission</h3><p><strong><em>Authentication</em></strong><br>서비스를 이용하는데 있어 내가 어느정도의 권한이 있음을  알려주는 과정<br><strong><em>Permission</em></strong><br>서비스를 어느 정도로 이용할 수 있는지에 대한 권한</p>
 <ol>
 <li><p>Authentication</p>
 <ul>
@@ -501,10 +500,17 @@ height:50vh;
 </li>
 </ul>
 </li>
-<li><p>발급받은 Token을 API요청에 담아 인증을 처리<br>http POST <a href="http://127.0.0.1:8000/userpost/" rel="external nofollow noopener noreferrer" target="_blank">http://127.0.0.1:8000/userpost/</a> “Authorization Token 토큰번호” title =”토큰글” body =”토큰내용”</p>
+<li><p>발급받은 Token을 API요청에 담아 인증을 처리</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http POST http://127.0.0.1:8000/userpost/ <span class="string">"Authorization Token 토큰번호"</span> title =<span class="string">"토큰글"</span> body =<span class="string">"토큰내용"</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h3 id="실습"><a href="#실습" class="headerlink" title="실습"></a>실습</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#settings.py</span></span><br><span class="line"><span class="comment"># 1:1 매칭 -&gt; OneToOneField를 이용해 Token을 발급</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">'rest_framework.authtoken'</span></span><br><span class="line">]</span><br><span class="line"><span class="comment">#bash</span></span><br><span class="line">python manage.py migrate</span><br><span class="line"><span class="comment">#현수 계정에 대한 토큰 생성</span></span><br><span class="line">python manage.py drf_create_token hyunsoo</span><br><span class="line"></span><br><span class="line"><span class="comment">#urls.py</span></span><br><span class="line"><span class="keyword">from</span> rest_framework.authtoken.views <span class="keyword">import</span> obtain_auth_token</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'api-token-auth/'</span>, obtain_auth_token),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>하루를 기록하다</p>
+</blockquote>
+
     </article>
     <!-- license  -->
     
@@ -512,7 +518,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/10/Django3/">https://khs9628.github.io/2019/09/10/Django3/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/10/Django3/">September 10th 2019, 5:11:12 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/10/Django3/">September 11th 2019, 11:39:49 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/10/Django3/">September 11th 2019, 11:44:57 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -682,7 +688,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pagination"><span class="toc-number">1.</span> <span class="toc-text">Pagination</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering-vs-Search"><span class="toc-number">2.</span> <span class="toc-text">Filtering vs Search ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Authentication-amp-Permission"><span class="toc-number">3.</span> <span class="toc-text">Authentication &amp; Permission</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Token-Authentication"><span class="toc-number">4.</span> <span class="toc-text">Token Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#수행-과정"><span class="toc-number">4.1.</span> <span class="toc-text">수행 과정</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#실습"><span class="toc-number">5.</span> <span class="toc-text">실습</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ViewSet-amp-Router"><span class="toc-number">1.</span> <span class="toc-text">ViewSet &amp; Router</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pagination"><span class="toc-number">1.1.</span> <span class="toc-text">Pagination</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#API-서버의-페이지네이션의-의의"><span class="toc-number">1.1.1.</span> <span class="toc-text">API 서버의 페이지네이션의 의의</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering-vs-Search"><span class="toc-number">1.2.</span> <span class="toc-text">Filtering vs Search ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Authentication-amp-Permission"><span class="toc-number">1.3.</span> <span class="toc-text">Authentication &amp; Permission</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Token-Authentication"><span class="toc-number">1.4.</span> <span class="toc-text">Token Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#수행-과정"><span class="toc-number">1.4.1.</span> <span class="toc-text">수행 과정</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#실습"><span class="toc-number">1.5.</span> <span class="toc-text">실습</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
