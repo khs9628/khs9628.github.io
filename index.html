@@ -427,10 +427,19 @@ key 값은 중복이 불가능 / value는 중복이 가능
     <article class="index-post">
         <a class="abstract-title" href="/2019/09/10/Django3/">
             
-                <span>Django3</span>
+                <span>ViewSet &amp; Router</span>
         </a>
         <div class="abstract-content">
-            
+            PaginationAPI 서버의 페이지네이션의 의의
+하나의 request만으로 처리하기 어려운 레코드들을여러 request로 나누어 전송
+DRF (장고 Rest Framework)의 Pagination
+
+PageNumberPagination - Default
+LimitOffsetPagination
+CusorPagination
+CustomizedPagination 
+
+12345678910111213141516# Pagenation 설정 # settings.py - 전역으로 설정 (Default)REST_FRAMEWORK = &#...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1071,6 +1080,16 @@ API...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 16
@@ -1094,12 +1113,12 @@ API...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/Django3/">Django3</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/codingtest3/">기능 개발</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/codingtest3/">기능 개발</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/Django3/">ViewSet & Router</a>
         </li>
     
     
@@ -1114,12 +1133,12 @@ API...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
         </li>
     
     
@@ -1174,9 +1193,9 @@ API...
     
         <span class="sidebar-tag-name" data-tags="PORTFOLIO"><span class="iconfont-archer">&#xe606;</span>PORTFOLIO</span>
     
-        <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
-    
         <span class="sidebar-tag-name" data-tags="Django"><span class="iconfont-archer">&#xe606;</span>Django</span>
+    
+        <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
     
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
     

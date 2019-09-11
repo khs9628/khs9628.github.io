@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Django3 · khs9628</title>
+    <title>ViewSet &amp; Router · khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,7 +218,7 @@
                 <a href="/">현수쓰 기술블로그</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Django3</a>
+                <a href="#" class="post-name">ViewSet & Router</a>
             </div>
     </div>
     
@@ -248,7 +248,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Django3
+            ViewSet & Router
             <!-- 404 -->
             
         </h1>
@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">0</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">460</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,7 +402,109 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><p>API 서버의 페이지네이션의 의의</p>
+<p>하나의 request만으로 처리하기 어려운 레코드들을<br>여러 request로 나누어 전송</p>
+<p>DRF (장고 Rest Framework)의 Pagination</p>
+<ol>
+<li><strong>PageNumberPagination</strong> - Default</li>
+<li>LimitOffsetPagination</li>
+<li>CusorPagination</li>
+<li><strong>CustomizedPagination</strong> </li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Pagenation 설정 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># settings.py - 전역으로 설정 (Default)</span></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">'DEFAULT_PAGINATION_CLASS'</span>: <span class="string">'rest_framework.pagination.PageNumberPagination'</span>,</span><br><span class="line">    <span class="string">'PAGE_SIZE'</span>: <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># views.py - 뷰단 별로 설정(CustomizedPagination)</span></span><br><span class="line"><span class="keyword">from</span> rest_framework <span class="keyword">import</span> PageNumberPagination</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myPagination</span><span class="params">(PageNumberPagination)</span></span></span><br><span class="line">    page_size = 100</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewSet</span><span class="params">(viewsets.ModelViewSet)</span>:</span></span><br><span class="line">    queryset = UserPost.objects.all()</span><br><span class="line">    serializer_class = UserSerializer</span><br><span class="line">    pagination_class = myPagination</span><br></pre></td></tr></table></figure>
+
+<h3 id="Filtering-vs-Search"><a href="#Filtering-vs-Search" class="headerlink" title="Filtering vs Search ?"></a>Filtering vs Search ?</h3><table>
+<thead>
+<tr>
+<th align="center">Filtering</th>
+<th align="center">Search</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Request 걸러보내기</td>
+<td align="center">Response 걸러보내기</td>
+</tr>
+</tbody></table>
+<p><strong><em>cf)Request 가져오는법</em></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">내용</th>
+<th align="center">명령어</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">내가 보낸 request</td>
+<td align="center">self.request</td>
+</tr>
+<tr>
+<td align="center">내가보낸 request의 user</td>
+<td align="center">Self.request.user</td>
+</tr>
+<tr>
+<td align="center">내가보낸 GET request</td>
+<td align="center">Self.request.GET (= self.request.query_param)</td>
+</tr>
+<tr>
+<td align="center">내가보낸 POST request</td>
+<td align="center">self.request.POST</td>
+</tr>
+</tbody></table>
+<h3 id="Authentication-amp-Permission"><a href="#Authentication-amp-Permission" class="headerlink" title="Authentication &amp; Permission"></a>Authentication &amp; Permission</h3><p><strong>Authentication</strong><br>서비스를 이용하는데 있어 내가 어느정도의 권한이 있음을  알려주는 과정<br><strong>Permission</strong><br>서비스를 어느 정도로 이용할 수 있는지에 대한 권한</p>
+<ol>
+<li><p>Authentication</p>
+<ul>
+<li><p>BasicAuthentication<br>HTTP 자체 기본인증에 기반한 인증방식<br>HTTP 제어 헤더로 넘긴 ID, PW를 BASE64 ENCODING</p>
+</li>
+<li><p>TokenAuthentication<br>인증요청 -&gt; 유일한 key값을 발급</p>
+</li>
+<li><p>SessionAuthentication<br>로그인이 될 때마다 저장되는 Session 정보를 참조하여 인증</p>
+<p>cf) Session을 관리하는 곳</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#settings.py</span></span><br><span class="line">MIDDLEWARE = [</span><br><span class="line"><span class="string">'django.contrib.sessions.middleware.SessionMiddleware'</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RemoteUserAuthentication<br>User정보가 다른 서비스에서 관리될 떄 사용되는 인증방식</p>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#settings.py</span></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">'DEFAULT_AUTHENTICATION_CLASSES'</span>: [</span><br><span class="line">        <span class="string">'rest_framework.authentication.BasicAuthentication'</span>,</span><br><span class="line">        <span class="string">'rest_framework.authentication.SessionAuthentication'</span>,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># views.py</span></span><br><span class="line"><span class="keyword">from</span> rest_framework.authentication <span class="keyword">import</span> SessionAuthentication, BasicAuthentication, TokenAuthentication</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewSet</span><span class="params">(viewsets.ModelViewSet)</span>:</span></span><br><span class="line">    authentication_classes = [TokenAuthentication,</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>Permission</p>
+<ul>
+<li><p>AllowAny - default<br>인증된 요청이든 비인증 요청이든 모든 허용하겠다.</p>
+</li>
+<li><p>IsAuthenticated<br>인증된 요청에 대해서만 View 호출을 허용하겠다.</p>
+</li>
+<li><p>IsAdminUser<br>Staff User에 대해서만 요청을 허용하겠다.</p>
+</li>
+<li><p>IsAuthenticatedOrReadOnly<br>비인증요청에 대해서는 읽기만 허용하겠다.</p>
+</li>
+<li><p>ETC<br>DjangoModelPermissions<br>DjangoModelPermissionsORAnonReadOnly<br>DjangoObjectPermissions</p>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#settings.py</span></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">'DEFAULT_PERMISSION_CLASSES'</span>: [</span><br><span class="line">        <span class="string">'rest_framework.permissions.IsAuthenticated'</span>,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># views.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> rest_framework.permissions <span class="keyword">import</span> AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserPostViewSet</span><span class="params">(viewsets.ModelViewSet)</span>:</span></span><br><span class="line">    authentication_classes = [TokenAuthentication, SessionAuthentication]</span><br><span class="line">    permission_classes = [IsAuthenticated]</span><br><span class="line"></span><br><span class="line"><span class="comment">#FBV -&gt; decorator를 이용한 설정</span></span><br><span class="line"><span class="keyword">from</span> rest_framework.permissions <span class="keyword">import</span> AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser</span><br><span class="line"></span><br><span class="line"><span class="meta">@api_view(&#123;'GET'&#125;)</span></span><br><span class="line"><span class="meta">@permission_classes(&#123;'IsAuthenticated'&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> 함수명<span class="params">(request, format=None)</span>:</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Token-Authentication"><a href="#Token-Authentication" class="headerlink" title="Token Authentication"></a>Token Authentication</h3><p>BasicAuthentication, SessionAuthentication의 한계<br>Mobile Client에 적합</p>
+<h4 id="수행-과정"><a href="#수행-과정" class="headerlink" title="수행 과정"></a>수행 과정</h4><ol>
+<li><p>username, password와 1:1 매칭되는 고유 key 생성 / 발급</p>
+<ul>
+<li><p>rest_framework/authtoken/views.py의 ObtaionAuthToken을 이용한 생성</p>
+</li>
+<li><p>Python 명렁어를 통한 생성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python manage.py drf_create_token &lt;username&gt;</span><br><span class="line"><span class="comment"># 강제로 재 생성</span></span><br><span class="line">python manage.py drf_create_token -r &lt;username&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Signal을 이용한 Token 획득</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.db.models.signals <span class="keyword">import</span> post_save</span><br><span class="line"><span class="keyword">from</span> django.dispatch <span class="keyword">import</span> receiver</span><br><span class="line"><span class="keyword">from</span> rest_framework.authentication.models <span class="keyword">import</span> Token</span><br><span class="line"></span><br><span class="line"><span class="comment">#post_save = DB에 뭔가 저장된 직후에 특정 동작 수행</span></span><br><span class="line"><span class="meta">@receiver(post_save, sender = settings.AUTH_USER_MODEL)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_auth_token</span><span class="params">(sender, instance = None, created=False, **kwargs)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> created:</span><br><span class="line">        Token.objects.create(user=instance)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>발급받은 Token을 API요청에 담아 인증을 처리<br>http POST <a href="http://127.0.0.1:8000/userpost/" rel="external nofollow noopener noreferrer" target="_blank">http://127.0.0.1:8000/userpost/</a> “Authorization Token 토큰번호” title =”토큰글” body =”토큰내용”</p>
+</li>
+</ol>
+<h3 id="실습"><a href="#실습" class="headerlink" title="실습"></a>실습</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#settings.py</span></span><br><span class="line"><span class="comment"># 1:1 매칭 -&gt; OneToOneField를 이용해 Token을 발급</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">'rest_framework.authtoken'</span></span><br><span class="line">]</span><br><span class="line"><span class="comment">#bash</span></span><br><span class="line">python manage.py migrate</span><br><span class="line"><span class="comment">#현수 계정에 대한 토큰 생성</span></span><br><span class="line">python manage.py drf_create_token hyunsoo</span><br><span class="line"></span><br><span class="line"><span class="comment">#urls.py</span></span><br><span class="line"><span class="keyword">from</span> rest_framework.authtoken.views <span class="keyword">import</span> obtain_auth_token</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'api-token-auth/'</span>, obtain_auth_token),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -410,7 +512,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/10/Django3/">https://khs9628.github.io/2019/09/10/Django3/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/10/Django3/">September 10th 2019, 5:11:12 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/10/Django3/">September 11th 2019, 7:01:18 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/10/Django3/">September 11th 2019, 11:39:49 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -446,7 +548,7 @@ height:50vh;
         
         var disqus_config = function () {
         this.page.url = "https://khs9628.github.io/2019/09/10/Django3/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "Django3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = "ViewSet & Router"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function () { // DON'T EDIT BELOW THIS LINE
@@ -580,7 +682,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pagination"><span class="toc-number">1.</span> <span class="toc-text">Pagination</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtering-vs-Search"><span class="toc-number">2.</span> <span class="toc-text">Filtering vs Search ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Authentication-amp-Permission"><span class="toc-number">3.</span> <span class="toc-text">Authentication &amp; Permission</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Token-Authentication"><span class="toc-number">4.</span> <span class="toc-text">Token Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#수행-과정"><span class="toc-number">4.1.</span> <span class="toc-text">수행 과정</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#실습"><span class="toc-number">5.</span> <span class="toc-text">실습</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -593,6 +695,16 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -798,12 +910,12 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/Django3/">Django3</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/codingtest3/">기능 개발</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/codingtest3/">기능 개발</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/Django3/">ViewSet & Router</a>
         </li>
     
     
@@ -818,12 +930,12 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
         </li>
     
     
@@ -878,9 +990,9 @@ s.setAttribute('data-timestamp', +new Date());
     
         <span class="sidebar-tag-name" data-tags="PORTFOLIO"><span class="iconfont-archer">&#xe606;</span>PORTFOLIO</span>
     
-        <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
-    
         <span class="sidebar-tag-name" data-tags="Django"><span class="iconfont-archer">&#xe606;</span>Django</span>
+    
+        <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
     
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
     
