@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">0</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">111</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,7 +402,31 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <h2 id="WorkManager"><a href="#WorkManager" class="headerlink" title="WorkManager"></a><a href="https://github.com/khs9628/NawamMa" rel="external nofollow noopener noreferrer" target="_blank">WorkManager</a></h2><p>지하철 자리 관리 서비스</p>
+<h3 id="라이브러리"><a href="#라이브러리" class="headerlink" title="라이브러리"></a>라이브러리</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install django-allauth : 소셜로그인 구현</span><br><span class="line">pip install pySerial : 아두이노 시리얼 통신 구현</span><br><span class="line">pip install Pillow : 게시판 사진 업로드 구현</span><br></pre></td></tr></table></figure>
+
+<h3 id="Project-구조"><a href="#Project-구조" class="headerlink" title="Project 구조"></a>Project 구조</h3><pre><code>프로젝트 이름 : project
+
+* app
+board : 게시판 관련 APP
+member : 계정 관련 APP
+accounts : 소셜 계정 관련 APP
+NawamMa : 전체적인 기능 관련 APP</code></pre><h3 id="Project-소개"><a href="#Project-소개" class="headerlink" title="Project 소개"></a>Project 소개</h3><pre><code>지하철 자리를 효율적으로 관리하고 사용자들이 쉽게 자리를 찾을 수 있도록 도와주는 
+임산부들이 자리를 양보받을 수 있게 환경을 만들어주는
+서비스가 되는 것이 목표입니다.
+
+주요 기능 2가지
+1. 지하철 자리 현황
+
+2. 임산부 자리 요청
+
+WEB 과 APP Arduino 3가지를 활용하여 구성
+WEB : 지하철 전광판 등에 표시 가능
+APP : 주 사용자들이 사용
+Arduino : 서버와 통신을 통해 신호를 보내고 값을 가져옴</code></pre><blockquote>
+<p>하루를 기록하다 </p>
+</blockquote>
+
     </article>
     <!-- license  -->
     
@@ -410,7 +434,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/10/나왐마/">https://khs9628.github.io/2019/09/10/나왐마/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/10/나왐마/">September 10th 2019, 1:34:43 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/10/나왐마/">September 10th 2019, 2:43:59 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/10/나왐마/">September 16th 2019, 9:37:54 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -580,7 +604,7 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#WorkManager"><span class="toc-number">1.</span> <span class="toc-text">WorkManager</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#라이브러리"><span class="toc-number">1.1.</span> <span class="toc-text">라이브러리</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Project-구조"><span class="toc-number">1.2.</span> <span class="toc-text">Project 구조</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Project-소개"><span class="toc-number">1.3.</span> <span class="toc-text">Project 소개</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -785,9 +809,28 @@ s.setAttribute('data-timestamp', +new Date());
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 17
         </div>
         <!-- search  -->
         
@@ -800,6 +843,11 @@ s.setAttribute('data-timestamp', +new Date());
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/16</span><a class="archive-post-title" href="/2019/09/16/royalTable/">수라상</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -818,12 +866,12 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/WorkManager/">WorkManager</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/5Ducku/">5Ducku</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/5Ducku/">5Ducku</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/WorkManager/">WorkManager</a>
         </li>
     
     
@@ -888,9 +936,9 @@ s.setAttribute('data-timestamp', +new Date());
     
         <span class="sidebar-tag-name" data-tags="PORTFOLIO"><span class="iconfont-archer">&#xe606;</span>PORTFOLIO</span>
     
-        <span class="sidebar-tag-name" data-tags="Django"><span class="iconfont-archer">&#xe606;</span>Django</span>
-    
         <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
+    
+        <span class="sidebar-tag-name" data-tags="Django"><span class="iconfont-archer">&#xe606;</span>Django</span>
     
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
     

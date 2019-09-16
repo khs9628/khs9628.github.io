@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://khs9628.github.io/tags/PORTFOLIO/</loc>
+        <lastmod>2019-09-16T12:37:54.557Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/tags/Django/</loc>
         <lastmod>2019-09-11T14:44:57.284Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,13 +26,6 @@
     <url>
         <loc>https://khs9628.github.io/tags/React/</loc>
         <lastmod>2019-09-10T08:06:07.954Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/PORTFOLIO/</loc>
-        <lastmod>2019-09-10T07:51:26.943Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
