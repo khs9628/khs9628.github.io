@@ -8,8 +8,32 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2019/09/10/Django3/</loc>
+        <lastmod>2019-09-16T15:39:39.054Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2019/09/10/%EB%82%98%EC%99%90%EB%A7%88/</loc>
-        <lastmod>2019-09-16T12:37:54.557Z</lastmod>
+        <lastmod>2019-09-16T15:16:46.942Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/16/royalTable/</loc>
+        <lastmod>2019-09-16T15:02:26.092Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/06/first/</loc>
+        <lastmod>2019-09-16T14:53:57.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,30 +42,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/10/GuardOwl/</loc>
         <lastmod>2019-09-16T11:25:04.612Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/16/royalTable/</loc>
-        <lastmod>2019-09-16T11:20:52.711Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/10/Django3/</loc>
-        <lastmod>2019-09-11T14:44:57.284Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/06/first/</loc>
-        <lastmod>2019-09-11T11:52:55.958Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
