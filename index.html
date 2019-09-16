@@ -360,6 +360,43 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/09/17/Django4/">
+            
+                <span>RESTful API 프로젝트</span>
+        </a>
+        <div class="abstract-content">
+            프로젝트 소개RESTful API를 가지고 3개의 게시판을 만들어보자
+
+글을 쓸 수 있는 Essay
+이미지를 올릴 수 있는 Album
+파일을 올릴 수 있는 Files
+
+코드settings.py12345678910INSTALLED_APPS = [    #rest_framework 등록    'rest_framework',    # app 등록    'mystorage']# 이미지를 등록하기위해 Media 경로지정MEDIA_URL = '/media/'MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Django">Django</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/09/16/royalTable/">
             
                 <span>수라상</span>
@@ -656,38 +693,6 @@ JSXReact를 위해 태어난 새로운 자바스크립트 문법...
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/09/09/React1/">
-            
-                <span>JavaScript 기본</span>
-        </a>
-        <div class="abstract-content">
-            필수 JavaScript 개념
-Arrow FunctionClass &amp; SuperAsynchronousPromise &amp; Async Func  
-
-Arrow Function123456789101112131415161718192021//Basicfunction plusTwo(s)&#123;    return s+2;&#125;// Arrow FunctionplusTwo = (s)=&gt;&#123;    return s+2;&#125;//함축plusTwo = s =&gt; s+2;console.log(plusTwo(1...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/09</span>
             </div>
             <!-- tags  -->
             
@@ -1111,9 +1116,32 @@ Arrow Function123456789101112131415161718192021//Basicfunction plusTwo(s)&#123; 
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 17
+        Total : 18
         </div>
         <!-- search  -->
         
@@ -1126,6 +1154,11 @@ Arrow Function123456789101112131415161718192021//Basicfunction plusTwo(s)&#123; 
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/17</span><a class="archive-post-title" href="/2019/09/17/Django4/">RESTful API 프로젝트</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1149,12 +1182,12 @@ Arrow Function123456789101112131415161718192021//Basicfunction plusTwo(s)&#123; 
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/5Ducku/">5Ducku</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/WorkManager/">WorkManager</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/WorkManager/">WorkManager</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
         </li>
     
     
@@ -1164,7 +1197,7 @@ Arrow Function123456789101112131415161718192021//Basicfunction plusTwo(s)&#123; 
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/GuardOwl/">GuardOwl</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/5Ducku/">5Ducku</a>
         </li>
     
     
