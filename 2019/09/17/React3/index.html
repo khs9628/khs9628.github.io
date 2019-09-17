@@ -402,16 +402,35 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="컴포넌트-실습-Feat-map"><a href="#컴포넌트-실습-Feat-map" class="headerlink" title="컴포넌트 실습 (Feat.map)"></a>컴포넌트 실습 (Feat.map)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./App.css'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSX -&gt; HTML 태그</span></span><br><span class="line"><span class="comment">// JSX -&gt; style을 통해 css (JSX)</span></span><br><span class="line"><span class="comment">// JSX -&gt; className을 통해 css (css -&gt; App.css)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">WorldClock</span>(<span class="params">props</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span>(</span><br><span class="line">  &lt;div className=&#123;<span class="string">"WorldClock"</span>&#125;&gt;</span><br><span class="line">    &lt;h2&gt; 도시 : &#123;props.city&#125; &lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p&gt; 시간 : &#123;props.time&#125; 시&lt;/</span>p&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">function App() &#123;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/list 타입의 Data</span></span><br><span class="line"><span class="regexp">  const cityTimeData= [</span></span><br><span class="line"><span class="regexp">    ['서울', 10],</span></span><br><span class="line"><span class="regexp">    ['북한', 11],</span></span><br><span class="line"><span class="regexp">    ['도쿄', 12],</span></span><br><span class="line"><span class="regexp">    ['베이징', 1],</span></span><br><span class="line"><span class="regexp">  ]</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  const WorldClockList = cityTimeData.map((citytime, index)=&gt;</span></span><br><span class="line"><span class="regexp">    &lt;WorldClock city=&#123;citytime[0]&#125; time =&#123;citytime[1]&#125; key =&#123;index&#125; /</span>&gt;</span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">      &lt;h1 className = &#123;<span class="string">'myStyle'</span>&#125;&gt;안녕하세요&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div className= &#123;'post'&#125;&gt;첫 게시글입니다.&lt;/</span>div&gt;</span><br><span class="line">    &#123;WorldClockList&#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/컴포넌트 수출</span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="컴포넌트-실습-Feat-map"><a href="#컴포넌트-실습-Feat-map" class="headerlink" title="컴포넌트 실습 (Feat.map)"></a>컴포넌트 실습 (Feat.map)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./App.css'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSX -&gt; HTML 태그</span></span><br><span class="line"><span class="comment">// JSX -&gt; style을 통해 css (JSX)</span></span><br><span class="line"><span class="comment">// JSX -&gt; className을 통해 css (css -&gt; App.css)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">WorldClock</span>(<span class="params">props</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span>(</span><br><span class="line">  &lt;div className=&#123;<span class="string">"WorldClock"</span>&#125;&gt;</span><br><span class="line">    &lt;h2&gt; 도시 : &#123;props.city&#125; &lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p&gt; 시간 : &#123;props.time&#125; 시&lt;/</span>p&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">function App() &#123;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/list 타입의 Data</span></span><br><span class="line"><span class="regexp">  const cityTimeData= [</span></span><br><span class="line"><span class="regexp">    ['서울', 10],</span></span><br><span class="line"><span class="regexp">    ['북한', 11],</span></span><br><span class="line"><span class="regexp">    ['도쿄', 12],</span></span><br><span class="line"><span class="regexp">    ['베이징', 1],</span></span><br><span class="line"><span class="regexp">  ]</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  const WorldClockList = cityTimeData.map((citytime, index)=&gt;</span></span><br><span class="line"><span class="regexp">    &lt;WorldClock city=&#123;citytime[0]&#125; time =&#123;citytime[1]&#125; key =&#123;index&#125; /</span>&gt;</span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">      &lt;h1 className = &#123;<span class="string">'myStyle'</span>&#125;&gt;안녕하세요&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div className= &#123;'post'&#125;&gt;첫 게시글입니다.&lt;/</span>div&gt;</span><br><span class="line">    &#123;WorldClockList&#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/컴포넌트 수출</span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="오류"><a href="#오류" class="headerlink" title="오류"></a>오류</h1><blockquote>
 <p>index.js:1375 Warning: Each child in a list should have a unique “key” prop.</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-&gt; <span class="keyword">const</span> WorldClockList = cityTimeData.map(<span class="function">(<span class="params">citytime, index</span>)=&gt;</span></span><br><span class="line">    &lt;WorldClock city=&#123;citytime[<span class="number">0</span>]&#125; time =&#123;citytime[<span class="number">1</span>]&#125; key =&#123;index&#125; /&gt;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-&gt; <span class="keyword">const</span> WorldClockList = cityTimeData.map(<span class="function">(<span class="params">citytime, index</span>)=&gt;</span></span><br><span class="line">    &lt;WorldClock city=&#123;citytime[<span class="number">0</span>]&#125; time =&#123;citytime[<span class="number">1</span>]&#125; key =&#123;index&#125; /&gt;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
 
-<h2 id="State"><a href="#State" class="headerlink" title="State"></a>State</h2><p>Props만으로도 표현 불가능 / Render로 표시 불가능 -&gt; State 사용<br>| | state | stateless |<br>| :–: | :–: | :–: |<br>| function | O(hook기술) | O |<br>| Class | O | O | </p>
+<h2 id="State"><a href="#State" class="headerlink" title="State"></a>State</h2><p>Props만으로도 표현 불가능 / Render로 표시 불가능  -&gt; State 사용</p>
+<table>
+<thead>
+<tr>
+<th align="center">–</th>
+<th align="center">state</th>
+<th align="center">stateless</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">function</td>
+<td align="center">O(hook기술)</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="center">Class</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+</tbody></table>
 <p>State는 좋지만 무겁고 어렵기 때문에 되도록 사용안함</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 요구사항 1. 시간과 분이 변화하는 것을 보고 싶다.</span></span><br><span class="line"><span class="comment">// 요구사항 2. 동적으로 보고싶다.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WorldClock</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      hour: <span class="keyword">this</span>.props.time,</span><br><span class="line">      minute : <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// this.setState</span></span><br><span class="line">    <span class="comment">// this.state.minute += 1; -&gt; 절대 불가</span></span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.setState(<span class="function">(<span class="params">state</span>)=&gt;</span>(</span><br><span class="line">        state.minute === <span class="number">59</span></span><br><span class="line">        ?&#123;<span class="attr">hour</span>: state.hour + <span class="number">1</span>, <span class="attr">minute</span> :<span class="number">0</span>&#125;</span><br><span class="line">        : &#123;<span class="attr">minute</span>: state.minute + <span class="number">1</span>&#125;</span><br><span class="line">        ))</span><br><span class="line">    &#125;, <span class="number">100</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// render 미리 약속되있는 함수</span></span><br><span class="line">  render()&#123;</span><br><span class="line">    <span class="keyword">return</span>(</span><br><span class="line">      &lt;div className=&#123;<span class="string">"WorldClock"</span>&#125;&gt;</span><br><span class="line">        &lt;h2&gt; 도시 : &#123;<span class="keyword">this</span>.props.city&#125; &lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;p&gt; 시간 : &#123;this.state.hour&#125;시 &#123;this.state.minute&#125;분&lt;/</span>p&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 요구사항 1. 시간과 분이 변화하는 것을 보고 싶다.</span></span><br><span class="line"><span class="comment">// 요구사항 2. 동적으로 보고싶다.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WorldClock</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      hour: <span class="keyword">this</span>.props.time,</span><br><span class="line">      minute : <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// this.setState</span></span><br><span class="line">    <span class="comment">// this.state.minute += 1; -&gt; 절대 불가</span></span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.setState(<span class="function">(<span class="params">state</span>)=&gt;</span>(</span><br><span class="line">        state.minute === <span class="number">59</span></span><br><span class="line">        ?&#123;<span class="attr">hour</span>: state.hour + <span class="number">1</span>, <span class="attr">minute</span> :<span class="number">0</span>&#125;</span><br><span class="line">        : &#123;<span class="attr">minute</span>: state.minute + <span class="number">1</span>&#125;</span><br><span class="line">        ))</span><br><span class="line">    &#125;, <span class="number">100</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// render 미리 약속되있는 함수</span></span><br><span class="line">  render()&#123;</span><br><span class="line">    <span class="keyword">return</span>(</span><br><span class="line">      &lt;div className=&#123;<span class="string">"WorldClock"</span>&#125;&gt;</span><br><span class="line">        &lt;h2&gt; 도시 : &#123;<span class="keyword">this</span>.props.city&#125; &lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;p&gt; 시간 : &#123;this.state.hour&#125;시 &#123;this.state.minute&#125;분&lt;/</span>p&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="실행-결과"><a href="#실행-결과" class="headerlink" title="실행 결과"></a>실행 결과</h2><p><img src="/assets/img/React/state.PNG" alt="State"></p>
 <blockquote>
@@ -425,7 +444,7 @@ height:50vh;
             <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
             </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/17/React3/">https://khs9628.github.io/2019/09/17/React3/</a>
             </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/17/React3/">September 17th 2019, 5:49:49 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/17/React3/">September 17th 2019, 6:33:57 pm</a>
+            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/17/React3/">September 17th 2019, 10:05:46 pm</a>
             </p><p>license：@madeby현수쓰</p>
         </div>
     
@@ -434,8 +453,8 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2019/09/17/React4/" title="Event & LifeTime">
-                    <div class="nextTitle">Event & LifeTime</div>
+                <a href="/2019/09/17/React4/" title="Event & Lifecycle">
+                    <div class="nextTitle">Event & Lifecycle</div>
                 </a>
             
         </li>
@@ -877,22 +896,6 @@ s.setAttribute('data-timestamp', +new Date());
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 21
@@ -911,7 +914,7 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/17</span><a class="archive-post-title" href="/2019/09/17/React4/">Event & LifeTime</a>
+            <span class="archive-post-date">09/17</span><a class="archive-post-title" href="/2019/09/17/React4/">Event & Lifecycle</a>
         </li>
     
     
@@ -941,17 +944,12 @@ s.setAttribute('data-timestamp', +new Date());
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/Django3/">ViewSet & Router</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/codingtest3/">기능 개발</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/Django3/">ViewSet & Router</a>
         </li>
     
     
@@ -967,6 +965,11 @@ s.setAttribute('data-timestamp', +new Date());
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/5Ducku/">5Ducku</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href="/2019/09/10/나왐마/">나왐마</a>
         </li>
     
     
@@ -1019,11 +1022,11 @@ s.setAttribute('data-timestamp', +new Date());
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="Django"><span class="iconfont-archer">&#xe606;</span>Django</span>
-    
         <span class="sidebar-tag-name" data-tags="PORTFOLIO"><span class="iconfont-archer">&#xe606;</span>PORTFOLIO</span>
     
         <span class="sidebar-tag-name" data-tags="DB"><span class="iconfont-archer">&#xe606;</span>DB</span>
+    
+        <span class="sidebar-tag-name" data-tags="Django"><span class="iconfont-archer">&#xe606;</span>Django</span>
     
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
     
