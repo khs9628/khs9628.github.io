@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="https://khs9628.github.io/2019/09/09/django2/">
+<link rel="canonical" href="https://khs9628.github.io/archives/2019/page/3/">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -23,7 +23,7 @@
     <meta name="description" content="기술블로그">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>RESTFUL API? · khs9628</title>
+    <title>khs9628</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,23 +204,12 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">현수쓰 기술블로그</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">RESTFUL API?</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">현수쓰 기술블로그</a>
 </header>
@@ -232,74 +221,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            RESTFUL API?
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Django">Django</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">240</span>Reading time: <span class="post-count reading-time">1 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/09/09</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -400,147 +339,74 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h4 id="REST란-REpresentational-State-Transfer"><a href="#REST란-REpresentational-State-Transfer" class="headerlink" title="REST란? REpresentational State Transfer"></a>REST란? REpresentational State Transfer</h4><ul>
-<li>HTTP를 이용해 통신하는 네트워크상에서 정한 약속</li>
-<li>분산 하이퍼미디어 시스템을 위한 소프트웨어 설계 형식</li>
-<li>자원을 대표하는 단어 OR 식별자로 자원의 상태를 전송하는 방법</li>
-<li>자원을 이름으로 구분하여 상태를 전송하는 방법</li>
-<li>하위 호환을 깨뜨리지 않고 독립적 발전할 수 있게 도와주는 방법</li>
-</ul>
-<blockquote>
-<p>REST 필요충분조건?</p>
-<ul>
-<li>Server - Client</li>
-<li>STATELESS</li>
-<li>Cache</li>
-<li>Uniform Interface</li>
-<li>Layered System</li>
-<li>Code-On-Demand</li>
-</ul>
-</blockquote>
-<h4 id="API란-Application-Program-Interface"><a href="#API란-Application-Program-Interface" class="headerlink" title="API란? Application Program Interface"></a>API란? Application Program Interface</h4><p><img src="/assets/img/Django/api.PNG" alt="API"><br>특정방식으로 response나 request를 보내는 형식</p>
-<h4 id="RESTAPI란-REST-아키텍쳐-스타일을-따르는-API"><a href="#RESTAPI란-REST-아키텍쳐-스타일을-따르는-API" class="headerlink" title="RESTAPI란? REST 아키텍쳐 스타일을 따르는 API"></a>RESTAPI란? REST 아키텍쳐 스타일을 따르는 API</h4><p>HTTP로 CRUD를 구현할 수 있는 API?<br>-&gt; JSON : 모든 태그가 만들어져 있는 것도 아님 만든 이가 정의하기 나름  -&gt; RESTFUL하지 못함</p>
-<h4 id="현재의-RESTFUL-API"><a href="#현재의-RESTFUL-API" class="headerlink" title="현재의 RESTFUL API?"></a>현재의 RESTFUL API?</h4><p>Self-Description (x)  HATROAS(x) -&gt; 잘 지켜지지 않고 있다!</p>
-<h3 id="JSON-직렬화-Serializer"><a href="#JSON-직렬화-Serializer" class="headerlink" title="JSON 직렬화 - Serializer"></a>JSON 직렬화 - Serializer</h3><p>(Model)Form vs (Model)Serializer</p>
-<table>
-<thead>
-<tr>
-<th align="center">Django</th>
-<th align="center">Serializer</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Form/ModelForm</td>
-<td align="center">Serializer/ModelSerializer</td>
-</tr>
-<tr>
-<td align="center">Model로 부터 Field 읽어옴</td>
-<td align="center">=</td>
-</tr>
-<tr>
-<td align="center">유효성검사</td>
-<td align="center">=</td>
-</tr>
-<tr>
-<td align="center">HTML Form</td>
-<td align="center">JSON 문자열</td>
-</tr>
-</tbody></table>
-<p><img src="/assets/img/Django/serializer.PNG" alt="Serializer"></p>
-<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#bash</span></span><br><span class="line">pip install djangorestframework <span class="comment">#REST설치</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#settings.py</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line"><span class="string">'rest_framework'</span> <span class="comment">#rest installed app 에 등록</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">#app/urls.py</span></span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path, include</span><br><span class="line"><span class="keyword">from</span> rest_framework.routers <span class="keyword">import</span> DefaultRouter</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line"><span class="comment">#Django rest framework -&gt; router -&gt; url</span></span><br><span class="line"></span><br><span class="line">router = DefaultRouter()</span><br><span class="line">router.register(<span class="string">'post'</span>, views.PostViewSet)</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">''</span>,include(router.urls)),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">#app/views.py</span></span><br><span class="line"><span class="keyword">from</span> rest_framework <span class="keyword">import</span> viewsets</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Post</span><br><span class="line"><span class="keyword">from</span> .serializer <span class="keyword">import</span> PostSerializer</span><br><span class="line"></span><br><span class="line"><span class="comment">#CBV (Class Based View)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PostViewSet</span><span class="params">(viewsets.ModelViewSet)</span>:</span></span><br><span class="line">    queryset = Post.objects.all()</span><br><span class="line">    serializer_class = PostSerializer</span><br><span class="line"></span><br><span class="line"><span class="comment">#serializer.py &lt;=&gt; forms.py</span></span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Post</span><br><span class="line"><span class="keyword">from</span> rest_framework <span class="keyword">import</span> serializers</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PostSerializer</span><span class="params">(serializers.ModelSerializer)</span>:</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        model = Post</span><br><span class="line">        <span class="comment">#fields = '__all__'</span></span><br><span class="line">        fields = [<span class="string">'id'</span>,<span class="string">'title'</span>,<span class="string">'body'</span>]</span><br><span class="line">        read_only_fields =(<span class="string">'title'</span>,)</span><br></pre></td></tr></table></figure>
-
-<h3 id="실행화면"><a href="#실행화면" class="headerlink" title="실행화면"></a>실행화면</h3><p><img src="/assets/img/Django/%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG" alt="실행화면"></p>
-<p><a href="https://www.django-rest-framework.org/" rel="external nofollow noopener noreferrer" target="_blank">REST 참고 사이트</a></p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>Author：<a href="https://khs9628.github.io">kimhyunsoo</a>
-            </p><p>원본링크：<a href="https://khs9628.github.io/2019/09/09/Django2/">https://khs9628.github.io/2019/09/09/Django2/</a>
-            </p><p>등록날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 9th 2019, 5:06:04 pm</a>
-            </p><p>수정날짜：<a href="https://khs9628.github.io/2019/09/09/Django2/">September 10th 2019, 1:58:12 pm</a>
-            </p><p>license：@madeby현수쓰</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/09/06/first/">
+            
+                <span>목차</span>
+        </a>
+        <div class="abstract-content">
+            MAIN 목차 및 정리개념기술 블로그 관련 POST1. SPRING 개념정리
+Tiles 프레임워크
+
+2. Django GIT
+CBV
+Serializer
+ViewSet &amp; Router
+
+3. React GIT
+기초 JS 정리
+React기본
+
+4. 알고리즘 / DB 문제 정리
+코딩 테스트 문제
+
+HASH 알고리즘
+완주하지 못한 선수
+전화번호 목록
+
+
+스택 / 큐
+기능 개발
+
+
+
+
+DB 문제
+
+7daySQL
+NEXT
+
+
+
+5. 포토폴리오
+WorkManager GIT
+GuardOWL    GIT
+나왐마      GIT
+5DUC...
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/06</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/09/09/React1/" title="JavaScript 기본">
-                    <div class="nextTitle">JavaScript 기본</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/09/09/Django1/" title="CBV(Class Based View)">
-                    <div class="prevTitle">CBV(Class Based View)</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
-    <!-- 
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-        
-        var disqus_config = function () {
-        this.page.url = "https://khs9628.github.io/2019/09/09/Django2/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "RESTFUL API?"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://khs9628.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
- -->
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://khs9628.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
-                            
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/archives/2019/page/2/">&#60; PREV</a><a class="page-number" href="/archives/2019/">1</a><a class="page-number" href="/archives/2019/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
     
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -626,13 +492,6 @@ s.setAttribute('data-timestamp', +new Date());
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style="top:50vh;">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#REST란-REpresentational-State-Transfer"><span class="toc-number">1.</span> <span class="toc-text">REST란? REpresentational State Transfer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#API란-Application-Program-Interface"><span class="toc-number">2.</span> <span class="toc-text">API란? Application Program Interface</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RESTAPI란-REST-아키텍쳐-스타일을-따르는-API"><span class="toc-number">3.</span> <span class="toc-text">RESTAPI란? REST 아키텍쳐 스타일을 따르는 API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#현재의-RESTFUL-API"><span class="toc-number">4.</span> <span class="toc-text">현재의 RESTFUL API?</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-직렬화-Serializer"><span class="toc-number"></span> <span class="toc-text">JSON 직렬화 - Serializer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#코드"><span class="toc-number"></span> <span class="toc-text">코드</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#실행화면"><span class="toc-number"></span> <span class="toc-text">실행화면</span></a>
-    </li></div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1130,10 +989,8 @@ jsonContent:
     
     
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
-    </body>
+    
 </html>
 
 

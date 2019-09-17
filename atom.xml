@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-16T16:19:59.522Z</updated>
+  <updated>2019-09-17T12:51:15.584Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -15,6 +15,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Event &amp; LifeTime</title>
+    <link href="https://khs9628.github.io/2019/09/17/React4/"/>
+    <id>https://khs9628.github.io/2019/09/17/React4/</id>
+    <published>2019-09-17T09:34:21.000Z</published>
+    <updated>2019-09-17T12:51:15.584Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h2><p>== 웹상에서의 모든 행위</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Event&quot;&gt;&lt;a href=&quot;#Event&quot; class=&quot;headerlink&quot; title=&quot;Event&quot;&gt;&lt;/a&gt;Event&lt;/h2&gt;&lt;p&gt;== 웹상에서의 모든 행위&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="React" scheme="https://khs9628.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Props &amp; State</title>
+    <link href="https://khs9628.github.io/2019/09/17/React3/"/>
+    <id>https://khs9628.github.io/2019/09/17/React3/</id>
+    <published>2019-09-17T08:49:49.000Z</published>
+    <updated>2019-09-17T09:33:57.018Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="컴포넌트-실습-Feat-map"><a href="#컴포넌트-실습-Feat-map" class="headerlink" title="컴포넌트 실습 (Feat.map)"></a>컴포넌트 실습 (Feat.map)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./App.css'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSX -&gt; HTML 태그</span></span><br><span class="line"><span class="comment">// JSX -&gt; style을 통해 css (JSX)</span></span><br><span class="line"><span class="comment">// JSX -&gt; className을 통해 css (css -&gt; App.css)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">WorldClock</span>(<span class="params">props</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span>(</span><br><span class="line">  &lt;div className=&#123;<span class="string">"WorldClock"</span>&#125;&gt;</span><br><span class="line">    &lt;h2&gt; 도시 : &#123;props.city&#125; &lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p&gt; 시간 : &#123;props.time&#125; 시&lt;/</span>p&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">function App() &#123;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/list 타입의 Data</span></span><br><span class="line"><span class="regexp">  const cityTimeData= [</span></span><br><span class="line"><span class="regexp">    ['서울', 10],</span></span><br><span class="line"><span class="regexp">    ['북한', 11],</span></span><br><span class="line"><span class="regexp">    ['도쿄', 12],</span></span><br><span class="line"><span class="regexp">    ['베이징', 1],</span></span><br><span class="line"><span class="regexp">  ]</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  const WorldClockList = cityTimeData.map((citytime, index)=&gt;</span></span><br><span class="line"><span class="regexp">    &lt;WorldClock city=&#123;citytime[0]&#125; time =&#123;citytime[1]&#125; key =&#123;index&#125; /</span>&gt;</span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">      &lt;h1 className = &#123;<span class="string">'myStyle'</span>&#125;&gt;안녕하세요&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div className= &#123;'post'&#125;&gt;첫 게시글입니다.&lt;/</span>div&gt;</span><br><span class="line">    &#123;WorldClockList&#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/컴포넌트 수출</span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure><h1 id="오류"><a href="#오류" class="headerlink" title="오류"></a>오류</h1><blockquote><p>index.js:1375 Warning: Each child in a list should have a unique “key” prop.</p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-&gt; <span class="keyword">const</span> WorldClockList = cityTimeData.map(<span class="function">(<span class="params">citytime, index</span>)=&gt;</span></span><br><span class="line">    &lt;WorldClock city=&#123;citytime[<span class="number">0</span>]&#125; time =&#123;citytime[<span class="number">1</span>]&#125; key =&#123;index&#125; /&gt;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure><h2 id="State"><a href="#State" class="headerlink" title="State"></a>State</h2><p>Props만으로도 표현 불가능 / Render로 표시 불가능 -&gt; State 사용<br>| | state | stateless |<br>| :–: | :–: | :–: |<br>| function | O(hook기술) | O |<br>| Class | O | O | </p><p>State는 좋지만 무겁고 어렵기 때문에 되도록 사용안함</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 요구사항 1. 시간과 분이 변화하는 것을 보고 싶다.</span></span><br><span class="line"><span class="comment">// 요구사항 2. 동적으로 보고싶다.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WorldClock</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      hour: <span class="keyword">this</span>.props.time,</span><br><span class="line">      minute : <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// this.setState</span></span><br><span class="line">    <span class="comment">// this.state.minute += 1; -&gt; 절대 불가</span></span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.setState(<span class="function">(<span class="params">state</span>)=&gt;</span>(</span><br><span class="line">        state.minute === <span class="number">59</span></span><br><span class="line">        ?&#123;<span class="attr">hour</span>: state.hour + <span class="number">1</span>, <span class="attr">minute</span> :<span class="number">0</span>&#125;</span><br><span class="line">        : &#123;<span class="attr">minute</span>: state.minute + <span class="number">1</span>&#125;</span><br><span class="line">        ))</span><br><span class="line">    &#125;, <span class="number">100</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// render 미리 약속되있는 함수</span></span><br><span class="line">  render()&#123;</span><br><span class="line">    <span class="keyword">return</span>(</span><br><span class="line">      &lt;div className=&#123;<span class="string">"WorldClock"</span>&#125;&gt;</span><br><span class="line">        &lt;h2&gt; 도시 : &#123;<span class="keyword">this</span>.props.city&#125; &lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;p&gt; 시간 : &#123;this.state.hour&#125;시 &#123;this.state.minute&#125;분&lt;/</span>p&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure><h2 id="실행-결과"><a href="#실행-결과" class="headerlink" title="실행 결과"></a>실행 결과</h2><p><img src="/assets/img/React/state.PNG" alt="State"></p><blockquote><p>하루를 기록하다</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;컴포넌트-실습-Feat-map&quot;&gt;&lt;a href=&quot;#컴포넌트-실습-Feat-map&quot; class=&quot;headerlink&quot; title=&quot;컴포넌트 실습 (Feat.map)&quot;&gt;&lt;/a&gt;컴포넌트 실습 (Feat.map)&lt;/h2&gt;&lt;figure class
+      
+    
+    </summary>
+    
+    
+    
+      <category term="React" scheme="https://khs9628.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React와 Django 프로젝트</title>
+    <link href="https://khs9628.github.io/2019/09/17/Django5/"/>
+    <id>https://khs9628.github.io/2019/09/17/Django5/</id>
+    <published>2019-09-17T05:45:17.000Z</published>
+    <updated>2019-09-17T11:36:20.900Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://velog.io/@killi8n/Django%EC%99%80-React%EB%A1%9C-%ED%95%9C%EC%A4%84-%EB%85%B8%ED%8A%B8-%EC%95%B1-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0-2.-React-Django-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1.-najmam6ds2" rel="external nofollow noopener noreferrer" target="_blank">참고 블로그</a></p><h1 id="폴더-구조"><a href="#폴더-구조" class="headerlink" title="폴더 구조"></a>폴더 구조</h1><h2 id="초기-설정"><a href="#초기-설정" class="headerlink" title="초기 설정"></a>초기 설정</h2><h3 id="Django-앱생성"><a href="#Django-앱생성" class="headerlink" title="Django 앱생성"></a>Django 앱생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 가상환경 생성</span></span><br><span class="line">python –m venv venv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 가상환경 접속</span></span><br><span class="line"><span class="built_in">source</span> venv/Scripts/activate</span><br><span class="line"></span><br><span class="line"><span class="comment"># django 프로젝트 생성</span></span><br><span class="line">(venv) pip install django</span><br><span class="line">(venv) django-admin startproject dnote</span><br><span class="line">(venv) <span class="built_in">cd</span> dnote</span><br><span class="line">(venv) python manage.py migrate</span><br><span class="line">(venv) python manage.py runserver <span class="comment"># 실행확인</span></span><br></pre></td></tr></table></figure><h3 id="react-앱생성"><a href="#react-앱생성" class="headerlink" title="react 앱생성"></a>react 앱생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br><span class="line">create-react-app frontend</span><br><span class="line"><span class="built_in">cd</span> frontend</span><br><span class="line">npm start <span class="comment"># 실행확인</span></span><br></pre></td></tr></table></figure><h3 id="React-개발-환경-설정-및-구조-잡기-sass-설정"><a href="#React-개발-환경-설정-및-구조-잡기-sass-설정" class="headerlink" title="React - 개발 환경 설정 및 구조 잡기.(sass 설정)"></a>React - 개발 환경 설정 및 구조 잡기.(sass 설정)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">cd</span> frontend</span><br><span class="line"><span class="comment"># 관련 패키지 다운</span></span><br><span class="line">npm install</span><br><span class="line">npm run eject</span><br><span class="line"><span class="comment"># 오류시 git add. / git commit -m "" 해줘야함 </span></span><br><span class="line"><span class="comment"># -&gt; 최상 디렉터리에(해당 폴더 git이 있어서 충돌)</span></span><br><span class="line">npm start <span class="comment"># react 시작하기</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sass 설정</span></span><br><span class="line">npm install --save node-sass sass-loader</span><br><span class="line">npm install --save-dev node-sass</span><br><span class="line">npm install --save-dev sass-loader</span><br></pre></td></tr></table></figure><h2 id="config-paths-js"><a href="#config-paths-js" class="headerlink" title="config/paths.js"></a>config/paths.js</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config after eject: we're in ./config/</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="comment">// 추가해줍니다.</span></span><br><span class="line">  styles: resolveApp(<span class="string">"src/styles"</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h1 id="React-개발-환경-설정-및-구조-잡기-프로젝트-구조잡기"><a href="#React-개발-환경-설정-및-구조-잡기-프로젝트-구조잡기" class="headerlink" title="React - 개발 환경 설정 및 구조 잡기.(프로젝트 구조잡기)"></a>React - 개발 환경 설정 및 구조 잡기.(프로젝트 구조잡기)</h1><h3 id="Module-not-found-에러"><a href="#Module-not-found-에러" class="headerlink" title="Module not found 에러"></a>Module not found 에러</h3><h3 id="폴더-구조-src"><a href="#폴더-구조-src" class="headerlink" title="폴더 구조 src/.."></a>폴더 구조 src/..</h3><p>containers: 리액트 컨테이너 파일들 집합<br>components: 리액트 컴포넌트 파일들 집합<br>pages: Routing에서 사용될 page 파일들 집합<br>store: redux모듈들과 configure파일들 집합</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://velog.io/@killi8n/Django%EC%99%80-React%EB%A1%9C-%ED%95%9C%EC%A4%84-%EB%85%B8%ED%8A%B8-%EC%95%B1-%EB%A7%8C%EB%93%A4%EC%9
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Django" scheme="https://khs9628.github.io/tags/Django/"/>
+    
+  </entry>
   
   <entry>
     <title>RESTful API 프로젝트</title>
@@ -421,28 +494,6 @@
     
     
       <category term="알고리즘" scheme="https://khs9628.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>목차</title>
-    <link href="https://khs9628.github.io/2019/09/06/first/"/>
-    <id>https://khs9628.github.io/2019/09/06/first/</id>
-    <published>2019-09-06T13:18:44.000Z</published>
-    <updated>2019-09-16T14:53:57.118Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="MAIN-목차-및-정리개념"><a href="#MAIN-목차-및-정리개념" class="headerlink" title="MAIN 목차 및 정리개념"></a>MAIN 목차 및 정리개념</h1><h2 id="기술-블로그-관련-POST"><a href="#기술-블로그-관련-POST" class="headerlink" title="기술 블로그 관련 POST"></a>기술 블로그 관련 POST</h2><h3 id="1-SPRING-개념정리"><a href="#1-SPRING-개념정리" class="headerlink" title="1. SPRING 개념정리"></a>1. SPRING 개념정리</h3><ul><li>Tiles 프레임워크</li></ul><h3 id="2-Django-GIT"><a href="#2-Django-GIT" class="headerlink" title="2. Django GIT"></a>2. Django <a href="https://github.com/khs9628/Django_deep" rel="external nofollow noopener noreferrer" target="_blank">GIT</a></h3><ol><li><a href="https://khs9628.github.io/2019/09/09/Django1/">CBV</a></li><li><a href="https://khs9628.github.io/2019/09/09/Django2/">Serializer</a></li><li><a href="https://khs9628.github.io/2019/09/10/Django3/">ViewSet &amp; Router</a></li></ol><h3 id="3-React-GIT"><a href="#3-React-GIT" class="headerlink" title="3. React GIT"></a>3. React <a href="https://github.com/khs9628/Django_deep" rel="external nofollow noopener noreferrer" target="_blank">GIT</a></h3><ol><li><a href="https://khs9628.github.io/2019/09/09/React1/">기초 JS 정리</a></li><li><a href="https://khs9628.github.io/2019/09/09/React2/">React기본</a></li></ol><h3 id="4-알고리즘-DB-문제-정리"><a href="#4-알고리즘-DB-문제-정리" class="headerlink" title="4. 알고리즘 / DB 문제 정리"></a>4. 알고리즘 / DB 문제 정리</h3><ul><li><p>코딩 테스트 문제</p><ol><li>HASH 알고리즘<ul><li><a href="https://khs9628.github.io/2019/09/07/codingTest1/">완주하지 못한 선수</a></li><li><a href="https://khs9628.github.io/2019/09/07/codingTest2/">전화번호 목록</a></li></ul></li><li>스택 / 큐<ul><li><a href="https://khs9628.github.io/2019/09/10/codingtest3/">기능 개발</a></li></ul></li></ol></li><li><p>DB 문제</p><ol><li><a href="https://khs9628.github.io/2019/09/07/DBtest1/">7daySQL</a></li><li><a href>NEXT</a></li></ol></li></ul><h3 id="5-포토폴리오"><a href="#5-포토폴리오" class="headerlink" title="5. 포토폴리오"></a>5. 포토폴리오</h3><ul><li>WorkManager <a href="https://github.com/khs9628/WorkManager" rel="external nofollow noopener noreferrer" target="_blank">GIT</a></li><li>GuardOWL    <a href="https://github.com/khs9628/Guard_Owl" rel="external nofollow noopener noreferrer" target="_blank">GIT</a></li><li>나왐마      <a href="https://github.com/khs9628/NawamMa" rel="external nofollow noopener noreferrer" target="_blank">GIT</a></li><li>5DUCKU      <a href="https://github.com/khs9628/5Ducku" rel="external nofollow noopener noreferrer" target="_blank">GIT</a></li><li>수라상      <a href="https://github.com/khs9628/NewbieThon" rel="external nofollow noopener noreferrer" target="_blank">GIT</a><blockquote><p>하루를 기록하다</p></blockquote></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;MAIN-목차-및-정리개념&quot;&gt;&lt;a href=&quot;#MAIN-목차-및-정리개념&quot; class=&quot;headerlink&quot; title=&quot;MAIN 목차 및 정리개념&quot;&gt;&lt;/a&gt;MAIN 목차 및 정리개념&lt;/h1&gt;&lt;h2 id=&quot;기술-블로그-관련-POST&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
