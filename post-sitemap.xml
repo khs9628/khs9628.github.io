@@ -8,8 +8,16 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2019/09/19/React5/</loc>
-        <lastmod>2019-09-19T07:10:34.181Z</lastmod>
+        <loc>https://khs9628.github.io/2019/09/07/DBtest1/</loc>
+        <lastmod>2019-09-19T08:43:54.759Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/17/Django5/</loc>
+        <lastmod>2019-09-19T08:43:16.456Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +25,31 @@
 
     <url>
         <loc>https://khs9628.github.io/2019/09/10/Django3/</loc>
-        <lastmod>2019-09-19T07:10:29.533Z</lastmod>
+        <lastmod>2019-09-19T08:43:04.987Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/09/Django2/</loc>
+        <lastmod>2019-09-19T08:42:54.668Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/09/Django1/</loc>
+        <lastmod>2019-09-19T08:42:46.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/19/React5/</loc>
+        <lastmod>2019-09-19T07:42:07.601Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,24 +72,8 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2019/09/09/Django1/</loc>
-        <lastmod>2019-09-19T07:09:08.206Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://khs9628.github.io/2019/09/07/DBtest2/</loc>
         <lastmod>2019-09-19T07:08:51.659Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/07/DBtest1/</loc>
-        <lastmod>2019-09-19T07:08:46.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -112,14 +128,6 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2019/09/17/Django5/</loc>
-        <lastmod>2019-09-19T07:04:21.978Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://khs9628.github.io/2019/09/16/royalTable/</loc>
         <lastmod>2019-09-19T07:01:51.472Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -138,14 +146,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/10/5Ducku/</loc>
         <lastmod>2019-09-19T06:57:16.433Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/09/Django2/</loc>
-        <lastmod>2019-09-19T05:52:46.672Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
