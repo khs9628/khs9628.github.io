@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2019/09/19/React5/</loc>
+        <lastmod>2019-09-19T17:30:57.520Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2019/09/20/React6/</loc>
-        <lastmod>2019-09-19T16:29:17.931Z</lastmod>
+        <lastmod>2019-09-19T17:27:20.970Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,14 +26,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/17/Django5/</loc>
         <lastmod>2019-09-19T16:26:17.491Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/19/React5/</loc>
-        <lastmod>2019-09-19T16:25:07.708Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
