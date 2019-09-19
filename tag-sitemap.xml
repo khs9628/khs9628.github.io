@@ -3,22 +3,43 @@
 
 
     <url>
-        <loc>https://khs9628.github.io/tags/DB/</loc>
-        <lastmod>2019-09-19T08:43:54.759Z</lastmod>
+        <loc>https://khs9628.github.io/tags/React6/</loc>
+        <lastmod>2019-09-19T16:29:17.931Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://khs9628.github.io/tags/Django/</loc>
-        <lastmod>2019-09-19T08:43:16.456Z</lastmod>
+        <lastmod>2019-09-19T16:26:17.491Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://khs9628.github.io/tags/React/</loc>
-        <lastmod>2019-09-19T07:42:07.601Z</lastmod>
+        <lastmod>2019-09-19T16:25:07.708Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/tags/DB/</loc>
+        <lastmod>2019-09-19T16:23:07.925Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
+        <lastmod>2019-09-19T16:21:29.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/tags/React-Javascirpt/</loc>
+        <lastmod>2019-09-19T16:17:17.940Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -26,20 +47,6 @@
     <url>
         <loc>https://khs9628.github.io/tags/PORTFOLIO/</loc>
         <lastmod>2019-09-19T07:09:34.010Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-        <lastmod>2019-09-19T07:08:38.242Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/React-Javascirpt/</loc>
-        <lastmod>2019-09-19T07:04:51.863Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
