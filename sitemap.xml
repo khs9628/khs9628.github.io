@@ -4,7 +4,7 @@
 
     <sitemap>
         <loc>https://khs9628.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-09-19T06:08:27.245Z</lastmod>
+        <lastmod>2019-09-19T07:10:34.181Z</lastmod>
     </sitemap>
 
     <sitemap>
@@ -13,8 +13,13 @@
     </sitemap>
 
     <sitemap>
+        <loc>https://khs9628.github.io/category-sitemap.xml</loc>
+        <lastmod>2019-09-19T07:10:29.533Z</lastmod>
+    </sitemap>
+
+    <sitemap>
         <loc>https://khs9628.github.io/tag-sitemap.xml</loc>
-        <lastmod>2019-09-19T06:08:27.245Z</lastmod>
+        <lastmod>2019-09-19T07:10:34.181Z</lastmod>
     </sitemap>
 
 </sitemapindex>
