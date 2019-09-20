@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2019/09/10/GuardOwl/</loc>
+        <lastmod>2019-09-20T06:17:46.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2019/09/19/React5/</loc>
         <lastmod>2019-09-19T17:30:57.520Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -130,14 +138,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/09/Django1/</loc>
         <lastmod>2019-09-19T08:42:46.478Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/10/GuardOwl/</loc>
-        <lastmod>2019-09-19T07:09:34.010Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
