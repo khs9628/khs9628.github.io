@@ -8,8 +8,24 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2019/09/20/CBV1/</loc>
-        <lastmod>2019-09-20T16:21:47.475Z</lastmod>
+        <loc>https://khs9628.github.io/2019/09/21/CBV5/</loc>
+        <lastmod>2019-09-21T10:31:28.688Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/21/CBV4/</loc>
+        <lastmod>2019-09-21T07:54:30.276Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/21/CBV3/</loc>
+        <lastmod>2019-09-21T06:52:35.224Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +33,23 @@
 
     <url>
         <loc>https://khs9628.github.io/2019/09/21/CBV2/</loc>
-        <lastmod>2019-09-20T16:21:38.806Z</lastmod>
+        <lastmod>2019-09-21T06:48:58.818Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/20/CBV1/</loc>
+        <lastmod>2019-09-21T06:48:53.327Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/10/codingtest/</loc>
+        <lastmod>2019-09-21T06:47:10.666Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,14 +58,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/06/first/</loc>
         <lastmod>2019-09-20T16:20:46.495Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/10/codingtest/</loc>
-        <lastmod>2019-09-20T16:19:47.320Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
