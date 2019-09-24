@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-24T08:12:28.355Z</updated>
+  <updated>2019-09-24T08:16:36.575Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dnote3</title>
+    <link href="https://khs9628.github.io/2019/09/24/Dnote3/"/>
+    <id>https://khs9628.github.io/2019/09/24/Dnote3/</id>
+    <published>2019-09-24T08:16:36.000Z</published>
+    <updated>2019-09-24T08:16:36.575Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Dnote2</title>
@@ -495,32 +510,6 @@
     <updated>2019-09-21T10:52:06.898Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="프로젝트" scheme="https://khs9628.github.io/categories/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"/>
-    
-    
-      <category term="PORTFOLIO" scheme="https://khs9628.github.io/tags/PORTFOLIO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>나왐마</title>
-    <link href="https://khs9628.github.io/2019/09/10/%EB%82%98%EC%99%90%EB%A7%88/"/>
-    <id>https://khs9628.github.io/2019/09/10/나왐마/</id>
-    <published>2019-09-10T04:34:43.000Z</published>
-    <updated>2019-09-19T07:06:19.180Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="나왐마"><a href="#나왐마" class="headerlink" title="나왐마!"></a><a href="https://github.com/khs9628/NawamMa" rel="external nofollow noopener noreferrer" target="_blank">나왐마!</a></h2><p><img alt="LOGO" data-src="/img/PORTFOLIO/NawamMa/index.PNG" class="lozad"></p><h3 id="라이브러리"><a href="#라이브러리" class="headerlink" title="라이브러리"></a>라이브러리</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install django-allauth : 소셜로그인 구현</span><br><span class="line">pip install pySerial : 아두이노 시리얼 통신 구현</span><br><span class="line">pip install Pillow : 게시판 사진 업로드 구현</span><br></pre></td></tr></table></figure><h3 id="프로젝트-개발-배경"><a href="#프로젝트-개발-배경" class="headerlink" title="프로젝트 개발 배경"></a>프로젝트 개발 배경</h3><pre><code>1. 지하철 자리의 비효울적인 관리와 일상시 가장 많이 이용하는 교통 수단인 하나인 지하철에 전반적인 문제를 해결하고 싶어서2. 임산부좌석에 대한 갈등 심화와 임산부가 임산부 좌석에 자리요청하기 힘든 상황을 해결하고 싶어서</code></pre><h3 id="Project-구조"><a href="#Project-구조" class="headerlink" title="Project 구조"></a>Project 구조</h3><pre><code>프로젝트 이름 : project* appboard : 게시판 관련 APPmember : 계정 관련 APPaccounts : 소셜 계정 관련 APPNawamMa : 전체적인 기능 관련 APP</code></pre><h3 id="Project-소개"><a href="#Project-소개" class="headerlink" title="Project 소개"></a>Project 소개</h3><pre><code>지하철 자리를 효율적으로 관리하고 사용자들이 쉽게 자리를 찾을 수 있도록 도와주는 임산부들이 자리를 양보받을 수 있게 환경을 만들어주는서비스가 되는 것이 목표입니다.WEB 과 APP Arduino 3가지를 활용하여 구성WEB : 지하철 전광판 등에 표시 가능APP : 주 사용자들이 사용Arduino : 서버와 통신을 통해 신호를 보내고 값을 가져옴</code></pre><h2 id="주요-기능-2가지"><a href="#주요-기능-2가지" class="headerlink" title="주요 기능 2가지"></a>주요 기능 2가지</h2><p><img alt="LOGO" data-src="/img/PORTFOLIO/NawamMa/NawamMa_ex.PNG" class="lozad"></p><ol><li><strong>지하철 자리 현황</strong></li></ol><p><img alt="LOGO" data-src="/img/PORTFOLIO/NawamMa/NawamMa_1.PNG" class="lozad"></p><ol start="2"><li><strong>임산부 자리 요청</strong></li></ol><p><img alt="LOGO" data-src="/img/PORTFOLIO/NawamMa/NawamMa_2.PNG" class="lozad"></p><h2 id="완성-화면"><a href="#완성-화면" class="headerlink" title="완성 화면"></a>완성 화면</h2><p><img alt="LOGO" data-src="/img/PORTFOLIO/NawamMa/intro.PNG" class="lozad"></p><p><a href="https://blog.naver.com/seoulsba?Redirect=Log&logNo=221622583365" rel="external nofollow noopener noreferrer" target="_blank">관련 기사</a></p><blockquote><p>하루를 기록하다 </p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;나왐마&quot;&gt;&lt;a href=&quot;#나왐마&quot; class=&quot;headerlink&quot; title=&quot;나왐마!&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/khs9628/NawamMa&quot; rel=&quot;external nofollow noopener
-      
     
     </summary>
     
