@@ -8,22 +8,29 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/categories/React/</loc>
-        <lastmod>2019-09-24T15:16:12.019Z</lastmod>
+        <loc>https://khs9628.github.io/categories/Django/</loc>
+        <lastmod>2019-09-26T13:45:38.984Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/categories/Django/</loc>
-        <lastmod>2019-09-24T08:49:00.731Z</lastmod>
+        <loc>https://khs9628.github.io/categories/React-Django/</loc>
+        <lastmod>2019-09-26T13:45:10.361Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://khs9628.github.io/categories/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</loc>
-        <lastmod>2019-09-21T10:52:06.898Z</lastmod>
+        <lastmod>2019-09-26T13:36:05.173Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/categories/React/</loc>
+        <lastmod>2019-09-26T09:53:53.840Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
