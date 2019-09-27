@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://khs9628.github.io/"/>
-  <updated>2019-09-26T13:44:45.058Z</updated>
+  <updated>2019-09-27T10:30:37.268Z</updated>
   <id>https://khs9628.github.io/</id>
   
   <author>
@@ -17,16 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>aws3</title>
+    <title>(AWS) EC2에 배포하기</title>
     <link href="https://khs9628.github.io/2019/09/25/aws3/"/>
     <id>https://khs9628.github.io/2019/09/25/aws3/</id>
     <published>2019-09-25T09:40:21.000Z</published>
-    <updated>2019-09-26T13:44:45.058Z</updated>
+    <updated>2019-09-27T10:30:37.268Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="서버-배포-방법"><a href="#서버-배포-방법" class="headerlink" title="서버 배포 방법"></a>서버 배포 방법</h1><p>인스턴스에 배포하기 전에 서버를 구성하는 방법의 종류를 알아 보겠습니다</p><h2 id="Django로만-배포"><a href="#Django로만-배포" class="headerlink" title="Django로만 배포"></a>Django로만 배포</h2><p>Django 프로젝트를 인스턴스에 그대로 옮겨 <code>python manage.py runserver</code> 를 켜서 서버를 돌리는 방법입니다.<br>하지만 Django의 runserver는 개발할 때 쓰는 작은 디버깅용 웹 서버이기 때문에 실제 프로젝트를 이 방법으로 배포하지는 않고, 아래의 두가지 방법을 이용합니다.</p><h2 id="uWSGI-Django로-배포"><a href="#uWSGI-Django로-배포" class="headerlink" title="uWSGI + Django로 배포"></a>uWSGI + Django로 배포</h2><p>Django 프로젝트를 생성하면 wsgi.py 파일이 생성되는 것을 많이 보셨을 겁니다. 우선 WSGI의 개념부터 살펴보면, <code>Web Server Gateway Interface</code>의 약자로 <strong><em>웹 서버(Apache, Nginx 등)와 웹 애플리케이션(Django, Flask 등) 사이를 이어주는 역할</em></strong>을 합니다. 즉 웹 서버로 들어온 요청을 Python 언어로 만들어진 웹 애플리케이션과 소통할 수 있도록 해주는 역할을 합니다.<br><code>uWSGI</code>는 이 WSGI 규격으로 만들어진 서버 중에 하나이며 Django 프로젝트를 배포할 때 가장 일반적으로 사용됩니다.</p><p>Django는 수많은 request를 처리할 수 있도록 설계되어 있지 않기 때문에, Django로만 배포하지 않고 수많은 request를 처리하도록 설계된 uWSGI를 함께 사용해서 배포합니다. 그렇기 때문에 물론 uWSGI + Django 만으로도 충분히 배포가 가능하지만 추천하지는 않습니다</p><h2 id="Nginx-uWSGI-Django로-배포"><a href="#Nginx-uWSGI-Django로-배포" class="headerlink" title="Nginx + uWSGI + Django로 배포"></a>Nginx + uWSGI + Django로 배포</h2><p><img alt data-src="/img/Django/AWS/aws.PNG" class="lozad"><br>위의 그림에서처럼 <code>Nginx</code>는 클라이언트로부터 HTTP 요청을 받아 request에 따라 바뀌지 않는 즉 정적파일(HTML, CSS, JavaScript)을 돌려주고, 동적데이터가 필요한 요청은 웹 애플리케이션으로 보내줍니다. 이게 바로 웹 서버가 하는 일입니다. 위의 방법을 추천하지 않은 이유 역시 이 웹 서버가 정적파일을 미리 클라이언트에게 보여줌으로써 서버 성능을 높여주기 때문입니다.</p><p>Nginx에서 받은 요청은 <code>unix socket</code>을 거쳐 uWSGI로 보내지며, uWSGI가 받은 요청을 Python 개발 환경에서 이해할 수 있도록 중계해주면 최종적으로 Django에서 요청을 처리하게 됩니다.</p><p>그럼 Nginx + uWSGI + Django의 일련의 과정을 실제로 배포하는 방법을 아래에서 알아보도록 하겠습니다.</p><h1 id="Django-Setting"><a href="#Django-Setting" class="headerlink" title="Django Setting"></a>Django Setting</h1><p>인스턴스에 배포하기 전에 Django를 세팅합니다.</p><h3 id="Django-static-media-파일-처리-설정"><a href="#Django-static-media-파일-처리-설정" class="headerlink" title="Django static, media 파일 처리 설정"></a>Django static, media 파일 처리 설정</h3><p>먼저 제가 사용 중인 프로젝트의 <code>tree 구조</code>는 아래와 같습니다.</p><pre><code>Restful-project├── drfproj (project)│   ├── /__pycache__│   ├── __init__.py│   ├── settings.py│   ├── urls.py│   └── wsgi.py├── manage.py├── /media        ├── /files        └── /images└── mystorage (app)    ├── /__pycache__    ├── /migrations    │   └── __init__.py    ├── __init__.py    ├── admin.py    ├── apps.py    ├── models.py    ├── serializers.py    ├── urls.py    ├── tests.py    └── views.py</code></pre>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;서버-배포-방법&quot;&gt;&lt;a href=&quot;#서버-배포-방법&quot; class=&quot;headerlink&quot; title=&quot;서버 배포 방법&quot;&gt;&lt;/a&gt;서버 배포 방법&lt;/h1&gt;&lt;p&gt;인스턴스에 배포하기 전에 서버를 구성하는 방법의 종류를 알아 보겠습니다&lt;/p&gt;
+&lt;h
+      
+    
     </summary>
     
+    
+      <category term="AWS" scheme="https://khs9628.github.io/categories/AWS/"/>
     
     
       <category term="AWS" scheme="https://khs9628.github.io/tags/AWS/"/>
@@ -38,12 +48,21 @@
     <link href="https://khs9628.github.io/2019/09/25/aws2/"/>
     <id>https://khs9628.github.io/2019/09/25/aws2/</id>
     <published>2019-09-25T09:40:08.000Z</published>
-    <updated>2019-09-26T15:35:47.026Z</updated>
+    <updated>2019-09-27T10:01:48.369Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="EC2-인스턴스-가상환경-세팅"><a href="#EC2-인스턴스-가상환경-세팅" class="headerlink" title="EC2 인스턴스 가상환경 세팅"></a>EC2 인스턴스 가상환경 세팅</h1><p>인스턴스 환경을 현재 사용중인 로컬 컴퓨터의 환경과 같게 만들어주기 위해서 세팅해줍니다.</p><h2 id="pyenv-설치"><a href="#pyenv-설치" class="headerlink" title="pyenv 설치"></a>pyenv 설치</h2><ul><li><p>터미널로 인스턴스에 접속합니다.<br><code>Window</code> - <strong>putty</strong> 접속<br><code>Mac</code> </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -i &lt;pem경로&gt; &lt;user name&gt;@&lt;public dns name&gt;</span><br></pre></td></tr></table></figure></li><li><p>locale 오류(한글 깨짐 현상) fix</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/default/locale</span><br></pre></td></tr></table></figure><p>  <img alt data-src="/img/Django/AWS/aws11.PNG" class="lozad"></p></li><li><p>다시 시작</p></li><li><p><code>apt-get</code> 업데이트</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure></li><li><p><a href="https://github.com/pyenv/pyenv/wiki/Common-build-problems" rel="external nofollow noopener noreferrer" target="_blank">Common build problems</a>에 나온 내용부터 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \</span><br><span class="line">libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \</span><br><span class="line">xz-utils tk-dev</span><br></pre></td></tr></table></figure></li><li><p><code>pyenv</code> 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash</span><br></pre></td></tr></table></figure></li></ul><h2 id="zsh-설치"><a href="#zsh-설치" class="headerlink" title="zsh 설치"></a>zsh 설치</h2><p>좀 더 사용성을 좋게 하기 위해 기본 bash을 zsh로 변경합니다.</p><ul><li><p><code>zsh</code> 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install zsh</span><br></pre></td></tr></table></figure></li><li><p><code>oh-my-zsh</code> 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L http://install.ohmyz.sh | sh</span><br></pre></td></tr></table></figure></li><li><p>기본 쉘을 bash에서 zsh로 변경</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chsh ubuntu -s `<span class="built_in">which</span> zsh`</span><br></pre></td></tr></table></figure></li><li><p>재접속</p></li><li><p>zshrc에 pyenv 관련 내용 추가</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  vi ~/.zshrc</span><br></pre></td></tr></table></figure><ul><li><p>2번째 줄 export PATH ~ 부분 주석 해제</p></li><li><p>맨아래 내용 추가</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;/home/ubuntu/.pyenv/bin:$PATH&quot;</span><br><span class="line">eval &quot;$(pyenv init -)&quot;</span><br><span class="line">eval &quot;$(pyenv virtualenv-init -)&quot;</span><br></pre></td></tr></table></figure><p><img alt data-src="/img/Django/AWS/aws12.PNG" class="lozad"></p></li><li><p>zshrc 새로고침</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></li></ul></li></ul><h2 id="srv-폴더-권한-수정"><a href="#srv-폴더-권한-수정" class="headerlink" title="/srv 폴더 권한 수정"></a>/srv 폴더 권한 수정</h2><p>로컬의 파일을 이제 인스턴스에 옮길 차례입니다. 파일은 인스턴스의 /srv 폴더로 옮겨야하는데, 권한이 필요합니다. 옮길 수 있도록 아래 명령어로 권한을 ubuntu로 변경합니다. (참고 : <a href="https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC%EC%8B%9C%EC%8A%A4%ED%85%9C_%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0_%ED%91%9C%EC%A4%80" rel="external nofollow noopener noreferrer" target="_blank">리눅스 폴더 구조</a>)</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chown -R ubuntu:ubuntu /srv</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;EC2-인스턴스-가상환경-세팅&quot;&gt;&lt;a href=&quot;#EC2-인스턴스-가상환경-세팅&quot; class=&quot;headerlink&quot; title=&quot;EC2 인스턴스 가상환경 세팅&quot;&gt;&lt;/a&gt;EC2 인스턴스 가상환경 세팅&lt;/h1&gt;&lt;p&gt;인스턴스 환경을 현재 사용
+      
+    
     </summary>
     
+    
+      <category term="AWS" scheme="https://khs9628.github.io/categories/AWS/"/>
     
     
       <category term="AWS" scheme="https://khs9628.github.io/tags/AWS/"/>
@@ -55,7 +74,7 @@
     <link href="https://khs9628.github.io/2019/09/25/aws/"/>
     <id>https://khs9628.github.io/2019/09/25/aws/</id>
     <published>2019-09-25T08:48:03.000Z</published>
-    <updated>2019-09-26T15:44:00.108Z</updated>
+    <updated>2019-09-27T10:01:41.804Z</updated>
     
     <content type="html"><![CDATA[<p><img alt="기초구조" data-src="/img/Django/AWS/aws.PNG" class="lozad"></p><h2 id="Django-서버-기본-틀"><a href="#Django-서버-기본-틀" class="headerlink" title="Django 서버 기본 틀"></a>Django 서버 기본 틀</h2><ol><li><p>웹 클라이언트가 <code>웹 서버(Nginx)</code>에 HTTP 프로토콜로 요청(request)를 보낸다.</p></li><li><p>CSS, JavaScript, Images, PDF 문서 등 파일 시스템에 저장되어있는 각종 정적 파일(static file)들은 웹 서버가 바로 처리할 수 있다.</p></li><li><p>정적 파일 외의 동적인 부분은 웹 서버가 처리할 수 없으므로 웹 <code>어플리케이션 서버(uWSGI)</code>에게 위임한다. 웹 서버가 웹 어플리케이션 서버에게 요청을 위임하고, 웹 어플리케이션 서버가 이를 대행해서 웹 서버에게 응답해주는 관계다. 이 사이를 매개해주는게 바로 앞에서 설명한 Unix Socket이다. 웹 서버와 웹 어플리케이션 서버 사이의 통신도 HTTP 프로토콜을 사용할 수 있지만, 같은 OS상에 존재하는 두 개체이므로 더 빠른 uwsgi 프로토콜을 사용한다.</p></li><li><p>웹 클라이언트가 요청한 HTTP 프로토콜의 메시지를, Python call로 변환해줘야 Python으로 기술된 어플리케이션이 동작할 수 있다. Python에서는 이 매핑 관계로 <code>WSGI</code>를 표준으로 사용한다. <code>WSGI</code>는 Web Server Gateway Interface의 약자이다. uWSGI는 이 WSGI 표준의 구현이라고 이해하면 된다. uWSGI는 웹 서버에게서 받은 HTTP 요청을 Python call로 변환해서 Django 프레임워크와 협업한다.</p></li><li><p><code>Django</code> 프레임워크는 사용자가 Python으로 작성한 어플리케이션 코드를 실행한다.</p></li><li><p>또한 필요하다면 <code>ORM(Object-Relational Mapping)</code>을 사용해서 DB에서 데이터를 읽거나 쓴다. 프레임워크가 제공해주는 강력한 기능 중 하나가 ORM이라고 생각한다. SQL 문법을 몰라도, Python 코드로 DB를 다룰 수 있다.</p></li></ol><p><a href="https://technerd.tistory.com/55" rel="external nofollow noopener noreferrer" target="_blank">출처</a></p><h1 id="Django-AWS-EC2로-배포하기"><a href="#Django-AWS-EC2로-배포하기" class="headerlink" title="Django AWS EC2로 배포하기"></a>Django AWS EC2로 배포하기</h1><h2 id="STEP1-AWS-가입하기"><a href="#STEP1-AWS-가입하기" class="headerlink" title="[STEP1] AWS 가입하기"></a>[STEP1] AWS 가입하기</h2><ol><li><a href="https://aws.amazon.com/" rel="external nofollow noopener noreferrer" target="_blank">AWS 사이트</a>에 접속합니다. …</li><li>이메일 주소, 암호, 암호확인, AWS 계정 이름을 입력 하고 [동의하고 계정 만들기]를 클릭합니다.</li><li>해당 정보를 입력합니다. …</li><li>결제 정보를 입력합니다. …</li><li>전화번호를 입력하고 인증을 마무리 합니다.</li></ol><h2 id="STEP2-EC2-가상-서버-생성하기"><a href="#STEP2-EC2-가상-서버-생성하기" class="headerlink" title="[STEP2] EC2 (가상 서버) 생성하기"></a>[STEP2] EC2 (가상 서버) 생성하기</h2><ol><li><p>AWS 접속 후 로그인</p></li><li><p>오른쪽 위에 서울 선택 &amp; 왼쪽상단 Services 클릭<br><img alt data-src="/img/Django/AWS/aws2.PNG" class="lozad"></p></li><li><p>클라우드 서버를 생성하기 위해 EC2 를 클릭한다.</p></li><li><p>인스턴스 시작 클릭</p></li></ol><ol start="5"><li><p>어떤 인스턴스를 실행할지 Ubuntu를 선택 (다른 환경 선택 가능)<br><img alt data-src="/img/Django/AWS/aws1.png" class="lozad"></p></li><li><p>인스턴스 유형은 프리티어에서 사용가능한 두번째 것을 선택하고 ‘검토 및 시작’을 클릭.<br><img alt data-src="/img/Django/AWS/aws3.PNG" class="lozad"></p></li></ol><ol start="7"><li><p>다음 화면에서는 ‘시작하기’를 누른다.<br><img alt data-src="/img/Django/AWS/aws4.PNG" class="lozad"></p></li><li><p><code>&#39;새 키 페어 생성&#39;</code>을 선택하고 ‘키 페어 이름’에 임의의 텍스트를 입력<br>그 다음 <code>&#39;키 페어 다운로드&#39;</code>를 클릭 (이 파일은 한번만 받을 수 있으니 잘 챙겨두자.)</p></li></ol><p><img alt data-src="/img/Django/AWS/aws5.PNG" class="lozad"></p><ol start="9"><li><p>인스턴스 시작을 누르면 시작됨(제대로 시작하기까지는 시간이 좀 걸린다)<br><img alt data-src="/img/Django/AWS/aws6.PNG" class="lozad"></p></li><li><p>탄력적 ip 생성 + 연결(안하셔도 가능)</p></li></ol><p><strong><code>주의</code></strong><br>프리티어에서 Elastic IP 1개를 무료로 사용할 수 있습니다.<br>하지만 Elastic IP는 EC2에 연결해두지 않으면 요금이 청구됩니다.<br>ip가 부족한 상황에서 Elastic ip를 만들어두고 EC2에 연결하지 않으면 ip가 만들어져 있지만 사용되지 않고 있으므로 요금이 청구됩니다.<br>또한, EC2에 연결해두었더라도 EC2가 stop되어있는 상태라면 요금이 청구됩니다.</p><h2 id="STEP3-SSH-를-사용해서-가상-서버-접속하기"><a href="#STEP3-SSH-를-사용해서-가상-서버-접속하기" class="headerlink" title="[STEP3] SSH 를 사용해서 가상 서버 접속하기"></a>[STEP3] SSH 를 사용해서 가상 서버 접속하기</h2><p><strong><em>cf)</em></strong> <a href="https://baked-corn.tistory.com/52" rel="external nofollow noopener noreferrer" target="_blank">SSH란?</a> </p><p><strong><em>mac에 경우</em></strong><br>1) 터미널을 실행하여  private 키를 저장했던 위치로 디렉토리를 이동시킨다.</p><ul><li>cd <del>~</del> 이용</li></ul><p>2) chmod를 이용해서 private 키를 공개적으로 보지 못하게 한다.</p><ul><li>“chmod 400 DjangoServer.pem”</li></ul><p>3) “sudo ssh -i PATH/DjangoServer.pem ubuntu@PUBLIC_DNS”</p><ul><li>PATH는 pwd했을 때 뜨는 경로 대신 채워주면됨</li><li>PUBLIC_DNS는 EC2-실행중인 인스턴스 들어가면 볼 수 있음.</li></ul><p>4) 클라우드 서버에 접속이 되면서 커맨드 창이 열림</p><p><strong><em>Window에 경우</em></strong><br><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" rel="external nofollow noopener noreferrer" target="_blank">putty</a> 프로그램 사용 - putty.exe과 puttygen.exe 다운로드</p><p>1) Puttygen을 통해 public key -&gt; private key<br><img alt data-src="/img/Django/AWS/aws7.PNG" class="lozad"></p><p><img alt data-src="/img/Django/AWS/aws8.PNG" class="lozad"></p><p>2) putty.exe를 통해 접속하기<br><img alt data-src="/img/Django/AWS/aws9.PNG" class="lozad"></p><h2 id="STEP4-보안그룹-설정"><a href="#STEP4-보안그룹-설정" class="headerlink" title="[STEP4] 보안그룹 설정"></a>[STEP4] 보안그룹 설정</h2><p><img alt data-src="/img/Django/AWS/aws10.PNG" class="lozad"></p><blockquote><hr><p>가상서버 : CPU와 메모리를 가진 클라우드 내 서버<br>인스턴스 (instance) : AWS에서 가상 서버를 부르는 용어<br>EC2 (Elastic Compute Cloud) : 가상 인스턴스를 운영하는 서비스<br>보안 그룹(security group) : 인스턴스에 대한 트래픽을 제어하는  가상 방화벽 역할<br>IAM (Identity and Access Management) : 사용자 엑세스 및 암호화 키 관리<br>관리 콘솔 : AWS 서비스를 모두 관리하는 사용자 인터페이스</p></blockquote>]]></content>
     
@@ -69,6 +88,8 @@
     
     </summary>
     
+    
+      <category term="AWS" scheme="https://khs9628.github.io/categories/AWS/"/>
     
     
       <category term="AWS" scheme="https://khs9628.github.io/tags/AWS/"/>
