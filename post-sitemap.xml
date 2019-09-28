@@ -9,7 +9,7 @@
 
     <url>
         <loc>https://khs9628.github.io/2019/09/25/aws3/</loc>
-        <lastmod>2019-09-27T10:30:37.268Z</lastmod>
+        <lastmod>2019-09-28T12:56:02.007Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>https://khs9628.github.io/2019/09/25/aws2/</loc>
-        <lastmod>2019-09-27T10:01:48.369Z</lastmod>
+        <lastmod>2019-09-28T10:12:11.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2019/09/09/Django4/</loc>
+        <lastmod>2019-09-27T12:12:56.275Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -122,14 +130,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/09/React3/</loc>
         <lastmod>2019-09-26T09:53:18.865Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/09/Django4/</loc>
-        <lastmod>2019-09-26T09:50:25.507Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
