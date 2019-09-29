@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://khs9628.github.io/tags/React-Django/</loc>
+        <lastmod>2019-09-29T12:38:01.710Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/tags/Crawling/</loc>
         <lastmod>2019-09-29T11:57:55.730Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -12,13 +19,6 @@
     <url>
         <loc>https://khs9628.github.io/tags/AWS/</loc>
         <lastmod>2019-09-29T11:34:59.881Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/React-Django/</loc>
-        <lastmod>2019-09-28T14:29:45.044Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
