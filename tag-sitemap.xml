@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://khs9628.github.io/tags/%EC%B7%A8%EB%BD%80%EA%B0%80%EC%9E%A3/</loc>
+        <lastmod>2019-10-01T07:26:10.150Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/tags/React-Django/</loc>
         <lastmod>2019-09-29T14:42:58.418Z</lastmod>
         <changefreq>weekly</changefreq>
