@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Technical Interview [면접후기] | 현수쓰</title><meta name="description" content="Technical Interview [면접후기]"><meta name="keywords" content="취뽀가잣!"><meta name="author" content="현수쓰"><meta name="copyright" content="현수쓰"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="https://khs9628.github.io/2019/09/06/CS5/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Technical Interview [면접후기]"><meta name="twitter:description" content="Technical Interview [면접후기]"><meta name="twitter:image" content="https://khs9628.github.io/img/운영체제.PNG"><meta property="og:type" content="article"><meta property="og:title" content="Technical Interview [면접후기]"><meta property="og:url" content="https://khs9628.github.io/2019/09/06/CS5/"><meta property="og:site_name" content="현수쓰"><meta property="og:description" content="Technical Interview [면접후기]"><meta property="og:image" content="https://khs9628.github.io/img/운영체제.PNG"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="완주하지 못한 선수" href="https://khs9628.github.io/2019/09/07/codingTest1/"><link rel="next" title="Technical Interview [자료구조]" href="https://khs9628.github.io/2019/09/06/CS4/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Bookmark',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days'
+
+  
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#첫번째-면접"><span class="toc-number">1.</span> <span class="toc-text">첫번째 면접</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-프로세스와-스레드의-차이점"><span class="toc-number">1.1.</span> <span class="toc-text">1. 프로세스와 스레드의 차이점</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-데드락이-무엇이고-어떻게-해결하나"><span class="toc-number">1.2.</span> <span class="toc-text">2. 데드락이 무엇이고 어떻게 해결하나</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-TCP와-UDP의"><span class="toc-number">1.3.</span> <span class="toc-text">3. TCP와 UDP의</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#두번째-면접"><span class="toc-number">2.</span> <span class="toc-text">두번째 면접</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ORM의-문제점-주의해야할-점"><span class="toc-number">2.1.</span> <span class="toc-text">ORM의 문제점 / 주의해야할 점</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#해결법"><span class="toc-number">2.1.1.</span> <span class="toc-text">해결법</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ViewSet과-View의-차이점"><span class="toc-number">2.2.</span> <span class="toc-text">ViewSet과 View의 차이점</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ViewSet의-주요-기능"><span class="toc-number">2.2.1.</span> <span class="toc-text">ViewSet의 주요 기능</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#효율적으로-객체에서-반복적으로-여러개의-모델에서-비슷한-영역의-데이터를-가져오려-할때-작성해야하는것-은-무엇인가"><span class="toc-number">2.3.</span> <span class="toc-text">효율적으로 객체에서 반복적으로 여러개의 모델에서 비슷한 영역의 데이터를 가져오려 할때 작성해야하는것 은 무엇인가?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#render-와-redirect-의-차이"><span class="toc-number">2.4.</span> <span class="toc-text">render 와 redirect 의 차이</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#만약-서버에-요청을-보냈을-때-응답시간이-너무-오래걸리면-무엇을-고려해야하나"><span class="toc-number">2.5.</span> <span class="toc-text">만약 서버에 요청을 보냈을 때 응답시간이 너무 오래걸리면 무엇을 고려해야하나?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP와-HTTPS-와의-차이는-무엇인가"><span class="toc-number">2.6.</span> <span class="toc-text">HTTP와 HTTPS 와의 차이는 무엇인가?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#보안-방법"><span class="toc-number">2.6.1.</span> <span class="toc-text">보안 방법</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTPS-의-SSL-은-무엇이-가장-중요한가"><span class="toc-number">2.6.2.</span> <span class="toc-text">HTTPS 의 SSL 은 무엇이 가장 중요한가?</span></a></li></ol></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/img/운영체제.PNG)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">현수쓰</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><div class="menu_mask"></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item text-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">47</div></a></div></div><div class="mobile_data_item text-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item text-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> PortPolio</span></a></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Technical Interview [면접후기]</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-09-06<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-10-04</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/면접준비/">면접준비</a></span></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="첫번째-면접"><a href="#첫번째-면접" class="headerlink" title="첫번째 면접"></a>첫번째 면접</h1><h2 id="1-프로세스와-스레드의-차이점"><a href="#1-프로세스와-스레드의-차이점" class="headerlink" title="1. 프로세스와 스레드의 차이점"></a>1. 프로세스와 스레드의 차이점</h2><p><code>프로세스</code>는 실행 중인 프로그램으로 디스크로부터 메모리에 적재되어 CPU 의 할당을 받을 수 있는 것을 말한다. </p>
+<p><code>스레드</code>는 프로세스의 실행 단위라고 할 수 있다. 한 프로세스 내에서 동작되는 여러 실행 흐름으로 프로세스 내의 주소 공간이나 자원을 공유할 수 있다.</p>
+<h2 id="2-데드락이-무엇이고-어떻게-해결하나"><a href="#2-데드락이-무엇이고-어떻게-해결하나" class="headerlink" title="2. 데드락이 무엇이고 어떻게 해결하나"></a>2. 데드락이 무엇이고 어떻게 해결하나</h2><p>교착상태(Dead Lock)은 상호 배제에 의해 나타나는 문제점으로, 둘 이상의 프로세스들이 자원을 점유한 상태에서 서로 다른 프로세스가 점유하고 있는 자원을 요구하며 무한정 기다리는 현상을 의미합니다.</p>
+<ul>
+<li>예방</li>
+<li>회피</li>
+<li>회복</li>
+<li>발견</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">이유</th>
+<th align="center">설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">상호배제(Mutual Exclusion)</td>
+<td align="center">한번에 한개의 프로세스만이 공유 자원을 사용할 수 있어야 합니다.</td>
+</tr>
+<tr>
+<td align="center">점유와 대기(Hold and Wait)</td>
+<td align="center">최소한 하나의 자원을 점유하고 있으면서 다른 프로세스에 할당되어 사용되고 있는 자원을 추가로 점유하기 이해 대기하는 프로세스가 있어야 합니다.</td>
+</tr>
+<tr>
+<td align="center">비선점(Non-preemption)</td>
+<td align="center">다른 프로세스에 할당된 자원은 사용이 끝날 때까지 강제로 빼앗을 수 없어야합니다.</td>
+</tr>
+<tr>
+<td align="center">환형 대기(Circular Wiat)</td>
+<td align="center">공유자원과 공유자원을 사용하기 위해 대기하는 프로세스들이 원형으로 구성되어 있어 자신에게 할당된 자원을 점유하면서 앞이나 뒤에 있는 프로세스의 자원을 요구해야 합니다.</td>
+</tr>
+</tbody></table>
+<h2 id="3-TCP와-UDP의"><a href="#3-TCP와-UDP의" class="headerlink" title="3. TCP와 UDP의"></a>3. TCP와 UDP의</h2><p><code>TCP</code></p>
+<ul>
+<li>연결형 서비스로 가상 회선 방식을 제공한다.</li>
+<li>3-way handshaking과정을 통해 연결을 설정하고 4-way handshaking을 통해 해제한다.</li>
+<li>흐름 제어 및 혼잡 제어.</li>
+<li>높은 신뢰성을 보장한다.</li>
+<li>UDP보다 속도가 느리다.</li>
+<li>전이중(Full-Duplex), 점대점(Point to Point) 방식.</li>
+</ul>
+<p><code>UDP</code></p>
+<ul>
+<li>비연결형 서비스로 데이터그램 방식을 제공한다</li>
+<li>정보를 주고 받을 때 정보를 보내거나 받는다는 신호절차를 거치지 않는다.</li>
+<li>UDP헤더의 CheckSum 필드를 통해 최소한의 오류만 검출한다.</li>
+<li>신뢰성이 낮다</li>
+<li>TCP보다 속도가 빠르다</li>
+</ul>
+<h1 id="두번째-면접"><a href="#두번째-면접" class="headerlink" title="두번째 면접"></a>두번째 면접</h1><p><strong><code>Django</code></strong></p>
+<h2 id="ORM의-문제점-주의해야할-점"><a href="#ORM의-문제점-주의해야할-점" class="headerlink" title="ORM의 문제점 / 주의해야할 점"></a>ORM의 문제점 / 주의해야할 점</h2><p>ORM은 데이터베이스의 테이블을 객체지향 프로그래밍에서 흔히 사용하는 객체(Class)처럼 사용할 수 있도록 해주는 기술입니다.</p>
+<p><code>N+1 Problem</code></p>
+<p><code>lazy loading</code><br>ORM에서 명령을 실행할 때마다 데이터베이스에서 데이터를 가져오는 것이 아니라 모든 명령 처리가 끝나고 실제로 데이터를 불러와야 할 시점이 왔을 때 데이터베이스에 쿼리를 실행하는 방식을 의미합니다.</p>
+<ul>
+<li>매 단계마다 쿼리를 실행하지 않기 때문에 쿼리 요청을 최소화 할 수 있다는 것입니다.</li>
+</ul>
+<ul>
+<li>하지만 이 방식이 성능에 악영향을 미칠 수도 있습니다.</li>
+</ul>
+<h3 id="해결법"><a href="#해결법" class="headerlink" title="해결법"></a>해결법</h3><p><code>Eager Loading</code><br>Eager Loading은 Lazy Loading의 반대 개념으로 사전에 쓸 데이터를 포함하여 쿼리를 날리기 때문에 비효율적으로 늘어나는 쿼리 요청을 사전에 방지할 수 있습니다.</p>
+<ul>
+<li><p>prefetch_related : 복잡한 관계를 가지고 있는 테이블간에 사용할 수 있는 메서드입니다. 하나의 row에 대해 관계가 이루어진 여러개의 row들이 존재할 때 (many=True 옵션이 적용되는 경우) 사용될 수 있습니다. 이 메서드가 쿼리로 치환될 때 WHERE … IN 구문으로 치환됩니다.</p>
+</li>
+<li><p>select_related : 가장 간단하게 Eager Loading을 구현할 수 있는 메서드입니다. 이 메서드를 사용하면 쿼리상으로는 SQL Join을 수행하게 됩니다.</p>
+</li>
+</ul>
+<h2 id="ViewSet과-View의-차이점"><a href="#ViewSet과-View의-차이점" class="headerlink" title="ViewSet과 View의 차이점"></a>ViewSet과 View의 차이점</h2><ul>
+<li>View 클래스와 거의 비슷하지만, get과 put 메서드는 지원하지 않고 read와 update 메서드를 지원합니다.</li>
+<li>Router 클래스를 사용하여 복잡한 URL 설정을 처리합니다.</li>
+</ul>
+<h3 id="ViewSet의-주요-기능"><a href="#ViewSet의-주요-기능" class="headerlink" title="ViewSet의 주요 기능"></a>ViewSet의 주요 기능</h3><ul>
+<li>Pagination</li>
+<li>Filtering &amp; Search</li>
+<li>Authentication &amp; Permission</li>
+</ul>
+<h2 id="효율적으로-객체에서-반복적으로-여러개의-모델에서-비슷한-영역의-데이터를-가져오려-할때-작성해야하는것-은-무엇인가"><a href="#효율적으로-객체에서-반복적으로-여러개의-모델에서-비슷한-영역의-데이터를-가져오려-할때-작성해야하는것-은-무엇인가" class="headerlink" title="효율적으로 객체에서 반복적으로 여러개의 모델에서 비슷한 영역의 데이터를 가져오려 할때 작성해야하는것 은 무엇인가?"></a>효율적으로 객체에서 반복적으로 여러개의 모델에서 비슷한 영역의 데이터를 가져오려 할때 작성해야하는것 은 무엇인가?</h2><p><code>Middleware</code><br>http 요청 / 응답 처리 중간에서 작동하는 시스템이다.<br>장고는 http 요청이 들어오면 미들웨어를 거쳐서 해당 URL 에 등록되어 있는 뷰로 연결해주고, http 응답 역시 미들웨어를 거쳐서 내보낸다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_middleware</span><span class="params">(get_response)</span>:</span></span><br><span class="line">    <span class="comment"># 최초 설정 및 초기화</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">middleware</span><span class="params">(request)</span>:</span></span><br><span class="line">        <span class="comment"># 뷰가 호출되기 전에 실행될 코드들</span></span><br><span class="line"></span><br><span class="line">        response = get_response(request)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 뷰가 호출된 뒤에 실행될 코드들</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> response</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> middleware</span><br></pre></td></tr></table></figure>
+
+<h2 id="render-와-redirect-의-차이"><a href="#render-와-redirect-의-차이" class="headerlink" title="render 와 redirect 의 차이"></a>render 와 redirect 의 차이</h2><p><code>render</code> 는 템플릿을 불러오고<br><code>redirect</code> 는 URL로 이동합니다. </p>
+<h2 id="만약-서버에-요청을-보냈을-때-응답시간이-너무-오래걸리면-무엇을-고려해야하나"><a href="#만약-서버에-요청을-보냈을-때-응답시간이-너무-오래걸리면-무엇을-고려해야하나" class="headerlink" title="만약 서버에 요청을 보냈을 때 응답시간이 너무 오래걸리면 무엇을 고려해야하나?"></a>만약 서버에 요청을 보냈을 때 응답시간이 너무 오래걸리면 무엇을 고려해야하나?</h2><p>반복문을 확인해서 잘못된것이 없는지 확인 하는것은 컴퓨터 성능의 발전으로 많은 차이가 나지 않지만<br>데이터베이스에 접근하는 부분이나 호출하는 부분에 코드를 중점적으로 확인해 정확한 영역을 접근하는지 중복된 코드가 있는지를 확인 해야한다.</p>
+<h2 id="HTTP와-HTTPS-와의-차이는-무엇인가"><a href="#HTTP와-HTTPS-와의-차이는-무엇인가" class="headerlink" title="HTTP와 HTTPS 와의 차이는 무엇인가?"></a>HTTP와 HTTPS 와의 차이는 무엇인가?</h2><p><code>HTTP</code><br>HTTP는 클라이언트와 서버 사이에 이루어지는 요청/응답(request/response) 프로토콜이다.</p>
+<p><code>HTTP 의 문제점</code><br>HTTP 는 평문 통신이기 때문에 도청이 가능하다.<br>통신 상대를 확인하지 않기 때문에 위장이 가능하다.<br>완전성을 증명할 수 없기 때문에 변조가 가능하다.<br>위 세 가지는 다른 암호화하지 않은 프로토콜에도 공통되는 문제점들이다.</p>
+<h3 id="보안-방법"><a href="#보안-방법" class="headerlink" title="보안 방법"></a>보안 방법</h3><p><code>통신 자체를 암호화</code><br>SSL(Secure Socket Layer) or TLS(Transport Layer Security)라는 다른 프로토콜을 조합함으로써 HTTP 의 통신 내용을 암호화할 수 있다.<br><code>SSL 을 조합한 HTTP</code> 를 HTTPS(HTTP Secure) or HTTP over SSL이라고 부른다.</p>
+<p><code>콘텐츠를 암호화</code><br>말 그대로 HTTP 를 사용해서 운반하는 내용인, HTTP 메시지에 포함되는 콘텐츠만 암호화하는 것이다.<br>암호화해서 전송하면 받은 측에서는 그 암호를 해독하여 출력하는 처리가 필요하다.</p>
+<p><code>HTTPS</code><br>HTTP 에 암호화와 인증, 그리고 완전성 보호를 더한 HTTPS</p>
+<p>HTTPS는 SSL 의 껍질을 덮어쓴 HTTP 라고 할 수 있다. 즉, HTTPS 는 새로운 애플리케이션 계층의 프로토콜이 아니라는 것이다.<br>HTTP 통신하는 소켓 부분을 SSL(Secure Socket Layer) or TLS(Transport Layer Security)라는 프로토콜로 대체하는 것 뿐이다.<br>HTTP 는 원래 TCP 와 직접 통신했지만, HTTPS 에서 HTTP 는 SSL 과 통신하고 SSL 이 TCP 와 통신 하게 된다.<br>SSL 을 사용한 HTTPS 는 암호화와 증명서, 안전성 보호를 이용할 수 있게 된다.</p>
+<p>HTTPS 의 SSL 에서는 <code>공통키 암호화 방식</code>과 <code>공개키 암호화 방식</code>을 혼합한 하이브리드 암호 시스템을 사용한다. 공통키를 공개키 암호화 방식으로 교환한 다음에 다음부터의 통신은 공통키 암호를 사용하는 방식이다.</p>
+<h3 id="HTTPS-의-SSL-은-무엇이-가장-중요한가"><a href="#HTTPS-의-SSL-은-무엇이-가장-중요한가" class="headerlink" title="HTTPS 의 SSL 은 무엇이 가장 중요한가?"></a>HTTPS 의 SSL 은 무엇이 가장 중요한가?</h3><p><code>SSL</code>은 Secure Socket Layer이라는 약자로 보안 소켓 레이어이다.</p>
+<p><code>공개키 암호화 방식</code></p>
+<ol>
+<li>사이트에서 인증기관(CA: Certificate Authority)에 인증요청</li>
+<li>인증기관에서 검증후에 사이트의 공개키와 정보를 인증기관의 개인키로 암호화, 인증기관의 공개키는 브라우저에 제공</li>
+<li>사용자가 사이트로 접속 요청시 사이트는 인증서 전송</li>
+<li>사용자는 브라우저에 내장된 공개키로 인증서를 복호화 -&gt; 사이트의 공개키로 대칭키를 암호화하여 전송</li>
+<li>사이트는 전송받은 암호화된 대칭키를 사이트의 개인키로 복호화 -&gt; 사용자, 사이트 같은 대칭키 획득</li>
+<li>전송시 해당 대칭키로 암호화하여 전송</li>
+</ol>
+<blockquote>
+<p>하루를 기록하다</p>
+</blockquote>
+</div></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/취뽀가잣/">취뽀가잣!    </a></div><div class="post_share"><div class="social-share" data-image="/img/운영체제.PNG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/09/07/codingTest1/"><img class="prev_cover lozad" data-src="/img/codingtest/logo/1.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>완주하지 못한 선수</span></div></a></div><div class="next-post pull-right"><a href="/2019/09/06/CS4/"><img class="next_cover lozad" data-src="/img/운영체제.PNG" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>Technical Interview [자료구조]</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/09/06/CS3/" title="Technical Interview [네트워크]"><img class="relatedPosts_cover lozad" data-src="/img/운영체제.PNG"><div class="relatedPosts_title">Technical Interview [네트워크]</div></a></div><div class="relatedPosts_item"><a href="/2019/09/06/CS1/" title="Technical Interview [개발상식]"><img class="relatedPosts_cover lozad" data-src="/img/운영체제.PNG"><div class="relatedPosts_title">Technical Interview [개발상식]</div></a></div><div class="relatedPosts_item"><a href="/2019/09/06/CS2/" title="Technical Interview [운영체제]"><img class="relatedPosts_cover lozad" data-src="/img/운영체제.PNG"><div class="relatedPosts_title">Technical Interview [운영체제]</div></a></div><div class="relatedPosts_item"><a href="/2019/09/06/CS4/" title="Technical Interview [자료구조]"><img class="relatedPosts_cover lozad" data-src="/img/운영체제.PNG"><div class="relatedPosts_title">Technical Interview [자료구조]</div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://khs9628.github.io/2019/09/06/CS5/';
+  this.page.identifier = '2019/09/06/CS5/';
+  this.page.title = 'Technical Interview [면접후기]';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'khs9628' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script></div></div></div><footer style="background-image: url(/img/운영체제.PNG)"><div id="footer"><div class="copyright">&copy;2019 By 현수쓰</div><div class="footer_custom_text">Code Your Life</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-book" id="readmode" title="Read Mode"> </i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion">繁</a><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></section><div class=" " id="post_bottom"><div id="post_bottom_items"><a id="mobile_to_comment" href="#post-comment"><i class="mobile_scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">Catalog</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#첫번째-면접"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">첫번째 면접</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#1-프로세스와-스레드의-차이점"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">1. 프로세스와 스레드의 차이점</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#2-데드락이-무엇이고-어떻게-해결하나"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">2. 데드락이 무엇이고 어떻게 해결하나</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#3-TCP와-UDP의"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">3. TCP와 UDP의</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#두번째-면접"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">두번째 면접</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#ORM의-문제점-주의해야할-점"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">ORM의 문제점 / 주의해야할 점</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#해결법"><span class="toc_mobile_items-number">2.1.1.</span> <span class="toc_mobile_items-text">해결법</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#ViewSet과-View의-차이점"><span class="toc_mobile_items-number">2.2.</span> <span class="toc_mobile_items-text">ViewSet과 View의 차이점</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#ViewSet의-주요-기능"><span class="toc_mobile_items-number">2.2.1.</span> <span class="toc_mobile_items-text">ViewSet의 주요 기능</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#효율적으로-객체에서-반복적으로-여러개의-모델에서-비슷한-영역의-데이터를-가져오려-할때-작성해야하는것-은-무엇인가"><span class="toc_mobile_items-number">2.3.</span> <span class="toc_mobile_items-text">효율적으로 객체에서 반복적으로 여러개의 모델에서 비슷한 영역의 데이터를 가져오려 할때 작성해야하는것 은 무엇인가?</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#render-와-redirect-의-차이"><span class="toc_mobile_items-number">2.4.</span> <span class="toc_mobile_items-text">render 와 redirect 의 차이</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#만약-서버에-요청을-보냈을-때-응답시간이-너무-오래걸리면-무엇을-고려해야하나"><span class="toc_mobile_items-number">2.5.</span> <span class="toc_mobile_items-text">만약 서버에 요청을 보냈을 때 응답시간이 너무 오래걸리면 무엇을 고려해야하나?</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#HTTP와-HTTPS-와의-차이는-무엇인가"><span class="toc_mobile_items-number">2.6.</span> <span class="toc_mobile_items-text">HTTP와 HTTPS 와의 차이는 무엇인가?</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#보안-방법"><span class="toc_mobile_items-number">2.6.1.</span> <span class="toc_mobile_items-text">보안 방법</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#HTTPS-의-SSL-은-무엇이-가장-중요한가"><span class="toc_mobile_items-number">2.6.2.</span> <span class="toc_mobile_items-text">HTTPS 의 SSL 은 무엇이 가장 중요한가?</span></a></li></ol></li></ol></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/nightshift.js"></script><script color="0,0,255" opacity="0.7" zindex="-1" count="99" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/js/canvas-nest.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();</script></body></html>
