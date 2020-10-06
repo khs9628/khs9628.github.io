@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://khs9628.github.io/tags/Docker/</loc>
+        <lastmod>2020-10-06T06:51:11.366Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/tags/Django/</loc>
+        <lastmod>2020-10-06T06:22:00.674Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/tags/Crawling/</loc>
         <lastmod>2019-10-05T09:11:24.052Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,13 +40,6 @@
     <url>
         <loc>https://khs9628.github.io/tags/AWS/</loc>
         <lastmod>2019-09-29T11:34:59.881Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/Django/</loc>
-        <lastmod>2019-09-27T12:12:56.275Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
