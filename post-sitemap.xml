@@ -8,24 +8,32 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/10/06/CICD/</loc>
-        <lastmod>2020-10-06T07:56:42.535Z</lastmod>
+        <loc>https://khs9628.github.io/2020/10/07/201007_WAF/</loc>
+        <lastmod>2020-10-07T06:35:26.695Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/10/06/docker/</loc>
-        <lastmod>2020-10-06T06:51:11.366Z</lastmod>
+        <loc>https://khs9628.github.io/2020/10/05/201007_spec/</loc>
+        <lastmod>2020-10-07T05:37:44.400Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/10/06/spec/</loc>
-        <lastmod>2020-10-06T06:39:41.798Z</lastmod>
+        <loc>https://khs9628.github.io/2020/10/06/201007_CICD/</loc>
+        <lastmod>2020-10-07T05:36:03.117Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/06/201007_docker/</loc>
+        <lastmod>2020-10-07T05:35:03.286Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
