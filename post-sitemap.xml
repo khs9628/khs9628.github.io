@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2020/10/13/201013-codeTest/</loc>
+        <lastmod>2020-10-15T13:00:52.329Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2020/10/12/201012-SQL/</loc>
-        <lastmod>2020-10-13T09:09:13.652Z</lastmod>
+        <lastmod>2020-10-14T07:18:35.339Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,14 +26,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/10/12/201012-codeTest/</loc>
         <lastmod>2020-10-13T08:30:36.057Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/13/201013-codeTest/</loc>
-        <lastmod>2020-10-13T07:05:42.790Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
