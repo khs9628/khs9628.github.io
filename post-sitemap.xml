@@ -8,8 +8,32 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/3000/10/19/To-do-List/</loc>
+        <lastmod>2020-10-19T10:16:48.973Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/19/201019_MongoDB/</loc>
+        <lastmod>2020-10-19T10:15:19.290Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/12/201012-SQL/</loc>
+        <lastmod>2020-10-19T07:32:28.583Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2020/10/19/201019-codeTest/</loc>
-        <lastmod>2020-10-19T06:07:57.666Z</lastmod>
+        <lastmod>2020-10-19T07:07:08.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,22 +58,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/10/13/201013-codeTest/</loc>
         <lastmod>2020-10-16T06:39:04.762Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/12/201012-SQL/</loc>
-        <lastmod>2020-10-14T07:18:35.339Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/08/200708_iptables/</loc>
-        <lastmod>2020-10-08T07:15:36.237Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -274,14 +282,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/06/GuardOwl/</loc>
         <lastmod>2019-09-26T13:34:50.836Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2019/09/06/5Ducku/</loc>
-        <lastmod>2019-09-26T13:33:05.276Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

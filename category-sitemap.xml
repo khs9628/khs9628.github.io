@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/categories/Django/</loc>
+        <lastmod>2020-10-19T10:15:19.290Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/categories/aws/</loc>
         <lastmod>2020-10-08T07:14:49.219Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,13 +31,6 @@
     <url>
         <loc>https://khs9628.github.io/categories/Docker/</loc>
         <lastmod>2020-10-07T05:35:03.286Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/categories/Django/</loc>
-        <lastmod>2020-10-06T06:22:00.674Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
