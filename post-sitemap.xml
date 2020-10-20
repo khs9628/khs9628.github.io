@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/10/06/201007_docker/</loc>
-        <lastmod>2020-10-20T06:33:26.309Z</lastmod>
+        <loc>https://khs9628.github.io/2020/10/19/201019_MongoDB/</loc>
+        <lastmod>2020-10-20T08:47:39.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>https://khs9628.github.io/3000/10/19/To-do-List/</loc>
-        <lastmod>2020-10-20T06:27:50.361Z</lastmod>
+        <lastmod>2020-10-20T08:23:12.993Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/06/201007_docker/</loc>
+        <lastmod>2020-10-20T06:33:26.309Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,14 +42,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/10/19/201019-codeTest/</loc>
         <lastmod>2020-10-20T05:37:44.021Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/19/201019_MongoDB/</loc>
-        <lastmod>2020-10-19T10:15:19.290Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
