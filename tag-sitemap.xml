@@ -4,7 +4,14 @@
 
     <url>
         <loc>https://khs9628.github.io/tags/Django/</loc>
-        <lastmod>2020-10-22T04:56:56.280Z</lastmod>
+        <lastmod>2020-10-22T09:35:22.178Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/tags/TIL/</loc>
+        <lastmod>2020-10-22T09:26:38.473Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

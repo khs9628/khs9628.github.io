@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2020/10/19/201019_MongoDB/</loc>
+        <lastmod>2020-10-22T09:35:22.178Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/22/201023-DRF/</loc>
+        <lastmod>2020-10-22T09:28:07.341Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/31/9_TIL/</loc>
+        <lastmod>2020-10-22T09:26:38.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2020/10/21/201021-TDD/</loc>
         <lastmod>2020-10-22T09:17:18.659Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,32 +40,8 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/3000/10/19/To-do-List/</loc>
-        <lastmod>2020-10-22T09:11:55.526Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/22/201023-DRF/</loc>
-        <lastmod>2020-10-22T09:11:36.272Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://khs9628.github.io/2020/10/22/201022-codeTest/</loc>
         <lastmod>2020-10-22T08:51:09.677Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/19/201019_MongoDB/</loc>
-        <lastmod>2020-10-22T04:56:56.280Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
