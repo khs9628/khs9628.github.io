@@ -77,28 +77,6 @@
   </entry>
   
   <entry>
-    <title>CodeTest 연습 (탐욕법)</title>
-    <link href="https://khs9628.github.io/2020/10/20/201022-codeTest/"/>
-    <id>https://khs9628.github.io/2020/10/20/201022-codeTest/</id>
-    <published>2020-10-20T04:54:30.000Z</published>
-    <updated>2020-10-22T04:53:13.498Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="탐욕법-Greedy"><a href="#탐욕법-Greedy" class="headerlink" title="탐욕법 (Greedy)"></a>탐욕법 (Greedy)</h1><h1 id="체육복"><a href="#체육복" class="headerlink" title="체육복"></a>체육복</h1><h2 id="1차-답안"><a href="#1차-답안" class="headerlink" title="1차 답안"></a>1차 답안</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(n, lost, reserve)</span>:</span></span><br><span class="line">    tmp = lost.copy()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> lost:</span><br><span class="line">        <span class="keyword">if</span> i <span class="keyword">in</span> reserve:</span><br><span class="line">            tmp.remove(i)</span><br><span class="line">            reserve.remove(i)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">elif</span> i - <span class="number">1</span> <span class="keyword">in</span> reserve:</span><br><span class="line">            tmp.remove(i)</span><br><span class="line">            reserve.remove(i<span class="number">-1</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">elif</span> i + <span class="number">1</span> <span class="keyword">in</span> reserve <span class="keyword">and</span> i + <span class="number">1</span> <span class="keyword">not</span> <span class="keyword">in</span> lost:</span><br><span class="line">            tmp.remove(i)</span><br><span class="line">            reserve.remove(i+<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span>  n - len(tmp)</span><br></pre></td></tr></table></figure><p><code>tmp = lost.copy()</code><br>초기에 tmp = lost로 리스트 자체를 복사했더니<br>tmp.remove(value)를 해버리니 lost의 값도 삭제가 되는 문제가 발생했다.</p><p><code>깊은복사 vs 얕은복사</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;탐욕법-Greedy&quot;&gt;&lt;a href=&quot;#탐욕법-Greedy&quot; class=&quot;headerlink&quot; title=&quot;탐욕법 (Greedy)&quot;&gt;&lt;/a&gt;탐욕법 (Greedy)&lt;/h1&gt;&lt;h1 id=&quot;체육복&quot;&gt;&lt;a href=&quot;#체육복&quot; class=&quot;he
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>CodeTest 연습 (완전탐색)</title>
     <link href="https://khs9628.github.io/2020/10/20/201020-codeTest/"/>
     <id>https://khs9628.github.io/2020/10/20/201020-codeTest/</id>
@@ -112,6 +90,28 @@
       
       
         &lt;h1 id=&quot;완전탐색&quot;&gt;&lt;a href=&quot;#완전탐색&quot; class=&quot;headerlink&quot; title=&quot;완전탐색&quot;&gt;&lt;/a&gt;완전탐색&lt;/h1&gt;&lt;h1 id=&quot;모의고사&quot;&gt;&lt;a href=&quot;#모의고사&quot; class=&quot;headerlink&quot; title=&quot;모의고사&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CodeTest 연습 (탐욕법)</title>
+    <link href="https://khs9628.github.io/2020/10/20/201022-codeTest/"/>
+    <id>https://khs9628.github.io/2020/10/20/201022-codeTest/</id>
+    <published>2020-10-20T04:54:30.000Z</published>
+    <updated>2020-10-22T04:53:13.498Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="탐욕법-Greedy"><a href="#탐욕법-Greedy" class="headerlink" title="탐욕법 (Greedy)"></a>탐욕법 (Greedy)</h1><h1 id="체육복"><a href="#체육복" class="headerlink" title="체육복"></a>체육복</h1><h2 id="1차-답안"><a href="#1차-답안" class="headerlink" title="1차 답안"></a>1차 답안</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(n, lost, reserve)</span>:</span></span><br><span class="line">    tmp = lost.copy()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> lost:</span><br><span class="line">        <span class="keyword">if</span> i <span class="keyword">in</span> reserve:</span><br><span class="line">            tmp.remove(i)</span><br><span class="line">            reserve.remove(i)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">elif</span> i - <span class="number">1</span> <span class="keyword">in</span> reserve:</span><br><span class="line">            tmp.remove(i)</span><br><span class="line">            reserve.remove(i<span class="number">-1</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">elif</span> i + <span class="number">1</span> <span class="keyword">in</span> reserve <span class="keyword">and</span> i + <span class="number">1</span> <span class="keyword">not</span> <span class="keyword">in</span> lost:</span><br><span class="line">            tmp.remove(i)</span><br><span class="line">            reserve.remove(i+<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span>  n - len(tmp)</span><br></pre></td></tr></table></figure><p><code>tmp = lost.copy()</code><br>초기에 tmp = lost로 리스트 자체를 복사했더니<br>tmp.remove(value)를 해버리니 lost의 값도 삭제가 되는 문제가 발생했다.</p><p><code>깊은복사 vs 얕은복사</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;탐욕법-Greedy&quot;&gt;&lt;a href=&quot;#탐욕법-Greedy&quot; class=&quot;headerlink&quot; title=&quot;탐욕법 (Greedy)&quot;&gt;&lt;/a&gt;탐욕법 (Greedy)&lt;/h1&gt;&lt;h1 id=&quot;체육복&quot;&gt;&lt;a href=&quot;#체육복&quot; class=&quot;he
       
     
     </summary>
