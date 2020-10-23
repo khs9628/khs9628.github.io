@@ -3,8 +3,15 @@
 
 
     <url>
+        <loc>https://khs9628.github.io/tags/TIL/</loc>
+        <lastmod>2020-10-23T10:11:30.308Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</loc>
-        <lastmod>2020-10-23T10:04:40.905Z</lastmod>
+        <lastmod>2020-10-23T10:10:26.926Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -12,13 +19,6 @@
     <url>
         <loc>https://khs9628.github.io/tags/PORTFOLIO/</loc>
         <lastmod>2020-10-23T09:00:14.579Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/TIL/</loc>
-        <lastmod>2020-10-23T08:53:42.119Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

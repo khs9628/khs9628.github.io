@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2020/10/31/2010_TIL/</loc>
+        <lastmod>2020-10-23T10:11:30.308Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2019/09/06/port-%ED%95%8F%ED%8C%8C%EC%9D%B8%EB%8D%94/</loc>
-        <lastmod>2020-10-23T10:04:40.905Z</lastmod>
+        <lastmod>2020-10-23T10:10:26.926Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,14 +50,6 @@
     <url>
         <loc>https://khs9628.github.io/2019/09/06/port_%EB%82%98%EC%99%90%EB%A7%88/</loc>
         <lastmod>2020-10-23T08:54:06.335Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/31/9_TIL/</loc>
-        <lastmod>2020-10-23T08:53:42.119Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
