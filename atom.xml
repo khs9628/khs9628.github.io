@@ -47,9 +47,17 @@
     <link href="https://khs9628.github.io/2020/10/22/201023-DRF/"/>
     <id>https://khs9628.github.io/2020/10/22/201023-DRF/</id>
     <published>2020-10-22T09:11:36.000Z</published>
-    <updated>2020-10-26T07:46:48.658Z</updated>
+    <updated>2020-10-26T10:24:47.607Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="REST-Framework란"><a href="#REST-Framework란" class="headerlink" title="REST Framework란?"></a>REST Framework란?</h1><ul><li><p><code>REST</code> 란 <code>Representational State Transfer</code> 의 약자이다. 월드 와이드 웹과 같은 분산 하이퍼미디어 시스템을 위한 소프트웨어 아키텍처의 한 형식이다.</p></li><li><p>REST란, “웹에 존재하는 모든 자원(이미지, 동영상, DB 자원)에 고유한 <code>URI</code>를 부여해 활용”하는 것으로, 자원을 정의하고 자원에 대한 주소를 지정하는 방법론을 의미한다고 한다.</p></li><li><p>이런 REST의 형식을 따른 시스템을 RESTful 이라고 부른다.</p></li><li><p>HTTP URI 를 통해 자원을 명시하고 HTTP Method를 통해 해당 자원의 대한 CRUD Operation을 적용한다.</p></li></ul><h2 id="CRUD-Operation-HTTP-Method"><a href="#CRUD-Operation-HTTP-Method" class="headerlink" title="CRUD Operation , HTTP Method"></a>CRUD Operation , HTTP Method</h2><ul><li>Create : POST (자원 생성)</li><li>Read : GET (자원의 정보 조회)</li><li>Update : PUT (자원의 정보 업데이트)</li><li>Delete : DELETE (자원 삭제)</li></ul><h2 id="REST-구성요소"><a href="#REST-구성요소" class="headerlink" title="REST 구성요소"></a>REST 구성요소</h2><ul><li>자원(Resource) , URI<br>모든 자원은 고유한 ID를 가지고 ID는 서버에 존재하고 클라이언트는 각 자원의 상태를 조작하기 위해 요청을 보낸다. HTTP에서 이러한 자원을 구별하는 ID는 ‘Students/1’ 같은 HTTP URI 이다.</li></ul><p><code>cf) URI : 통합 자원 식별자(Uniform Resource Identifier, URI)는 인터넷에 있는 자원을 나타내는 유일한 주소이다.</code></p><ul><li><p>행위(Verb) , Method<br>클라이언트는 URI를 이용해 자원을 지정하고 자원을 조작하기 위해 Method를 사용한다. HTTP 프로토콜에서는 GET , POST , PUT , DELETE 같은 Method를 제공한다.</p></li><li><p>표현(Representation)<br>클라이언트가 서버로 요청을 보냈을 때 서버가 응답으로 보내주는 자원의 상태를 Representation이라고 한다. REST에서 하나의 자원은 JSON , XML , TEXT , RSS 등 여러형태의 Representation으로 나타낼수 있다.</p></li></ul><h2 id="REST-의-특징"><a href="#REST-의-특징" class="headerlink" title="REST 의 특징"></a>REST 의 특징</h2><ul><li><p>클라이언트 / 서버 구조 (Client-Server)<br>자원이 있는 Server , 자원을 요청하는 Client의 구조를 가진다.</p></li><li><p>무상태 (Stateless)<br>HTTP는 Stateless 프로토콜 이므로 REST 역시 무상태성을 가진다. 클라이언트의 Context 를 서버에 저장하지 않는다.</p></li><li><p>캐시 처리 가능 (Cachealble)<br>웹 표준 HTTP 프로토콜을 그대로 사용하므로 , 웹에서 사용하는 기존의 인프라를 그대로 활용 가능하다.</p></li><li><p>계층화<br>API 서버는 순수 비즈니스 로직을 수행하고 그 앞단에 사용자 인증 , 암호화 , 로드밸런싱 등을 하는 계층을 추가하여 구조상의 유연성을 줄 수 있다.</p></li><li><p>인터페이스 일관성(Uniform Interface)<br>URI로 지정한 자원에 대한 조작을 통일되고 한정적인 인터페이스로 수행한다. HTTP 표준에만 따른다면 모든 플랫폼에 사용이 가능하다.</p></li><li><p>자체 표현 구조<br>동사(Method) + 명사(URI) 로 이루어져있어 어떤 메서드에 무슨 행위를 하는지 알 수 있으며 REST API 자체가 매우 쉬워서 API 메세지 자체만 보고도 API를 이해할 수 있다</p></li></ul><h2 id="REST의-장단점"><a href="#REST의-장단점" class="headerlink" title="REST의 장단점"></a>REST의 장단점</h2><h3 id="장점"><a href="#장점" class="headerlink" title="장점"></a><code>장점</code></h3><ul><li><p>쉬운 사용<br>HTTP 프로토콜 인프라를 그대로 사용하므로 별도의 인프라를 구축할 필요가 없다.</p></li><li><p>클라이언트-서버 역할의 명확한 분리<br>클라이언트는 REST API를 통해 서버와 정보를 주고받는다. REST의 특징인 Stateless에 따라 서버는 클라이언트의 Context를 유지할 필요가 없다.</p></li><li><p>특정 데이터 표현을 사용가능<br>REST API는 헤더 부분에 URI 처리 메소드를 명시하고 필요한 실제 데이터를 ‘body’에 표현할 수 있도록 분리시켰다. JSON , XML 등 원하는 Representation 언어로 사용 가능하다.</p></li></ul><h3 id="단점"><a href="#단점" class="headerlink" title="단점"></a><code>단점</code></h3><ul><li><p>메소드의 한계<br>REST는 HTTP 메소드를 이용하여 URI를 표현한다. 이러한 표현은 쉬운 사용이 가능하다는 장점이 있지만 반대로 메소드 형태가 제한적인 단점이 있다.</p></li><li><p>표준이 없음<br>REST는 설계 가이드 일 뿐이지 표준이 아니다. 명확한 표준이 없다.</p></li></ul><h1 id="실제-DRF-구현"><a href="#실제-DRF-구현" class="headerlink" title="실제 DRF 구현"></a>실제 DRF 구현</h1><p><a href="https://github.com/Nifled/drf-cheat-sheet" rel="external nofollow noopener noreferrer" target="_blank">참고 URL</a></p><p><code>ModelSerializer</code> VS <code>HyperlinkedModelSerializer</code></p><p>The only difference is, as in citation you included, that primary and foreign keys are represented by URLs that point to those resources, instead of just actual key values.</p><p>RestFramework는 URI 즉 자원들이 URI 형태로 지정되기 때문에 Frontend에서 해당 자원을 요청하기 쉽게 url 형태로 리턴하는 것이 바람직하다.</p><p><strong><em>그러므로 DRF에서는 ModelSerializer보다 HyperlinkedModelSerializer를 권장하고 있다.</em></strong></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;REST-Framework란&quot;&gt;&lt;a href=&quot;#REST-Framework란&quot; class=&quot;headerlink&quot; title=&quot;REST Framework란?&quot;&gt;&lt;/a&gt;REST Framework란?&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;R
+      
     
     </summary>
     
@@ -58,6 +66,28 @@
     
     
       <category term="Django" scheme="https://khs9628.github.io/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CodeTest 연습 (DFS/BFS)</title>
+    <link href="https://khs9628.github.io/2020/10/22/201026-codeTest/"/>
+    <id>https://khs9628.github.io/2020/10/22/201026-codeTest/</id>
+    <published>2020-10-22T04:55:30.000Z</published>
+    <updated>2020-10-26T09:38:26.723Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="깊이-너비-우선탐색"><a href="#깊이-너비-우선탐색" class="headerlink" title="깊이/너비 우선탐색"></a>깊이/너비 우선탐색</h1><h1 id="타겟-넘버"><a href="#타겟-넘버" class="headerlink" title="타겟 넘버"></a><a href="https://programmers.co.kr/learn/courses/30/lessons/43165" rel="external nofollow noopener noreferrer" target="_blank">타겟 넘버</a></h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(numbers, target)</span>:</span></span><br><span class="line">    tree = [<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">        sub_tree = []</span><br><span class="line">        <span class="keyword">for</span> tree_num <span class="keyword">in</span> tree:</span><br><span class="line">            sub_tree.append(tree_num + num)</span><br><span class="line">            sub_tree.append(tree_num - num)</span><br><span class="line">        tree = sub_tree</span><br><span class="line"></span><br><span class="line">        <span class="comment"># print("Tree : "+ str(tree))</span></span><br><span class="line">    <span class="keyword">return</span> tree.count(target)</span><br></pre></td></tr></table></figure><p>그래프의 깊이 만큼 더한 값을 리스트에 저장 후 해당 합이 target값과 같다면 count 한다.</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">target = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1 : Tree : [1, -1]</span></span><br><span class="line"><span class="comment"># 2 : Tree : [2, 0, 0, -2]</span></span><br><span class="line"><span class="comment"># 3 : Tree : [3, 1, 1, -1, 1, -1, -1, -3]</span></span><br><span class="line"><span class="comment"># 4: Tree : [4, 2, 2, 0, 2, 0, 0, -2, 2, 0, 0, -2, 0, -2, -2, -4]</span></span><br><span class="line"><span class="comment"># 5 : Tree : [5, 3, 3, 1, 3, 1, 1, -1, 3, 1, 1, -1, 1, -1, -1, -3, 3, 1, 1, -1, 1, -1, -1, -3, 1, -1, -1, -3, -1, -3, -3, -5]</span></span><br><span class="line"><span class="comment"># return tree.count(target) = 3</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;깊이-너비-우선탐색&quot;&gt;&lt;a href=&quot;#깊이-너비-우선탐색&quot; class=&quot;headerlink&quot; title=&quot;깊이/너비 우선탐색&quot;&gt;&lt;/a&gt;깊이/너비 우선탐색&lt;/h1&gt;&lt;h1 id=&quot;타겟-넘버&quot;&gt;&lt;a href=&quot;#타겟-넘버&quot; class=&quot;he
+      
+    
+    </summary>
+    
+    
     
   </entry>
   
@@ -76,28 +106,6 @@
       
         &lt;h1 id=&quot;탐욕법-Greedy&quot;&gt;&lt;a href=&quot;#탐욕법-Greedy&quot; class=&quot;headerlink&quot; title=&quot;탐욕법 (Greedy)&quot;&gt;&lt;/a&gt;탐욕법 (Greedy)&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;탐욕적인 방법이란?&lt;br&gt;결정 할 때마다 그 순간에
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CodeTest 연습 (DFS/BFS)</title>
-    <link href="https://khs9628.github.io/2020/10/22/201026-codeTest/"/>
-    <id>https://khs9628.github.io/2020/10/22/201026-codeTest/</id>
-    <published>2020-10-22T04:54:30.000Z</published>
-    <updated>2020-10-26T08:29:33.496Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="깊이-너비-우선탐색"><a href="#깊이-너비-우선탐색" class="headerlink" title="깊이/너비 우선탐색"></a>깊이/너비 우선탐색</h1><h1 id="타겟-넘버"><a href="#타겟-넘버" class="headerlink" title="타겟 넘버"></a><a href="https://programmers.co.kr/learn/courses/30/lessons/43165" rel="external nofollow noopener noreferrer" target="_blank">타겟 넘버</a></h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(numbers, target)</span>:</span></span><br><span class="line">    tree = [<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">        sub_tree = []</span><br><span class="line">        <span class="keyword">for</span> tree_num <span class="keyword">in</span> tree:</span><br><span class="line">            sub_tree.append(tree_num + num)</span><br><span class="line">            sub_tree.append(tree_num - num)</span><br><span class="line">        tree = sub_tree</span><br><span class="line"></span><br><span class="line">        <span class="comment"># print("Tree : "+ str(tree))</span></span><br><span class="line">    <span class="keyword">return</span> tree.count(target)</span><br></pre></td></tr></table></figure><p>그래프의 깊이 만큼 더한 값을 리스트에 저장 후 해당 합이 target값과 같다면 count 한다.</p><pre><code>Tree : [1, -1]Tree : [2, 0, 0, -2]Tree : [3, 1, 1, -1, 1, -1, -1, -3]Tree : [4, 2, 2, 0, 2, 0, 0, -2, 2, 0, 0, -2, 0, -2, -2, -4]Tree : [5, 3, 3, 1, 3, 1, 1, -1, 3, 1, 1, -1, 1, -1, -1, -3, 3, 1, 1, -1, 1, -1, -1, -3, 1, -1, -1, -3, -1, -3, -3, -5]</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;깊이-너비-우선탐색&quot;&gt;&lt;a href=&quot;#깊이-너비-우선탐색&quot; class=&quot;headerlink&quot; title=&quot;깊이/너비 우선탐색&quot;&gt;&lt;/a&gt;깊이/너비 우선탐색&lt;/h1&gt;&lt;h1 id=&quot;타겟-넘버&quot;&gt;&lt;a href=&quot;#타겟-넘버&quot; class=&quot;he
       
     
     </summary>
