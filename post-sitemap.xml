@@ -9,7 +9,7 @@
 
     <url>
         <loc>https://khs9628.github.io/2020/10/22/201026-codeTest/</loc>
-        <lastmod>2020-10-27T09:51:05.432Z</lastmod>
+        <lastmod>2020-10-29T09:45:52.968Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>https://khs9628.github.io/2020/10/31/2010_TIL/</loc>
-        <lastmod>2020-10-27T09:20:36.321Z</lastmod>
+        <lastmod>2020-10-29T06:18:27.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/22/201022-codeTest/</loc>
+        <lastmod>2020-10-27T05:32:25.203Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,14 +34,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/10/22/201023-DRF/</loc>
         <lastmod>2020-10-26T10:24:47.607Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/22/201022-codeTest/</loc>
-        <lastmod>2020-10-26T07:23:42.346Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
