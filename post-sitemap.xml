@@ -8,8 +8,16 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/11/03/20201103-codeTest-j/</loc>
-        <lastmod>2020-11-03T10:19:55.604Z</lastmod>
+        <loc>https://khs9628.github.io/2020/11/04/201105-codeTest/</loc>
+        <lastmod>2020-11-04T10:46:18.938Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/04/201104-Java/</loc>
+        <lastmod>2020-11-04T10:29:03.002Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +25,23 @@
 
     <url>
         <loc>https://khs9628.github.io/2020/11/03/201104-Spring2/</loc>
-        <lastmod>2020-11-03T09:57:34.773Z</lastmod>
+        <lastmod>2020-11-04T09:31:24.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/03/201103-codeTest-j/</loc>
+        <lastmod>2020-11-04T05:52:17.646Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/10/12/201012-codeTest/</loc>
+        <lastmod>2020-11-04T05:29:25.216Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,7 +49,7 @@
 
     <url>
         <loc>https://khs9628.github.io/2020/11/30/2011-TIL/</loc>
-        <lastmod>2020-11-03T09:13:47.786Z</lastmod>
+        <lastmod>2020-11-04T05:05:22.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -162,14 +186,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/10/16/201016-codeTest/</loc>
         <lastmod>2020-10-19T04:54:10.828Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/10/12/201012-codeTest/</loc>
-        <lastmod>2020-10-16T06:43:24.767Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
