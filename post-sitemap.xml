@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/11/06/201106-Springboot/</loc>
-        <lastmod>2020-11-06T07:48:21.006Z</lastmod>
+        <loc>https://khs9628.github.io/2020/11/04/201105-codeTest-j/</loc>
+        <lastmod>2020-11-09T08:44:14.957Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>https://khs9628.github.io/2020/11/30/2011-TIL/</loc>
-        <lastmod>2020-11-06T07:22:13.395Z</lastmod>
+        <lastmod>2020-11-09T05:58:24.749Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/06/201106-Springboot/</loc>
+        <lastmod>2020-11-09T05:21:54.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,14 +42,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/11/06/201106-codeTest-j/</loc>
         <lastmod>2020-11-06T06:24:51.434Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/11/04/201105-codeTest-j/</loc>
-        <lastmod>2020-11-06T04:12:34.767Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
