@@ -3,8 +3,15 @@
 
 
     <url>
+        <loc>https://khs9628.github.io/tags/Spring/</loc>
+        <lastmod>2020-11-10T07:49:17.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/tags/TIL/</loc>
-        <lastmod>2020-11-09T08:45:07.498Z</lastmod>
+        <lastmod>2020-11-10T07:24:08.600Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -12,13 +19,6 @@
     <url>
         <loc>https://khs9628.github.io/tags/java/</loc>
         <lastmod>2020-11-05T06:53:49.385Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/tags/Spring/</loc>
-        <lastmod>2020-11-04T09:31:24.714Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

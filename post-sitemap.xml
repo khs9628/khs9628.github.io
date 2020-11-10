@@ -8,6 +8,46 @@
     </url>
 
     <url>
+        <loc>https://khs9628.github.io/2020/11/10/201110-codeTest-j/</loc>
+        <lastmod>2020-11-10T09:38:28.739Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/10/201110-Spring-jpa/</loc>
+        <lastmod>2020-11-10T07:49:17.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/30/2011-TIL/</loc>
+        <lastmod>2020-11-10T07:24:08.600Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/06/201106-Spring-mybatis/</loc>
+        <lastmod>2020-11-10T07:01:12.638Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/2020/11/03/201104-Spring2/</loc>
+        <lastmod>2020-11-10T07:00:14.267Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://khs9628.github.io/2020/11/10/201110-codeTest/</loc>
         <lastmod>2020-11-10T06:51:47.378Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,24 +64,8 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/2020/11/30/2011-TIL/</loc>
-        <lastmod>2020-11-09T08:45:07.498Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://khs9628.github.io/2020/11/04/201105-codeTest-j/</loc>
         <lastmod>2020-11-09T08:44:14.957Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/11/06/201106-Springboot/</loc>
-        <lastmod>2020-11-09T05:21:54.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -74,14 +98,6 @@
     <url>
         <loc>https://khs9628.github.io/2020/11/04/201104-Java/</loc>
         <lastmod>2020-11-05T06:53:49.385Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://khs9628.github.io/2020/11/03/201104-Spring2/</loc>
-        <lastmod>2020-11-04T09:31:24.714Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
