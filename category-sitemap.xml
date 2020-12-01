@@ -8,22 +8,22 @@
     </url>
 
     <url>
-        <loc>https://khs9628.github.io/categories/sql/</loc>
-        <lastmod>2020-12-01T08:53:28.180Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://khs9628.github.io/categories/TIL/</loc>
-        <lastmod>2020-12-01T08:30:46.107Z</lastmod>
+        <lastmod>2020-12-01T13:22:15.894Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://khs9628.github.io/categories/JavaScript/</loc>
-        <lastmod>2020-12-01T08:30:33.544Z</lastmod>
+        <lastmod>2020-12-01T13:21:42.813Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://khs9628.github.io/categories/sql/</loc>
+        <lastmod>2020-12-01T08:53:28.180Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
