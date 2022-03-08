@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LV.2 카카오프렌즈 컬러링북 | 현수쓰</title><meta name="keywords" content="java"><meta name="author" content="현수쓰"><meta name="copyright" content="현수쓰"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="카카오프렌즈 컬러링북문제출판사의 편집자인 어피치는 네오에게 컬러링북에 들어갈 원화를 그려달라고 부탁하여 여러 장의 그림을 받았다. 여러 장의 그림을 난이도 순으로 컬러링북에 넣고 싶었던 어피치는 영역이 많으면 색칠하기가 까다로워 어려워진다는 사실을 발견하고 그림의 난이도를 영역의 수로 정의하였다. (영역이란 상하좌우로 연결된 같은 색상의 공간을 의미한다.)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LV.2 카카오프렌즈 컬러링북">
+<meta property="og:url" content="https://khs9628.github.io/2022/03/08/20220308-codeTest-j/index.html">
+<meta property="og:site_name" content="현수쓰">
+<meta property="og:description" content="카카오프렌즈 컬러링북문제출판사의 편집자인 어피치는 네오에게 컬러링북에 들어갈 원화를 그려달라고 부탁하여 여러 장의 그림을 받았다. 여러 장의 그림을 난이도 순으로 컬러링북에 넣고 싶었던 어피치는 영역이 많으면 색칠하기가 까다로워 어려워진다는 사실을 발견하고 그림의 난이도를 영역의 수로 정의하였다. (영역이란 상하좌우로 연결된 같은 색상의 공간을 의미한다.)">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://khs9628.github.io/img/codingtest/logo/1.png">
+<meta property="article:published_time" content="2022-03-08T04:47:47.000Z">
+<meta property="article:modified_time" content="2022-03-08T07:52:56.917Z">
+<meta property="article:author" content="현수쓰">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://khs9628.github.io/img/codingtest/logo/1.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://khs9628.github.io/2022/03/08/20220308-codeTest-j/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LV.2 카카오프렌즈 컬러링북',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-08 16:52:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">97</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">24</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">19</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> PortPolio</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/codingtest/logo/1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">현수쓰</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> PortPolio</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">LV.2 카카오프렌즈 컬러링북</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-08T04:47:47.000Z" title="Created 2022-03-08 13:47:47">2022-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-08T07:52:56.917Z" title="Updated 2022-03-08 16:52:56">2022-03-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/java/">java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="LV.2 카카오프렌즈 컬러링북"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="카카오프렌즈-컬러링북"><a href="#카카오프렌즈-컬러링북" class="headerlink" title="카카오프렌즈 컬러링북"></a><a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/1829">카카오프렌즈 컬러링북</a></h1><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>출판사의 편집자인 어피치는 네오에게 컬러링북에 들어갈 원화를 그려달라고 부탁하여 여러 장의 그림을 받았다. 여러 장의 그림을 난이도 순으로 컬러링북에 넣고 싶었던 어피치는 영역이 많으면 색칠하기가 까다로워 어려워진다는 사실을 발견하고 그림의 난이도를 영역의 수로 정의하였다. (영역이란 상하좌우로 연결된 같은 색상의 공간을 의미한다.)</p>
+<p>그림에 몇 개의 영역이 있는지와 가장 큰 영역의 넓이는 얼마인지 계산하는 프로그램을 작성해보자.</p>
+<p><img src="/img/codingtest/color.PNG" alt="문제"></p>
+<p>위의 그림은 총 12개 영역으로 이루어져 있으며, 가장 넓은 영역은 어피치의 얼굴면으로 넓이는 120이다.</p>
+<h2 id="입력-형식"><a href="#입력-형식" class="headerlink" title="입력 형식"></a>입력 형식</h2><p>입력은 그림의 크기를 나타내는 m과 n, 그리고 그림을 나타내는 m × n 크기의 2차원 배열 picture로 주어진다. 제한조건은 아래와 같다.</p>
+<ul>
+<li>1 &lt;= m, n &lt;= 100</li>
+<li>picture의 원소는 0 이상 2^31 - 1 이하의 임의의 값이다.</li>
+<li>picture의 원소 중 값이 0인 경우는 색칠하지 않는 영역을 뜻한다.</li>
+</ul>
+<h2 id="출력-형식"><a href="#출력-형식" class="headerlink" title="출력 형식"></a>출력 형식</h2><p>리턴 타입은 원소가 두 개인 정수 배열이다. 그림에 몇 개의 영역이 있는지와 가장 큰 영역은 몇 칸으로 이루어져 있는지를 리턴한다.</p>
+<h2 id="예제-입출력"><a href="#예제-입출력" class="headerlink" title="예제 입출력"></a>예제 입출력</h2><table>
+<thead>
+<tr>
+<th align="center">m</th>
+<th align="center">n</th>
+<th align="center">picture</th>
+<th align="center">answer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6</td>
+<td align="center">4</td>
+<td align="center">[[1, 1, 1, 0], [1, 2, 2, 0], [1, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 3], [0, 0, 0, 3]]</td>
+<td align="center">[4, 5]</td>
+</tr>
+</tbody></table>
+<h2 id="예제에-대한-설명"><a href="#예제에-대한-설명" class="headerlink" title="예제에 대한 설명"></a>예제에 대한 설명</h2><p>예제로 주어진 그림은 총 4개의 영역으로 구성되어 있으며, 왼쪽 위의 영역과 오른쪽의 영역은 모두 1로 구성되어 있지만 상하좌우로 이어져있지 않으므로 다른 영역이다. 가장 넓은 영역은 왼쪽 위 1이 차지하는 영역으로 총 5칸이다.</p>
+<h2 id="문제에-대한-고찰"><a href="#문제에-대한-고찰" class="headerlink" title="문제에 대한 고찰"></a>문제에 대한 고찰</h2><p>예시1)<br>    m = 6<br>    n = 4<br>    picture = [[1, 1, 1, 0], [1, 2, 2, 0], [1, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 3], [0, 0, 0, 3]]<br>    answer = [4, 5]</p>
+<table>
+<thead>
+<tr>
+<th align="center">-</th>
+<th align="center"><code>1</code></th>
+<th align="center"><code>2</code></th>
+<th align="center"><code>3</code></th>
+<th align="center"><code>4</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>1</code></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><code>2</code></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:purple">2</span></td>
+<td align="center"><span style="color:purple">2</span></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><code>3</code></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:blue">1</span></td>
+</tr>
+<tr>
+<td align="center"><code>4</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:blue">1</span></td>
+</tr>
+<tr>
+<td align="center"><code>5</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:pink">3</span></td>
+</tr>
+<tr>
+<td align="center"><code>6</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:pink">3</span></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>최대크기 1이 5개영역을 차지하고 있기 때문에 5<br>개수    1/5, 2/2, 1/2, 3/2 즉 4개<br>답 = [4,5]</p>
+</blockquote>
+<p>예시2)<br>    m = 6<br>    n = 4<br>    picture = [[1, 1, 1, 0], [1, 1, 1, 0], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 1]]<br>    answer = [2, 6]</p>
+<table>
+<thead>
+<tr>
+<th align="center">-</th>
+<th align="center"><code>1</code></th>
+<th align="center"><code>2</code></th>
+<th align="center"><code>3</code></th>
+<th align="center"><code>4</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>1</code></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><code>2</code></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center"><span style="color:green">1</span></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><code>3</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:purple">1</span></td>
+</tr>
+<tr>
+<td align="center"><code>4</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:purple">1</span></td>
+</tr>
+<tr>
+<td align="center"><code>5</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:purple">1</span></td>
+</tr>
+<tr>
+<td align="center"><code>6</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><span style="color:purple">1</span></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>최대크기  1이 6개영역을 차지하고 있기 때문에 6<br>개수      1/6, 1/4 즉2개<br>답 = [2,6]</p>
+</blockquote>
+<p>문제에 대해 한참을 이해하지 못하고 있다가 그림을 그리면서 고민해보니 생각보다 어렵지 않은 문제였다.<br>dfs/bfs 우선탐색관련 로직을 기준으로 풀이를 생각해야했다.</p>
+<h2 id="1차답안"><a href="#1차답안" class="headerlink" title="1차답안"></a>1차답안</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span>[] dx = &#123;-<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>&#125;;               <span class="comment">// x축이동</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span>[] dy = &#123;<span class="number">0</span>,<span class="number">1</span>,-<span class="number">1</span>,<span class="number">0</span>&#125;;               <span class="comment">// y축이동</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">boolean</span>[][] check;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] solution(<span class="keyword">int</span> m, <span class="keyword">int</span> n, <span class="keyword">int</span>[][] picture) &#123;</span><br><span class="line">        <span class="keyword">int</span> numberOfArea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> maxSizeOfOneArea = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        check = <span class="keyword">new</span> <span class="keyword">boolean</span>[m][n];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; m ;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span> ; j &lt; n ;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(picture[i][j] != <span class="number">0</span> &amp;&amp; !check[i][j])&#123;</span><br><span class="line">                    numberOfArea++;</span><br><span class="line">                    dfs(i,j,picture);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cnt &gt; maxSizeOfOneArea) maxSizeOfOneArea = cnt;</span><br><span class="line">                cnt = <span class="number">0</span>;</span><br><span class="line">            &#125;           </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span>[] answer = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        </span><br><span class="line">        answer[<span class="number">0</span>] = numberOfArea;</span><br><span class="line">        answer[<span class="number">1</span>] = maxSizeOfOneArea;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span>[][] picture)</span> </span>&#123;</span><br><span class="line">        check[x][y] = <span class="keyword">true</span>;</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> nx = x + dx[i];</span><br><span class="line">            <span class="keyword">int</span> ny = y + dy[i];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(nx &lt; <span class="number">0</span> || nx &gt;= picture.length || ny &lt; <span class="number">0</span> || ny &gt;= picture[<span class="number">0</span>].length) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(picture[x][y] == picture[nx][ny] &amp;&amp; !check[nx][ny])&#123;</span><br><span class="line">                dfs(nx,ny,picture);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="DFS-깊이우선탐색-vs-BFS-너비우선탐색"><a href="#DFS-깊이우선탐색-vs-BFS-너비우선탐색" class="headerlink" title="DFS (깊이우선탐색) vs BFS (너비우선탐색)"></a>DFS (깊이우선탐색) vs BFS (너비우선탐색)</h1><p>그래프를 탐색하는 방법에는 크게 깊이 우선 탐색(DFS)과 너비 우선 탐색(BFS)이 있습니다.<br>** 여기서 그래프란, 정점(node)과 그 정점을 연결하는 간선(edge)으로 이루어진 자료구조의 일종을 말하며,<br>그래프를 탐색한다는 것은 하나의 정점으로부터 시작하여 차례대로 모든 정점들을 한 번씩 방문하는 것을 말합니다.</p>
+<h2 id="깊이-우선-탐색-DFS-Depth-First-Search"><a href="#깊이-우선-탐색-DFS-Depth-First-Search" class="headerlink" title="깊이 우선 탐색 (DFS, Depth-First Search)"></a>깊이 우선 탐색 (DFS, Depth-First Search)</h2><p>최대한 깊이 내려간 뒤, 더이상 깊이 갈 곳이 없을 경우 옆으로 이동</p>
+<h3 id="깊이-우선-탐색의-개념"><a href="#깊이-우선-탐색의-개념" class="headerlink" title="깊이 우선 탐색의 개념"></a>깊이 우선 탐색의 개념</h3><p>루트 노드(혹은 다른 임의의 노드)에서 시작해서 다음 분기(branch)로 넘어가기 전에<br>해당 분기를 완벽하게 탐색하는 방식을 말합니다.</p>
+<blockquote>
+<p>예를 들어, 미로찾기를 할 때 최대한 한 방향으로 갈 수 있을 때까지 쭉 가다가<br>더 이상 갈 수 없게 되면 다시 가장 가까운 갈림길로 돌아와서<br>그 갈림길부터 다시 다른 방향으로 탐색을 진행하는 것이 깊이 우선 탐색 방식이라고 할 수 있습니다.</p>
+</blockquote>
+<ol>
+<li>모든 노드를 방문하고자 하는 경우에 이 방법을 선택함</li>
+<li>깊이 우선 탐색(DFS)이 너비 우선 탐색(BFS)보다 좀 더 간단함</li>
+<li>검색 속도 자체는 너비 우선 탐색(BFS)에 비해서 느림</li>
+</ol>
+<h2 id="너비-우선-탐색-BFS-Breadth-First-Search"><a href="#너비-우선-탐색-BFS-Breadth-First-Search" class="headerlink" title="너비 우선 탐색 (BFS, Breadth-First Search)"></a>너비 우선 탐색 (BFS, Breadth-First Search)</h2><p>최대한 넓게 이동한 다음, 더 이상 갈 수 없을 때 아래로 이동</p>
+<h3 id="너비-우선-탐색의-개념"><a href="#너비-우선-탐색의-개념" class="headerlink" title="너비 우선 탐색의 개념"></a>너비 우선 탐색의 개념</h3><p>루트 노드(혹은 다른 임의의 노드)에서 시작해서 인접한 노드를 먼저 탐색하는 방법으로,<br>시작 정점으로부터 가까운 정점을 먼저 방문하고 멀리 떨어져 있는 정점을 나중에 방문하는 순회 방법입니다.<br>주로 두 노드 사이의 최단 경로를 찾고 싶을 때 이 방법을 선택합니다.</p>
+<h2 id="깊이-우선-탐색-DFS-과-너비-우선-탐색-BFS-비교"><a href="#깊이-우선-탐색-DFS-과-너비-우선-탐색-BFS-비교" class="headerlink" title="깊이 우선 탐색(DFS) 과 너비 우선 탐색(BFS) 비교"></a>깊이 우선 탐색(DFS) 과 너비 우선 탐색(BFS) 비교</h2><table>
+<thead>
+<tr>
+<th align="center">BFS</th>
+<th align="center">DFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">현재 정점에서 갈 수 있는 점들까지 들어가면서 탐색</td>
+<td align="center">현재 정점에 연결된 가까운 점들부터 탐색</td>
+</tr>
+<tr>
+<td align="center">스택 또는 재귀함수로 구현</td>
+<td align="center">큐를 이용해서 구현</td>
+</tr>
+</tbody></table>
+<h2 id="깊이-우선-탐색-DFS-과-너비-우선-탐색-BFS-활용한-문제-유형-응용"><a href="#깊이-우선-탐색-DFS-과-너비-우선-탐색-BFS-활용한-문제-유형-응용" class="headerlink" title="깊이 우선 탐색(DFS)과 너비 우선 탐색(BFS) 활용한 문제 유형/응용"></a>깊이 우선 탐색(DFS)과 너비 우선 탐색(BFS) 활용한 문제 유형/응용</h2><p>DFS, BFS은 특징에 따라 사용에 더 적합한 문제 유형들이 있습니다.</p>
+<pre><code>- 그래프의 모든 정점을 방문하는 것이 주요한 문제
+단순히 모든 정점을 방문하는 것이 중요한 문제의 경우 `DFS`, `BFS` 두 가지 방법 중 어느 것을 사용하셔도 상관없습니다.
+둘 중 편한 것을 사용하시면 됩니다.
+
+- 경로의 특징을 저장해둬야 하는 문제
+예를 들면 각 정점에 숫자가 적혀있고 a부터 b까지 가는 경로를 구하는데 경로에 같은 숫자가 있으면 안 된다는 문제 등, 각각의 경로마다 특징을 저장해둬야 할 때는 `DFS`를 사용합니다. (BFS는 경로의 특징을 가지지 못합니다)
+
+- 최단거리 구해야 하는 문제 : 미로 찾기 등 최단거리를 구해야 할 경우, `BFS`가 유리합니다.
+
+- 검색 대상 그래프가 정말 크다면 `DFS`를 고려
+
+- 검색대상의 규모가 크지 않고, 검색 시작 지점으로부터 원하는 대상이 별로 멀지 않다면 `BFS`
+</code></pre>
+<h2 id="JAVA로-구현한-코드"><a href="#JAVA로-구현한-코드" class="headerlink" title="JAVA로 구현한 코드"></a>JAVA로 구현한 코드</h2><h3 id="DFS-BFS-알고리즘은-재귀함수를-사용"><a href="#DFS-BFS-알고리즘은-재귀함수를-사용" class="headerlink" title="DFS (BFS 알고리즘은 재귀함수를 사용)"></a>DFS (BFS 알고리즘은 재귀함수를 사용)</h3><p><em><strong>함수 내에 재귀 호출을 중단하도록 조건이 변경될 명령문을 반드시 포함해야 합니다.</strong></em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 인접 리스트 이용 */</span> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123; </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> V; </span><br><span class="line">    <span class="keyword">private</span> LinkedList&lt;Integer&gt; adj[]; </span><br><span class="line">    Graph(<span class="keyword">int</span> v) &#123; </span><br><span class="line">        V = v; adj = <span class="keyword">new</span> LinkedList[v]; <span class="comment">// 인접 리스트 초기화 </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;v; ++i) </span><br><span class="line">            adj[i] = <span class="keyword">new</span> LinkedList(); </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> w)</span> </span>&#123; </span><br><span class="line">        adj[v].add(w); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="comment">/* DFS */</span> </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> v)</span> </span>&#123; </span><br><span class="line">        <span class="keyword">boolean</span> visited[] = <span class="keyword">new</span> <span class="keyword">boolean</span>[V]; </span><br><span class="line">        <span class="comment">// v를 시작 노드로 DFSUtil 재귀 호출 </span></span><br><span class="line">        DFSUtil(v, visited); </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* DFS에 의해 사용되는 함수 */</span> </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DFSUtil</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">boolean</span> visited[])</span> </span>&#123; </span><br><span class="line">        <span class="comment">// 현재 노드를 방문한 것으로 표시하고 값을 출력 </span></span><br><span class="line">        visited[v] = <span class="keyword">true</span>; </span><br><span class="line">        System.out.print(v + <span class="string">&quot; &quot;</span>); </span><br><span class="line">        <span class="comment">// 방문한 노드와 인접한 모든 노드를 가져온다. </span></span><br><span class="line">        Iterator&lt;Integer&gt; it = adj[v].listIterator(); </span><br><span class="line">        <span class="keyword">while</span> (it.hasNext()) &#123; </span><br><span class="line">            <span class="keyword">int</span> n = it.next(); </span><br><span class="line">            <span class="comment">// 방문하지 않은 노드면 해당 노드를 시작 노드로 다시 DFSUtil 호출 </span></span><br><span class="line">            <span class="keyword">if</span> (!visited[n]) </span><br><span class="line">                DFSUtil(n, visited); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="BFS-BFS-알고리즘은-큐-Queue-를-사용"><a href="#BFS-BFS-알고리즘은-큐-Queue-를-사용" class="headerlink" title="BFS (BFS 알고리즘은 큐(Queue)를 사용)"></a>BFS (BFS 알고리즘은 큐(Queue)를 사용)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123; </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> V; </span><br><span class="line">    <span class="keyword">private</span> LinkedList&lt;Integer&gt; adj[];</span><br><span class="line">    Graph(<span class="keyword">int</span> v) &#123; </span><br><span class="line">        V = v; </span><br><span class="line">        adj = <span class="keyword">new</span> LinkedList[v]; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;v; ++i)</span><br><span class="line">            adj[i] = <span class="keyword">new</span> LinkedList(); </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> w)</span> </span>&#123; </span><br><span class="line">        adj[v].add(w); </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* BFS */</span> </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> s)</span> </span>&#123; </span><br><span class="line">        <span class="keyword">boolean</span> visited[] = <span class="keyword">new</span> <span class="keyword">boolean</span>[V]; </span><br><span class="line">        <span class="comment">//방문여부 확인용 변수 </span></span><br><span class="line">        LinkedList&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;Integer&gt;(); </span><br><span class="line">        <span class="comment">//연결리스트 생성 </span></span><br><span class="line">        visited[s] = <span class="keyword">true</span>; </span><br><span class="line">        queue.add(s); </span><br><span class="line">        <span class="keyword">while</span> (queue.size() != <span class="number">0</span>) &#123; </span><br><span class="line">            <span class="comment">// 방문한 노드를 큐에서 추출(dequeue)하고 값을 출력 </span></span><br><span class="line">            s = queue.poll(); </span><br><span class="line">            System.out.print(s + <span class="string">&quot; &quot;</span>); </span><br><span class="line">            <span class="comment">// 방문한 노드와 인접한 모든 노드를 가져온다. </span></span><br><span class="line">            Iterator&lt;Integer&gt; i = adj[s].listIterator(); </span><br><span class="line">            <span class="keyword">while</span> (i.hasNext()) &#123; </span><br><span class="line">                <span class="keyword">int</span> n = i.next(); </span><br><span class="line">                <span class="comment">// 방문하지 않은 노드면 방문한 것으로 표시하고 큐에 삽입(enqueue) </span></span><br><span class="line">                <span class="keyword">if</span> (!visited[n]) &#123; </span><br><span class="line">                    visited[n] = <span class="keyword">true</span>; </span><br><span class="line">                    queue.add(n); </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://devuna.tistory.com/32">참고 URL</a></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a></div><div class="post_share"><div class="social-share" data-image="/img/codingtest/logo/1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/07/20220307-codeTest-j/"><img class="next-cover" src="/img/codingtest/logo/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">LV1. 크레인 인형뽑기 게임</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/10/16/201016-codeTest/" title="CodeTest 연습 (Heap)"><img class="cover" src="/img/codingtest/logo/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-16</div><div class="title">CodeTest 연습 (Heap)</div></div></a></div><div><a href="/2020/10/13/201013-codeTest/" title="CodeTest 연습 (스택/큐)"><img class="cover" src="/img/codingtest/logo/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-13</div><div class="title">CodeTest 연습 (스택/큐)</div></div></a></div><div><a href="/2020/10/19/201019-codeTest/" title="CodeTest 연습 (Sort)"><img class="cover" src="/img/codingtest/logo/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-19</div><div class="title">CodeTest 연습 (Sort)</div></div></a></div><div><a href="/2020/10/22/201022-codeTest/" title="CodeTest 연습 (탐욕법)"><img class="cover" src="/img/codingtest/logo/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-22</div><div class="title">CodeTest 연습 (탐욕법)</div></div></a></div><div><a href="/2020/10/22/201026-codeTest/" title="CodeTest 연습 (DFS/BFS)"><img class="cover" src="/img/codingtest/logo/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-22</div><div class="title">CodeTest 연습 (DFS/BFS)</div></div></a></div><div><a href="/2020/11/03/201103-codeTest-j/" title="Java CodeTest 연습 (Hash)"><img class="cover" src="/img/codingtest/logo/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-03</div><div class="title">Java CodeTest 연습 (Hash)</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">현수쓰</div><div class="author-info__description">기술블로그</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">97</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">24</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">19</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/khs9628"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/khs9628" target="_blank" title=""><i class="fa fa-github"></i></a><a class="social-icon" href="https://www.instagram.com/khs9628" target="_blank" title=""><i class="fa fa-instagram"></i></a><a class="social-icon" href="https://www.facebook.com/profile.php?id=100002507953205" target="_blank" title=""><i class="fa fa-facebook"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88-%EC%BB%AC%EB%9F%AC%EB%A7%81%EB%B6%81"><span class="toc-number">1.</span> <span class="toc-text">카카오프렌즈 컬러링북</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AC%B8%EC%A0%9C"><span class="toc-number">1.1.</span> <span class="toc-text">문제</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9E%85%EB%A0%A5-%ED%98%95%EC%8B%9D"><span class="toc-number">1.2.</span> <span class="toc-text">입력 형식</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%B6%9C%EB%A0%A5-%ED%98%95%EC%8B%9D"><span class="toc-number">1.3.</span> <span class="toc-text">출력 형식</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%98%88%EC%A0%9C-%EC%9E%85%EC%B6%9C%EB%A0%A5"><span class="toc-number">1.4.</span> <span class="toc-text">예제 입출력</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%98%88%EC%A0%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A4%EB%AA%85"><span class="toc-number">1.5.</span> <span class="toc-text">예제에 대한 설명</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AC%B8%EC%A0%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EC%B0%B0"><span class="toc-number">1.6.</span> <span class="toc-text">문제에 대한 고찰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%EC%B0%A8%EB%8B%B5%EC%95%88"><span class="toc-number">1.7.</span> <span class="toc-text">1차답안</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DFS-%EA%B9%8A%EC%9D%B4%EC%9A%B0%EC%84%A0%ED%83%90%EC%83%89-vs-BFS-%EB%84%88%EB%B9%84%EC%9A%B0%EC%84%A0%ED%83%90%EC%83%89"><span class="toc-number">2.</span> <span class="toc-text">DFS (깊이우선탐색) vs BFS (너비우선탐색)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-DFS-Depth-First-Search"><span class="toc-number">2.1.</span> <span class="toc-text">깊이 우선 탐색 (DFS, Depth-First Search)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89%EC%9D%98-%EA%B0%9C%EB%85%90"><span class="toc-number">2.1.1.</span> <span class="toc-text">깊이 우선 탐색의 개념</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-BFS-Breadth-First-Search"><span class="toc-number">2.2.</span> <span class="toc-text">너비 우선 탐색 (BFS, Breadth-First Search)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89%EC%9D%98-%EA%B0%9C%EB%85%90"><span class="toc-number">2.2.1.</span> <span class="toc-text">너비 우선 탐색의 개념</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-DFS-%EA%B3%BC-%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-BFS-%EB%B9%84%EA%B5%90"><span class="toc-number">2.3.</span> <span class="toc-text">깊이 우선 탐색(DFS) 과 너비 우선 탐색(BFS) 비교</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-DFS-%EA%B3%BC-%EB%84%88%EB%B9%84-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-BFS-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%AC%B8%EC%A0%9C-%EC%9C%A0%ED%98%95-%EC%9D%91%EC%9A%A9"><span class="toc-number">2.4.</span> <span class="toc-text">깊이 우선 탐색(DFS)과 너비 우선 탐색(BFS) 활용한 문제 유형&#x2F;응용</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JAVA%EB%A1%9C-%EA%B5%AC%ED%98%84%ED%95%9C-%EC%BD%94%EB%93%9C"><span class="toc-number">2.5.</span> <span class="toc-text">JAVA로 구현한 코드</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DFS-BFS-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%80-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98%EB%A5%BC-%EC%82%AC%EC%9A%A9"><span class="toc-number">2.5.1.</span> <span class="toc-text">DFS (BFS 알고리즘은 재귀함수를 사용)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFS-BFS-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%80-%ED%81%90-Queue-%EB%A5%BC-%EC%82%AC%EC%9A%A9"><span class="toc-number">2.5.2.</span> <span class="toc-text">BFS (BFS 알고리즘은 큐(Queue)를 사용)</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/08/20220308-codeTest-j/" title="LV.2 카카오프렌즈 컬러링북"><img src="/img/codingtest/logo/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LV.2 카카오프렌즈 컬러링북"/></a><div class="content"><a class="title" href="/2022/03/08/20220308-codeTest-j/" title="LV.2 카카오프렌즈 컬러링북">LV.2 카카오프렌즈 컬러링북</a><time datetime="2022-03-08T04:47:47.000Z" title="Created 2022-03-08 13:47:47">2022-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/07/20220307-codeTest-j/" title="LV1. 크레인 인형뽑기 게임"><img src="/img/codingtest/logo/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LV1. 크레인 인형뽑기 게임"/></a><div class="content"><a class="title" href="/2022/03/07/20220307-codeTest-j/" title="LV1. 크레인 인형뽑기 게임">LV1. 크레인 인형뽑기 게임</a><time datetime="2022-03-07T06:14:11.000Z" title="Created 2022-03-07 15:14:11">2022-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/24/%ED%9A%8C%EA%B3%84/" title="회계 기본"><img src="/img/logo/fi.PNG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="회계 기본"/></a><div class="content"><a class="title" href="/2022/02/24/%ED%9A%8C%EA%B3%84/" title="회계 기본">회계 기본</a><time datetime="2022-02-24T01:25:53.000Z" title="Created 2022-02-24 10:25:53">2022-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/24/20220224-codeTest-j/" title="LV3. 추석 트래픽"><img src="/img/codingtest/logo/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LV3. 추석 트래픽"/></a><div class="content"><a class="title" href="/2022/02/24/20220224-codeTest-j/" title="LV3. 추석 트래픽">LV3. 추석 트래픽</a><time datetime="2022-02-24T01:03:59.000Z" title="Created 2022-02-24 10:03:59">2022-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/23/20220223-codeTest-j/" title="LV2. 오픈채팅방"><img src="/img/codingtest/logo/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LV2. 오픈채팅방"/></a><div class="content"><a class="title" href="/2022/02/23/20220223-codeTest-j/" title="LV2. 오픈채팅방">LV2. 오픈채팅방</a><time datetime="2022-02-23T07:26:23.000Z" title="Created 2022-02-23 16:26:23">2022-02-23</time></div></div></div></div></div></div></main><footer id="footer" style="background: black"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 현수쓰</div><div class="footer_custom_text">Code Your Life</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://khs9628.github.io/2022/03/08/20220308-codeTest-j/'
+    this.page.identifier = '2022/03/08/20220308-codeTest-j/'
+    this.page.title = 'LV.2 카카오프렌즈 컬러링북'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://khs9628.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Disqus' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
